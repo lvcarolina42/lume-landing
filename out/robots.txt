@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://brlume.app/sitemap.xml

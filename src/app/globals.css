@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --teal-600: #00897B;
+  --teal-700: #00695C;
+  --teal-800: #004D40;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@layer utilities {
+  .gradient-hero {
+    background: linear-gradient(135deg, #00897B 0%, #005548 50%, #002B22 100%);
+  }
+  .gradient-cta {
+    background: linear-gradient(90deg, #00897B 0%, #00695C 100%);
+  }
+}
