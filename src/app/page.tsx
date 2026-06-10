@@ -7,10 +7,12 @@ import Navbar from '@/components/ui/Navbar'
 import Hero from '@/components/sections/Hero'
 import StatsStrip from '@/components/sections/StatsStrip'
 import Problem from '@/components/sections/Problem'
+import ForWho from '@/components/sections/ForWho'
 import Features from '@/components/sections/Features'
+import MidCTA from '@/components/sections/MidCTA'
 import HowItWorks from '@/components/sections/HowItWorks'
 import SocialProof from '@/components/sections/SocialProof'
-import Pricing from '@/components/sections/Pricing'
+import Security from '@/components/sections/Security'
 import Footer from '@/components/sections/Footer'
 
 export default function Home() {
@@ -18,18 +20,15 @@ export default function Home() {
     <>
       <Navbar />
       <main>
-        {/*
-          Cada seção aqui é um componente separado.
-          O conteúdo textual de todas elas vai para o HTML estático,
-          indexável pelo Google — diferente do Flutter que rendia tudo em Canvas.
-        */}
         <Hero />
         <StatsStrip />
         <Problem />
+        <ForWho />
         <Features />
+        <MidCTA />
         <HowItWorks />
         <SocialProof />
-        <Pricing />
+        <Security />
       </main>
       <Footer />
     </>

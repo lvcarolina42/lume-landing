@@ -1,98 +1,124 @@
-// Server Component — sem 'use client'.
-// Todo o texto aqui vai direto pro HTML estático.
-// O <h1> é o sinal mais forte que o Google usa para entender o tema da página.
+import Image from 'next/image'
+import SmartCTA from '@/components/ui/SmartCTA'
 
-const BULLETS = [
-  'Câmera ghost garante o mesmo ângulo em toda sessão',
-  'Antes/depois com sua logo, pronto para WhatsApp ou Instagram',
-  'Formulário clínico completo para botox e filler',
+const OUTCOMES = [
+  'Veja a linha do tempo de qualquer cliente em segundos',
+  'Fotos com ângulo idêntico sessão a sessão com câmera ghost',
+  'Antes/depois com sua logo prontos para compartilhar',
 ]
-
-const APP_STORE = 'https://apps.apple.com/us/app/lume-prontu%C3%A1rio-est%C3%A9tico/id6760568566'
-const PLAY_STORE = 'https://play.google.com/store/apps/details?id=br.com.lumeapp.lume&hl=pt'
 
 export default function Hero() {
   return (
     <section
-      className="gradient-hero pt-32 pb-20 px-6"
+      className="gradient-hero pt-28 pb-16 px-6 overflow-hidden"
       aria-label="Apresentação do Lume"
     >
-      <div className="max-w-4xl mx-auto text-center">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-8 items-center">
 
-        {/* Badge — indexável, aparece nos resultados de busca dentro da descrição */}
-        <p className="inline-flex items-center gap-2 bg-white/15 border border-white/30 text-white text-sm font-semibold px-4 py-2 rounded-full mb-8">
-          <span className="w-2 h-2 rounded-full bg-teal-100 animate-pulse" />
-          Grátis · iOS e Android
-        </p>
+        {/* ── Coluna de texto ── */}
+        <div className="text-center md:text-left order-2 md:order-1">
 
-        {/*
-          H1 — o mais importante para SEO.
-          Contém a keyword principal ("organizar clientes") e o diferencial ("sessões de estética").
-          Deve existir exatamente um H1 por página.
-        */}
-        <h1 className="text-4xl md:text-6xl font-extrabold text-white leading-tight tracking-tight mb-6">
-          Da sessão ao antes/depois,{' '}
-          <span className="text-teal-100">tudo organizado por cliente</span>
-        </h1>
+          <p className="animate-fade-in-up inline-flex items-center gap-2 bg-white/15 border border-white/25 text-white/90 text-xs font-semibold px-4 py-2 rounded-full mb-7 tracking-wide">
+            <span className="w-1.5 h-1.5 rounded-full bg-teal-300 animate-pulse" />
+            Grátis · iOS e Android · +500 profissionais
+          </p>
 
-        <p className="text-lg md:text-xl text-white/75 leading-relaxed mb-8 max-w-2xl mx-auto">
-          Para esteticistas, médicos e fisioterapeutas. Câmera ghost, antes/depois
-          com logo e ficha clínica de botox e filler — num único app.
-        </p>
+          <h1 className="animate-fade-in-up animation-delay-100 text-4xl md:text-[3.25rem] font-extrabold text-white leading-[1.1] tracking-tight mb-5">
+            Guarde a evolução{' '}
+            <br className="hidden md:block" />
+            de cada cliente.{' '}
+            <span className="text-teal-200">Do jeito que ela merece.</span>
+          </h1>
 
-        {/* Bullets — keywords naturais que o Google também indexa */}
-        <ul className="text-left inline-flex flex-col gap-3 mb-10">
-          {BULLETS.map((b) => (
-            <li key={b} className="flex items-start gap-3 text-white text-sm md:text-base">
-              <span className="mt-0.5 w-5 h-5 rounded-full bg-white/20 flex items-center justify-center shrink-0 text-xs">✓</span>
-              {b}
-            </li>
-          ))}
-        </ul>
+          <p className="animate-fade-in-up animation-delay-200 text-base md:text-lg text-white/70 leading-relaxed mb-7 max-w-lg">
+            Registre cada sessão com foto, câmera com guia de ângulo e ficha clínica completa.
+            Daqui a seis meses, você abre o app e mostra a transformação inteira — em segundos.
+          </p>
 
-        {/* CTAs com links reais — o Google segue esses links e passa autoridade às lojas */}
-        <div className="flex flex-wrap gap-4 justify-center mb-4">
-          <a
-            href={APP_STORE}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-white text-teal-700 font-bold px-8 py-4 rounded-full hover:bg-teal-50 transition-colors text-sm md:text-base"
-          >
-            Baixar na App Store
-          </a>
-          <a
-            href={PLAY_STORE}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="border border-white/60 text-white font-semibold px-8 py-4 rounded-full hover:border-white hover:bg-white/10 transition-colors text-sm md:text-base"
-          >
-            Baixar no Google Play
-          </a>
-        </div>
-
-        <p className="text-white/40 text-xs">Gratuito · Sem cartão · iOS e Android</p>
-
-        {/* Social proof — texto indexável, reforça autoridade */}
-        <div className="mt-10 flex items-center justify-center gap-3">
-          <div className="flex -space-x-2">
-            {['AM', 'RK', 'CS', 'LB', 'MP'].map((i) => (
-              <span
-                key={i}
-                className="w-8 h-8 rounded-full bg-teal-400 border-2 border-teal-800 flex items-center justify-center text-white text-xs font-bold"
-              >
-                {i[0]}
-              </span>
+          <ul className="animate-fade-in-up animation-delay-300 text-left inline-flex flex-col gap-2.5 mb-8">
+            {OUTCOMES.map((item) => (
+              <li key={item} className="flex items-start gap-3 text-white/85 text-sm">
+                <span className="mt-0.5 w-4 h-4 rounded-full bg-teal-400/30 border border-teal-400/60 flex items-center justify-center shrink-0">
+                  <span className="text-teal-300 text-[9px] font-bold">✓</span>
+                </span>
+                {item}
+              </li>
             ))}
+          </ul>
+
+          <div className="animate-fade-in-up animation-delay-400">
+            <SmartCTA variant="hero" />
+            <p className="text-white/35 text-xs mt-3">
+              Sem cartão · Sem cadastro obrigatório · Cancele quando quiser
+            </p>
           </div>
-          <div className="text-left">
-            <div className="flex gap-0.5">
-              {[...Array(5)].map((_, i) => (
-                <span key={i} className="text-yellow-400 text-sm">★</span>
+
+          {/* Social proof */}
+          <div className="mt-9 flex items-center gap-3 justify-center md:justify-start">
+            <div className="flex -space-x-2">
+              {['A', 'R', 'C', 'L', 'M'].map((l, i) => (
+                <span
+                  key={i}
+                  className="w-8 h-8 rounded-full bg-gradient-to-br from-teal-400 to-teal-600 border-2 border-teal-800/80 flex items-center justify-center text-white text-xs font-bold"
+                >
+                  {l}
+                </span>
               ))}
             </div>
-            <p className="text-white/70 text-xs">+500 profissionais de estética</p>
+            <div className="text-left">
+              <div className="flex gap-0.5 mb-0.5">
+                {[...Array(5)].map((_, i) => (
+                  <span key={i} className="text-yellow-400 text-xs">★</span>
+                ))}
+              </div>
+              <p className="text-white/60 text-xs leading-tight">
+                +500 esteticistas e médicos
+                <br />
+                <span className="text-white/40">5 estrelas na App Store</span>
+              </p>
+            </div>
           </div>
         </div>
+
+        {/* ── Dispositivos ── */}
+        <div className="order-1 md:order-2 flex justify-center md:justify-end relative h-[340px] md:h-[500px]">
+          <div className="absolute inset-0 bg-teal-400/15 rounded-full blur-3xl scale-75 pointer-events-none" />
+
+          {/* Phone traseiro */}
+          <div className="absolute right-0 md:right-4 top-4 md:top-0 w-36 md:w-48 rotate-6 translate-x-4">
+            <div className="bg-gray-900 rounded-[2rem] p-[5px] shadow-xl ring-1 ring-white/5 opacity-80">
+              <div className="rounded-[1.7rem] overflow-hidden">
+                <Image
+                  src="/images/site/screen_before_after_select.jpeg"
+                  alt="Antes e depois gerado pelo Lume"
+                  width={192}
+                  height={415}
+                  className="w-full object-cover"
+                  unoptimized
+                />
+              </div>
+            </div>
+          </div>
+
+          {/* Phone principal */}
+          <div className="absolute left-0 md:left-0 bottom-0 w-44 md:w-56 -rotate-3 translate-y-2">
+            <div className="relative bg-gray-950 rounded-[2.5rem] p-[7px] shadow-2xl ring-1 ring-white/10">
+              <div className="absolute top-3 left-1/2 -translate-x-1/2 w-12 h-[12px] bg-gray-950 rounded-full z-10" />
+              <div className="rounded-[2.1rem] overflow-hidden">
+                <Image
+                  src="/images/site/screen_home.jpeg"
+                  alt="Histórico de clientes no app Lume"
+                  width={224}
+                  height={484}
+                  className="w-full object-cover"
+                  priority
+                  unoptimized
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>
   )

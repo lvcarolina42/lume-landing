@@ -3,45 +3,57 @@
 const STEPS = [
   {
     n: 1,
-    title: 'Cadastre o cliente',
-    description: 'Nome e telefone, ou importe direto dos seus contatos. Em segundos o cliente está pronto.',
+    title: 'Cadastre a cliente',
+    description:
+      'Nome e telefone. Ou importe direto dos seus contatos. Em dez segundos ela está pronta para a primeira sessão — sem formulário longo, sem burocracia.',
   },
   {
     n: 2,
-    title: 'Fotografe com o ângulo certo',
-    description: 'A câmera ghost exibe a foto anterior em sobreposição. Alinhe o rosto e tire — o ângulo sai idêntico.',
+    title: 'Fotografe com referência',
+    description:
+      'A câmera ghost exibe a última foto em sobreposição. Você alinha o rosto e tira. O ângulo sai idêntico — e é assim que a comparação começa a fazer sentido.',
   },
   {
     n: 3,
-    title: 'Marque e registre',
-    description: 'Toque na foto para mapear os pontos. Preencha marca, lote, diluição e regiões aplicadas.',
+    title: 'Registre o que foi feito',
+    description:
+      'Marque pontos na foto, preencha lote e regiões aplicadas. Adicione observações. A sessão inteira documentada em menos de dois minutos.',
   },
   {
     n: 4,
-    title: 'Compartilhe o resultado',
-    description: 'Monte o antes/depois com sua logo. Escolha o formato e compartilhe pelo WhatsApp ou Instagram.',
+    title: 'Mostre a evolução',
+    description:
+      'Abra o perfil da cliente e veja a linha do tempo completa. Ou gere um antes/depois com sua logo e mande direto para ela.',
   },
 ]
 
 export function HowItWorks() {
   return (
-    <section id="como-funciona" className="bg-white py-20 px-6" aria-labelledby="how-heading">
-      <div className="max-w-5xl mx-auto text-center">
-        <span className="inline-block bg-teal-50 text-teal-700 text-xs font-bold tracking-widest px-4 py-1.5 rounded-full mb-4 uppercase">
-          Como funciona
-        </span>
-        <h2 id="how-heading" className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-14">
-          Da consulta ao Instagram em 4 passos simples
-        </h2>
+    <section id="como-funciona" className="bg-white py-24 px-6" aria-labelledby="how-heading">
+      <div className="max-w-5xl mx-auto">
+        <div className="text-center mb-16">
+          <span className="inline-block bg-teal-50 text-teal-700 text-xs font-bold tracking-widest px-4 py-1.5 rounded-full mb-4 uppercase">
+            Como funciona
+          </span>
+          <h2 id="how-heading" className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-3 leading-tight">
+            Da primeira sessão ao registro completo.
+            <br />
+            <span className="text-gray-400 font-medium">Em menos de dois minutos.</span>
+          </h2>
+        </div>
 
         <ol className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          {STEPS.map((s) => (
-            <li key={s.n} className="flex flex-col items-center text-center">
-              <span className="w-14 h-14 rounded-full bg-teal-600 text-white text-2xl font-extrabold flex items-center justify-center mb-4 shadow-lg">
+          {STEPS.map((s, i) => (
+            <li
+              key={s.n}
+              className="flex flex-col items-center text-center animate-fade-in-up"
+              style={{ animationDelay: `${i * 100}ms` }}
+            >
+              <span className="w-14 h-14 rounded-2xl bg-teal-600 text-white text-xl font-extrabold flex items-center justify-center mb-5 shadow-lg shadow-teal-600/25">
                 {s.n}
               </span>
-              <h3 className="font-bold text-gray-900 mb-2">{s.title}</h3>
-              <p className="text-gray-500 text-sm leading-relaxed">{s.description}</p>
+              <h3 className="font-bold text-gray-900 mb-2 text-sm">{s.title}</h3>
+              <p className="text-gray-400 text-sm leading-relaxed">{s.description}</p>
             </li>
           ))}
         </ol>
@@ -54,61 +66,101 @@ export function HowItWorks() {
 
 const TESTIMONIALS = [
   {
-    quote: 'Na primeira semana já economizei o tempo que gastava anotando em papel. O registro de lote e diluição me deu uma segurança jurídica que eu não tinha antes.',
+    quote:
+      'Minha cliente me pediu para ver como ela estava há oito meses. Abri o Lume, mostrei a linha do tempo completa e ela ficou em silêncio por uns segundos. Depois me disse que queria continuar o tratamento. Esse momento não existiria sem o registro.',
     name: 'Dra. Ana M.',
     role: 'Médica Esteticista · São Paulo',
     initials: 'AM',
+    highlight: 'A evolução que convenceu a cliente a continuar',
   },
   {
-    quote: 'A câmera ghost mudou minha prática. Os ângulos ficaram consistentes e meus antes/depois ficaram muito mais profissionais. Os clientes percebem na hora.',
+    quote:
+      'Eu sabia que meu trabalho era bom, mas não conseguia provar nas fotos. Com ângulos sempre diferentes, a comparação não impressionava. A câmera ghost mudou isso. Agora os antes/depois falam sozinhos — e meus seguidores percebem.',
     name: 'Dr. Rafael K.',
     role: 'Dermatologista · Rio de Janeiro',
     initials: 'RK',
+    highlight: 'Antes/depois que finalmente impressiona',
   },
   {
-    quote: 'Uso o Lume em todas as consultas. O antes/depois com minha logo virou cartão de visita no Instagram. Os clientes chegam já conhecendo meu trabalho.',
+    quote:
+      'O que mais gosto é poder abrir o prontuário antes da sessão e ver exatamente o que foi feito da última vez. Lote, regiões, quantidade. Não dependo mais de memória — e isso me dá uma segurança completamente diferente.',
     name: 'Dra. Camila S.',
     role: 'Médica Esteta · Belo Horizonte',
     initials: 'CS',
+    highlight: 'Segurança clínica sem depender de memória',
   },
 ]
 
 export function SocialProof() {
   return (
-    <section className="bg-gray-50 py-20 px-6" aria-labelledby="testimonials-heading">
-      <div className="max-w-5xl mx-auto text-center">
-        <div className="flex justify-center gap-1 mb-4">
-          {[...Array(5)].map((_, i) => <span key={i} className="text-yellow-400 text-2xl">★</span>)}
+    <section className="bg-gray-50 py-24 px-6" aria-labelledby="testimonials-heading">
+      <div className="max-w-5xl mx-auto">
+        <div className="text-center mb-14">
+          <div className="flex justify-center gap-1 mb-4">
+            {[...Array(5)].map((_, i) => (
+              <span key={i} className="text-yellow-400 text-xl">★</span>
+            ))}
+          </div>
+          <h2 id="testimonials-heading" className="text-3xl font-extrabold text-gray-900 mb-2">
+            O que muda quando a evolução fica registrada
+          </h2>
+          <p className="text-gray-400 text-base">
+            Profissionais reais. Situações reais.
+          </p>
         </div>
-        <h2 id="testimonials-heading" className="text-3xl font-extrabold text-gray-900 mb-2">
-          Quem já usa fala por nós
-        </h2>
-        <p className="text-gray-500 mb-12">
-          Esteticistas, dermatologistas e profissionais de estética de todo o Brasil
-        </p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {TESTIMONIALS.map((t) => (
-            // itemScope/itemType são microdados — reforçam o Schema para o Google
             <blockquote
               key={t.name}
-              className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 text-left hover:-translate-y-1 transition-transform duration-300"
+              className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 text-left hover:-translate-y-1 transition-transform duration-300 flex flex-col"
               itemScope
               itemType="https://schema.org/Review"
             >
-              <div className="flex gap-0.5 mb-4">
-                {[...Array(5)].map((_, i) => <span key={i} className="text-yellow-400 text-sm">★</span>)}
+              <div itemProp="itemReviewed" itemScope itemType="https://schema.org/SoftwareApplication" hidden>
+                <meta itemProp="name" content="Lume" />
+                <meta itemProp="operatingSystem" content="iOS, Android" />
+                <meta itemProp="applicationCategory" content="HealthApplication" />
+                <div itemProp="offers" itemScope itemType="https://schema.org/Offer">
+                  <meta itemProp="price" content="0" />
+                  <meta itemProp="priceCurrency" content="BRL" />
+                </div>
+                <div itemProp="aggregateRating" itemScope itemType="https://schema.org/AggregateRating">
+                  <meta itemProp="ratingValue" content="5" />
+                  <meta itemProp="ratingCount" content="500" />
+                  <meta itemProp="bestRating" content="5" />
+                </div>
               </div>
-              <p className="text-gray-700 text-sm leading-relaxed italic mb-6" itemProp="reviewBody">
+              <div itemProp="reviewRating" itemScope itemType="https://schema.org/Rating" hidden>
+                <meta itemProp="ratingValue" content="5" />
+                <meta itemProp="bestRating" content="5" />
+              </div>
+              <p className="text-xs font-bold text-teal-600 bg-teal-50 px-3 py-1.5 rounded-full inline-block mb-5 self-start leading-snug">
+                {t.highlight}
+              </p>
+              <p
+                className="text-gray-600 text-sm leading-relaxed mb-6 flex-1"
+                itemProp="reviewBody"
+              >
                 &ldquo;{t.quote}&rdquo;
               </p>
-              <footer className="flex items-center gap-3">
-                <span className="w-10 h-10 rounded-full bg-teal-600 text-white text-xs font-bold flex items-center justify-center">
+              <span itemProp="author" itemScope itemType="https://schema.org/Person" hidden>
+                <meta itemProp="name" content={t.name} />
+              </span>
+              <footer className="flex items-center gap-3 pt-5 border-t border-gray-100">
+                <span className="w-10 h-10 rounded-full bg-gradient-to-br from-teal-400 to-teal-700 text-white text-xs font-bold flex items-center justify-center shrink-0">
                   {t.initials}
                 </span>
                 <div>
-                  <cite className="font-bold text-gray-900 text-sm not-italic" itemProp="author">{t.name}</cite>
+                  <cite className="font-bold text-gray-900 text-sm not-italic block">
+                    {t.name}
+                  </cite>
                   <p className="text-gray-400 text-xs">{t.role}</p>
+                </div>
+                <div className="ml-auto flex gap-0.5">
+                  {[...Array(5)].map((_, i) => (
+                    <span key={i} className="text-yellow-400 text-xs">★</span>
+                  ))}
                 </div>
               </footer>
             </blockquote>
@@ -119,131 +171,51 @@ export function SocialProof() {
   )
 }
 
-// ─── Pricing ──────────────────────────────────────────────────────────────────
-
-const FREE_FEATURES = [
-  'Até 50 clientes cadastrados',
-  'Até 30 sessões por cliente',
-  'Câmera com foto ghost',
-  'Mapa de anotações na foto',
-  'Registro de botox e filler',
-  'Antes/depois para compartilhar',
-]
-
-const PRO_FEATURES = [
-  'Clientes ilimitados',
-  'Sessões ilimitadas por cliente',
-  'Logo personalizada na montagem',
-  'Quadrado, retrato (4:5) e stories (9:16)',
-  'Marca d\'água personalizada',
-  'Suporte prioritário',
-]
-
-export function Pricing() {
-  return (
-    <section id="precos" className="bg-white py-20 px-6" aria-labelledby="pricing-heading">
-      <div className="max-w-4xl mx-auto text-center">
-        <span className="inline-block bg-teal-50 text-teal-700 text-xs font-bold tracking-widest px-4 py-1.5 rounded-full mb-4 uppercase">
-          Planos
-        </span>
-        <h2 id="pricing-heading" className="text-3xl font-extrabold text-gray-900 mb-2">
-          Simples e transparente.
-        </h2>
-        <p className="text-gray-500 mb-12">
-          Comece grátis. Enquanto estiver no beta, o Lume Pro é de graça para todo mundo.
-        </p>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto">
-          {/* Plano Gratuito */}
-          <div className="border border-gray-200 rounded-2xl p-8 text-left">
-            <h3 className="font-bold text-gray-900 text-xl mb-2">Gratuito</h3>
-            <p className="text-4xl font-extrabold text-gray-900 mb-1">Grátis</p>
-            <p className="text-gray-400 text-sm mb-6">para sempre, sem cartão</p>
-            <ul className="space-y-3 mb-8">
-              {FREE_FEATURES.map((f) => (
-                <li key={f} className="flex items-center gap-2 text-sm text-gray-600">
-                  <span className="text-teal-600">✓</span> {f}
-                </li>
-              ))}
-            </ul>
-            <a
-              href="https://apps.apple.com/us/app/lume-prontu%C3%A1rio-est%C3%A9tico/id6760568566"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block text-center border border-teal-600 text-teal-600 font-semibold py-3 rounded-full hover:bg-teal-50 transition-colors"
-            >
-              Baixar Grátis
-            </a>
-          </div>
-
-          {/* Lume Pro */}
-          <div className="border-2 border-teal-600 rounded-2xl overflow-hidden text-left shadow-lg">
-            <div className="bg-teal-600 py-2.5 text-center text-white text-sm font-bold">
-              ⭐ Mais Popular
-            </div>
-            <div className="p-8">
-              <h3 className="font-bold text-gray-900 text-xl mb-2">Lume Pro</h3>
-              <p className="text-4xl font-extrabold text-teal-600 mb-1">Grátis no beta</p>
-              <p className="text-gray-400 text-sm mb-6">R$ 29/mês após o lançamento</p>
-              <ul className="space-y-3 mb-8">
-                {PRO_FEATURES.map((f) => (
-                  <li key={f} className="flex items-center gap-2 text-sm text-gray-600">
-                    <span className="text-teal-600">✓</span> {f}
-                  </li>
-                ))}
-              </ul>
-              <a
-                href="https://apps.apple.com/us/app/lume-prontu%C3%A1rio-est%C3%A9tico/id6760568566"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block text-center bg-teal-600 text-white font-semibold py-3 rounded-full hover:bg-teal-700 transition-colors"
-              >
-                Ativar Lume Pro
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  )
-}
-
 // ─── Footer ───────────────────────────────────────────────────────────────────
 
-const APP_STORE = 'https://apps.apple.com/us/app/lume-prontu%C3%A1rio-est%C3%A9tico/id6760568566'
-const PLAY_STORE = 'https://play.google.com/store/apps/details?id=br.com.lumeapp.lume&hl=pt'
+import { APP_STORE_URL, PLAY_STORE_URL } from '@/lib/stores'
+import StoreBadge from '@/components/ui/StoreBadge'
 
 export function Footer() {
   return (
     <>
       {/* CTA Strip */}
-      <div className="gradient-cta py-20 px-6 text-center">
-        <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-3">
-          Comece hoje. É grátis, sem cartão.
+      <div className="gradient-cta py-24 px-6 text-center">
+        <p className="text-teal-200/70 text-xs font-bold tracking-widest uppercase mb-5">
+          Comece agora
+        </p>
+        <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-3 leading-tight">
+          Toda sessão é parte de uma história.
+          <br className="hidden md:block" />
+          Comece a guardar a sua.
         </h2>
-        <p className="text-white/70 mb-8">iOS e Android · Sem compromisso · Cancele quando quiser.</p>
-        <a
-          href={APP_STORE}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-block bg-white text-teal-700 font-bold px-8 py-4 rounded-full hover:bg-teal-50 transition-colors"
-        >
-          Baixar o Lume Grátis
-        </a>
+        <p className="text-white/55 text-base mb-8 max-w-sm mx-auto">
+          App gratuito para iOS e Android. Sem cartão, sem burocracia.
+        </p>
+        <div className="flex flex-col sm:flex-row gap-3 justify-center">
+          <StoreBadge store="apple" url={APP_STORE_URL} variant="light" />
+          <StoreBadge store="android" url={PLAY_STORE_URL} variant="light" />
+        </div>
       </div>
 
       {/* Footer */}
       <footer className="bg-gray-950 py-10 px-6 text-center">
-        <p className="text-white font-extrabold text-xl mb-1">✦ Lume</p>
-        <p className="text-gray-500 text-sm mb-6">
-          Para qualquer profissional que registra evolução visual de clientes.
+        <p className="text-white font-extrabold text-xl mb-1 tracking-tight">✦ Lume</p>
+        <p className="text-gray-600 text-sm mb-7">
+          Prontuário visual para quem leva o trabalho a sério.
         </p>
+        <div className="flex flex-col sm:flex-row gap-3 justify-center mb-7">
+          <StoreBadge store="apple" url={APP_STORE_URL} variant="outline" />
+          <StoreBadge store="android" url={PLAY_STORE_URL} variant="outline" />
+        </div>
         <nav className="flex flex-wrap justify-center gap-6 mb-6">
-          <a href={APP_STORE} target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-teal-400 text-sm transition-colors">App Store</a>
-          <a href={PLAY_STORE} target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-teal-400 text-sm transition-colors">Google Play</a>
-          <a href="https://www.instagram.com/br_lume" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-teal-400 text-sm transition-colors">Instagram</a>
-          <a href="mailto:lvcarolina42@gmail.com" className="text-gray-500 hover:text-teal-400 text-sm transition-colors">Contato</a>
-          <a href="https://lumeapp.com.br/privacidade" className="text-gray-500 hover:text-teal-400 text-sm transition-colors">Privacidade</a>
+          <a href="https://www.instagram.com/br_lume" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-teal-400 text-sm transition-colors">Instagram</a>
+          <a href="mailto:lvcarolina42@gmail.com" className="text-gray-600 hover:text-teal-400 text-sm transition-colors">Contato</a>
+          <a href="/faq" className="text-gray-600 hover:text-teal-400 text-sm transition-colors">Perguntas frequentes</a>
+          <a href="/como-funciona" className="text-gray-600 hover:text-teal-400 text-sm transition-colors">Como funciona</a>
+          <a href="/glossario" className="text-gray-600 hover:text-teal-400 text-sm transition-colors">Glossário</a>
+          <a href="/alternativas" className="text-gray-600 hover:text-teal-400 text-sm transition-colors">Comparações</a>
+          <a href="https://lumeapp.com.br/privacidade" className="text-gray-600 hover:text-teal-400 text-sm transition-colors">Privacidade</a>
         </nav>
         <p className="text-gray-700 text-xs">© 2026 Lume App. Todos os direitos reservados.</p>
       </footer>

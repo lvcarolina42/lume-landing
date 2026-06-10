@@ -10,4 +10,28 @@
     <xhtml:link rel="alternate" hreflang="en"    href="https://brlume.app/en"/>
     <xhtml:link rel="alternate" hreflang="es"    href="https://brlume.app/es"/>
   </url>
+  <url>
+    <loc>https://brlume.app/faq</loc>
+    <lastmod>2026-06-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://brlume.app/como-funciona</loc>
+    <lastmod>2026-06-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://brlume.app/glossario</loc>
+    <lastmod>2026-06-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brlume.app/alternativas</loc>
+    <lastmod>2026-06-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>
