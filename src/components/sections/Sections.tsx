@@ -215,7 +215,7 @@ export function Footer() {
           <a href="/como-funciona" className="text-gray-600 hover:text-teal-400 text-sm transition-colors">Como funciona</a>
           <a href="/glossario" className="text-gray-600 hover:text-teal-400 text-sm transition-colors">Glossário</a>
           <a href="/alternativas" className="text-gray-600 hover:text-teal-400 text-sm transition-colors">Comparações</a>
-          <a href="https://lumeapp.com.br/privacidade" className="text-gray-600 hover:text-teal-400 text-sm transition-colors">Privacidade</a>
+          <a href="/privacidade" className="text-gray-600 hover:text-teal-400 text-sm transition-colors">Privacidade</a>
         </nav>
         <p className="text-gray-700 text-xs">© 2026 Lume App. Todos os direitos reservados.</p>
       </footer>
