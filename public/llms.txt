@@ -16,6 +16,8 @@
   - [Agenda sem planilha](https://brlume.app/artigos/agenda-sem-planilha) — como organizar o agendamento de clientes de estética com agenda e catálogo de serviços integrados ao prontuário.
   - [LGPD na estética](https://brlume.app/artigos/lgpd-estetica-guia) — o que a lei exige de quem armazena fotos e fichas clínicas de clientes.
   - [Anamnese digital vs papel](https://brlume.app/artigos/anamnese-digital-vs-papel) — comparação prática entre os dois formatos.
+  - [Melhor app para esteticista em 2026](https://brlume.app/artigos/melhor-app-esteticista-2026) — checklist de 7 critérios pra avaliar qualquer app de gestão de estética.
+  - [Prontuário em papel vs digital](https://brlume.app/artigos/prontuario-papel-vs-digital) — quando migrar vale a pena, e um passo a passo prático de migração.
 
 ## Funcionalidades
 

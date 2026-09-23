@@ -42,6 +42,18 @@ const ARTICLES = [
     excerpt:
       'Comparação prática entre anamnese em papel e digital: organização, segurança jurídica, processo de preenchimento e quando o papel ainda pode fazer sentido.',
   },
+  {
+    slug: 'melhor-app-esteticista-2026',
+    title: 'Melhor app para esteticista em 2026: o que avaliar antes de escolher',
+    excerpt:
+      'Checklist de 7 critérios pra avaliar qualquer app de gestão de estética: fotos consistentes, ficha clínica estruturada, anamnese, agenda, LGPD e mais.',
+  },
+  {
+    slug: 'prontuario-papel-vs-digital',
+    title: 'Prontuário em papel vs digital: vale a pena migrar em 2026?',
+    excerpt:
+      'Os custos ocultos do papel, o que o digital exige em troca, quando migrar realmente vale a pena, e um passo a passo prático de migração.',
+  },
 ]
 
 const breadcrumbSchema = {

@@ -48,6 +48,14 @@ Fotos e anamneses vinculadas a um cliente são dados pessoais sensíveis pela LG
 
 Comparação entre anamnese em papel e digital: organização e busca (ficha física vs perfil digital pesquisável), segurança jurídica (risco de perda física vs timestamp na nuvem), processo de preenchimento (prancheta + digitação posterior vs preenchimento direto no celular, presencial ou por link). O Lume oferece anamnese digital com 24 perguntas clínicas editáveis, assinatura na tela, e histórico de status (pendente/em andamento/concluída) por cliente.
 
+## Artigo: Melhor app para esteticista em 2026 (https://brlume.app/artigos/melhor-app-esteticista-2026)
+
+Sete critérios pra avaliar qualquer app de gestão de estética: fotos com ângulo consistente, ficha clínica estruturada (não texto livre), anamnese digital com assinatura, agenda vinculada ao prontuário, conformidade com a LGPD, funcionamento offline, e clareza sobre limites do plano gratuito. Sinais de que um app não foi pensado para estética: falta de campo específico para lote, não separar cliente de sessão, ausência de mecanismo de consistência fotográfica.
+
+## Artigo: Prontuário em papel vs digital (https://brlume.app/artigos/prontuario-papel-vs-digital)
+
+Custos ocultos do papel: tempo procurando ficha, risco de perda física, impossibilidade de busca instantânea. Custos do digital: curva de adaptação, dependência de celular/tablet e conectividade. Migrar vale a pena quando: volume de clientes cresce, há uso de botox/filler exigindo rastreabilidade de lote, fotos de antes/depois já são rotina, ou múltiplos profissionais acessam o mesmo histórico. Passo a passo: não digitalizar retroativamente tudo de uma vez; configurar catálogo de serviços e anamnese antes do primeiro atendimento digital; migrar cliente por cliente, no retorno de cada um; manter o hábito nas primeiras semanas.
+
 ## FAQ completo (https://brlume.app/faq)
 
 ### Sobre o Lume
