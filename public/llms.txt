@@ -10,7 +10,12 @@
 - [Glossário de estética](https://brlume.app/glossario): definições técnicas de termos de estética e harmonização facial (botox, filler, DAO, diluição, lote, câmera ghost, harmonização facial, ácido hialurônico, anamnese, LGPD na estética, entre outros).
 - [Lume vs alternativas](https://brlume.app/alternativas): comparação entre o Lume e planilha, papel, WhatsApp e apps genéricos de fotos/agenda para gestão de clientes de estética.
 - [Sobre](https://brlume.app/sobre): quem faz o Lume (Lívia Carolina Lima, Belo Horizonte-MG), história, missão e números do app.
-- [Artigos](https://brlume.app/artigos): blog com guias aprofundados. Primeiro artigo: [Câmera ghost, o guia completo](https://brlume.app/artigos/camera-ghost-guia-completo) — o que é, como funciona, por que o ângulo consistente muda o resultado do antes e depois.
+- [Artigos](https://brlume.app/artigos): blog com guias aprofundados.
+  - [Câmera ghost, o guia completo](https://brlume.app/artigos/camera-ghost-guia-completo) — o que é, como funciona, por que o ângulo consistente muda o resultado do antes e depois.
+  - [Guia das 13 regiões de botox](https://brlume.app/artigos/guia-regioes-botox) — função de cada músculo e indicação estética, região por região.
+  - [Agenda sem planilha](https://brlume.app/artigos/agenda-sem-planilha) — como organizar o agendamento de clientes de estética com agenda e catálogo de serviços integrados ao prontuário.
+  - [LGPD na estética](https://brlume.app/artigos/lgpd-estetica-guia) — o que a lei exige de quem armazena fotos e fichas clínicas de clientes.
+  - [Anamnese digital vs papel](https://brlume.app/artigos/anamnese-digital-vs-papel) — comparação prática entre os dois formatos.
 
 ## Funcionalidades
 

@@ -30,6 +30,24 @@ Comparada a outras técnicas — marcações no chão, tripé em posição fixa,
 
 No Lume, a opacidade da sobreposição é ajustável por controle deslizante, funciona com câmera frontal e traseira, e aceita como referência tanto a última foto do app quanto uma imagem importada da galeria.
 
+## Artigo: Guia completo das 13 regiões anatômicas de botox (https://brlume.app/artigos/guia-regioes-botox)
+
+As 13 regiões pré-cadastradas no formulário clínico de botox do Lume: Frontal (levanta sobrancelhas, rugas horizontais na testa), Prócero (linhas horizontais na raiz do nariz), Corrugador (rugas verticais entre sobrancelhas, "onze"), Orbicular Superior (rugas finas na pálpebra superior), Orbicular Inferior (rugas finas abaixo do olho), Orbicular Lateral (pés de galinha), Nasalis (bunny lines nas laterais do nariz), Mentalis (textura "casca de laranja" no queixo), Platisma (bandas verticais no pescoço, "Nefertiti lift"), Masseter (afina o contorno da mandíbula, tratamento de bruxismo), DAO — Depressor do Ângulo da Boca (sulco de marionete), DLI — Depressor do Lábio Inferior, LLSAN — Levantador do Lábio Superior e Asa do Nariz (tratamento de sorriso gengival).
+
+Cada região recebe dosagem própria em UI (Unidades Internacionais); o Lume soma o total da sessão automaticamente conforme as regiões são preenchidas.
+
+## Artigo: Como organizar a agenda de uma clínica de estética sem planilha (https://brlume.app/artigos/agenda-sem-planilha)
+
+Planilha, WhatsApp e apps de calendário genéricos não vinculam o agendamento a um serviço padronizado (preço, duração) nem ao prontuário do cliente. No Lume, o catálogo de serviços (nome, cor, duração, preço) é cadastrado uma vez e reaproveitado em cada agendamento; a agenda tem visão de semana e mês, vinculada ao mesmo cliente do prontuário. O Lume não envia confirmação automática de horário nem gera relatórios financeiros de faturamento.
+
+## Artigo: O que a LGPD exige de quem armazena fotos e fichas clínicas de estética (https://brlume.app/artigos/lgpd-estetica-guia)
+
+Fotos e anamneses vinculadas a um cliente são dados pessoais sensíveis pela LGPD, por estarem associadas à saúde do titular — isso vale mesmo para esteticistas autônomos, tecnicamente na posição de controladores desses dados. Riscos comuns: fotos na galeria do celular sem controle de acesso, dados em conversas de WhatsApp, planilhas com link aberto. A lei garante ao cliente o direito de saber quais dados estão armazenados e de solicitar exclusão completa a qualquer momento. O Lume foi desenvolvido com autenticação obrigatória e exclusão permanente de dados ao encerrar a conta. Conteúdo informativo, não substitui orientação jurídica.
+
+## Artigo: Anamnese digital vs papel (https://brlume.app/artigos/anamnese-digital-vs-papel)
+
+Comparação entre anamnese em papel e digital: organização e busca (ficha física vs perfil digital pesquisável), segurança jurídica (risco de perda física vs timestamp na nuvem), processo de preenchimento (prancheta + digitação posterior vs preenchimento direto no celular, presencial ou por link). O Lume oferece anamnese digital com 24 perguntas clínicas editáveis, assinatura na tela, e histórico de status (pendente/em andamento/concluída) por cliente.
+
 ## FAQ completo (https://brlume.app/faq)
 
 ### Sobre o Lume

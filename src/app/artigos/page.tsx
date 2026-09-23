@@ -18,6 +18,30 @@ const ARTICLES = [
     excerpt:
       'O que é câmera ghost, como ela funciona passo a passo, por que o ângulo consistente muda tudo no antes e depois, e como tirar o máximo dela na prática.',
   },
+  {
+    slug: 'guia-regioes-botox',
+    title: 'Guia completo das 13 regiões anatômicas de aplicação de botox',
+    excerpt:
+      'Frontal, prócero, corrugador, orbicular, nasalis, mentalis, platisma, masseter, DAO, DLI e LLSAN: função de cada músculo e indicação estética, região por região.',
+  },
+  {
+    slug: 'agenda-sem-planilha',
+    title: 'Como organizar a agenda de uma clínica de estética sem planilha',
+    excerpt:
+      'Os problemas do agendamento manual por planilha, WhatsApp ou app genérico — e como agenda, catálogo de serviços e prontuário integrados resolvem isso.',
+  },
+  {
+    slug: 'lgpd-estetica-guia',
+    title: 'O que a LGPD exige de quem armazena fotos e fichas clínicas de estética',
+    excerpt:
+      'Por que fotos e anamneses de clientes são dados sensíveis, os riscos de guardar isso no WhatsApp ou na galeria do celular, e boas práticas para reduzir o risco.',
+  },
+  {
+    slug: 'anamnese-digital-vs-papel',
+    title: 'Anamnese digital vs papel: o que muda na prática clínica',
+    excerpt:
+      'Comparação prática entre anamnese em papel e digital: organização, segurança jurídica, processo de preenchimento e quando o papel ainda pode fazer sentido.',
+  },
 ]
 
 export default function ArtigosPage() {
