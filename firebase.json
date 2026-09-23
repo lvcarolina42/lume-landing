@@ -2,7 +2,7 @@
   "hosting": {
     "site": "lume-landing",
     "public": "out",
-    "ignore": ["firebase.json", "**/.*"],
+    "ignore": ["firebase.json", "**/.*", "instagram-templates.html"],
     "cleanUrls": true,
     "trailingSlash": false,
     "redirects": [

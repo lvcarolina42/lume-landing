@@ -7,7 +7,7 @@ import { APP_STORE_URL } from '@/lib/stores'
 export const metadata: Metadata = {
   title: 'Perguntas Frequentes — Lume App para Esteticistas',
   description:
-    'Tudo sobre o Lume: câmera ghost, ficha clínica de botox e filler, geração de antes e depois e organização de clientes. O app gratuito para esteticistas e médicos estetas.',
+    'Tudo sobre o Lume: câmera ghost, ficha clínica de botox e filler, anamnese digital, geração de antes e depois e organização de clientes. O app gratuito para esteticistas e médicos estetas.',
   alternates: {
     canonical: 'https://brlume.app/faq',
   },
@@ -30,17 +30,27 @@ const CATEGORIES = [
       {
         question: 'O Lume é gratuito?',
         answer:
-          'Sim, o Lume é gratuito para baixar e usar. O plano gratuito permite cadastrar até 50 clientes com até 30 sessões cada, com acesso completo a todas as funcionalidades — câmera ghost, ficha clínica, antes e depois. Para quem precisa de mais capacidade, o Lume Pro oferece clientes e sessões ilimitados. Durante o período de beta, todos os usuários têm acesso ao plano Pro sem custo.',
+          'Sim, o Lume é gratuito para baixar e usar. O plano gratuito permite cadastrar até 50 clientes com até 30 sessões cada, com acesso completo a todas as funcionalidades — câmera ghost, ficha clínica, anamnese digital, antes e depois. Para quem precisa de mais capacidade, o Lume Pro oferece clientes e sessões ilimitados. Durante o período de beta, todos os usuários têm acesso ao plano Pro sem custo.',
+      },
+      {
+        question: 'Preciso criar conta para usar o Lume?',
+        answer:
+          'Não. Ao abrir o Lume pela primeira vez, você pode escolher "continuar como convidado" e já cadastrar clientes, tirar fotos e registrar sessões sem preencher nenhum formulário de cadastro. Criar uma conta com Google ou Apple é opcional e pode ser feito depois, a qualquer momento, sem perder nada do que já foi registrado como convidado — útil principalmente se você quiser acessar os mesmos dados de outro aparelho.',
       },
       {
         question: 'O Lume está disponível para iOS e Android?',
         answer:
-          'Sim, o Lume está disponível para iOS na App Store e para Android na Google Play Store. O app funciona em iPhones e iPads com iOS 14 ou superior, e em dispositivos Android com versão 8.0 ou superior. Os dados ficam sincronizados na nuvem, então você pode trocar de celular ou usar em mais de um dispositivo sem perder nenhum registro. Basta fazer login com a mesma conta para ter acesso a todos os seus clientes e sessões.',
+          'Sim, o Lume está disponível para iOS na App Store e para Android na Google Play Store. O app funciona em iPhones e iPads com iOS 15 ou superior, e em versões recentes do Android. Os dados ficam sincronizados na nuvem, então você pode trocar de celular ou usar em mais de um dispositivo sem perder nenhum registro — basta entrar com a mesma conta Google ou Apple para ter acesso a todos os seus clientes e sessões.',
+      },
+      {
+        question: 'O Lume funciona em outros idiomas além do português?',
+        answer:
+          'Sim. O Lume está disponível em português, inglês e espanhol. O idioma do app segue automaticamente a configuração do celular, o que é útil para profissionais que atendem clientes internacionais ou trabalham fora do Brasil. Campos como telefone também aceitam números de outros países, com seletor de código internacional.',
       },
       {
         question: 'Meus dados ficam seguros?',
         answer:
-          'Sim. Cada profissional acessa exclusivamente seus próprios dados — nenhum outro usuário tem acesso à sua lista de clientes. As fotos e fichas clínicas são armazenadas na nuvem com autenticação obrigatória, e o Lume foi desenvolvido em conformidade com a LGPD. Se você decidir encerrar a conta, todos os dados — fotos, fichas e histórico — são removidos permanentemente, sem exceções.',
+          'Sim. Cada profissional acessa exclusivamente seus próprios dados — nenhum outro usuário tem acesso à sua lista de clientes. As fotos, fichas clínicas e anamneses são armazenadas na nuvem com autenticação obrigatória, e o Lume foi desenvolvido em conformidade com a LGPD. Se você decidir encerrar a conta, todos os dados — fotos, fichas e histórico — são removidos permanentemente, sem exceções.',
       },
     ],
   },
@@ -80,12 +90,12 @@ const CATEGORIES = [
       {
         question: 'Quais regiões anatômicas de botox o Lume registra?',
         answer:
-          'O Lume oferece 13 regiões pré-cadastradas para registro de botox, cobrindo os principais pontos de aplicação em harmonização facial: Frontal, Prócero, Corrugador, Orbicular do Olho, Nasal, Sorriso Gengival, DAO (Depressor do Ângulo da Boca), Mentoniano, Masseter, Platisma e outras regiões personalizáveis. Para cada região, você informa a quantidade em unidades (UI) e o total da sessão é calculado automaticamente. Esse nível de detalhe transforma o Lume em um prontuário clínico completo, não apenas um álbum de fotos.',
+          'O Lume tem 13 regiões pré-cadastradas para registro de botox, cobrindo os principais pontos de aplicação em harmonização facial: Frontal, Prócero, Corrugador, Orbicular Superior, Orbicular Inferior, Orbicular Lateral, Nasalis, Mentalis, Platisma, Masseter, DAO, DLI e LLSAN. Para cada região, você informa a quantidade em unidades (UI) e o total da sessão é calculado automaticamente. Esse nível de detalhe transforma o Lume em um prontuário clínico completo, não apenas um álbum de fotos.',
       },
       {
         question: 'Como registrar preenchimento facial no celular?',
         answer:
-          'O registro de filler no Lume segue a mesma lógica do botox: você seleciona a marca, informa o lote e escolhe as regiões de aplicação. O app oferece 11 regiões pré-cadastradas para preenchimento facial: Lábios, Sulco Nasogeniano, Malar, Olheira, Mento, Ângulo da Mandíbula, Contorno da Mandíbula, Pré-Jowls, Têmpora, Rinomodelação e outras. Para cada região, você informa o volume em ml e o total é calculado automaticamente. É possível registrar múltiplas seringas e regiões na mesma sessão, com todos os dados salvos na nuvem.',
+          'O registro de filler no Lume segue a mesma lógica do botox: você seleciona a marca, informa o lote e escolhe as regiões de aplicação. O app tem 11 regiões pré-cadastradas para preenchimento facial: Lábios, Sulco Nasogeniano, Malar, Bigode Chinês, Pré-jowl, Mento, Comissura Labial, Periorbital, Temporal, Nariz e Mandíbula. Para cada região, você informa o volume em ml e o total é calculado automaticamente. É possível registrar múltiplas seringas e regiões na mesma sessão, com todos os dados salvos na nuvem.',
       },
       {
         question: 'É possível registrar botox e filler na mesma sessão?',
@@ -96,6 +106,31 @@ const CATEGORIES = [
         question: 'Por que é importante registrar o lote do botox?',
         answer:
           'O registro do número de lote de botox e filler é uma exigência de boas práticas clínicas e pode ser decisivo em situações de reação adversa, auditoria ou ação judicial. Com o lote documentado no Lume, você consegue identificar rapidamente qual produto foi usado em cada paciente e em qual data — informação essencial para comunicar à vigilância sanitária em caso de recall ou evento adverso. Além da proteção profissional, o registro de lote demonstra seriedade e fortalece a confiança do paciente. O Lume armazena essas informações na nuvem, acessíveis a qualquer momento.',
+      },
+    ],
+  },
+  {
+    title: 'Anamnese Digital',
+    items: [
+      {
+        question: 'O que é a anamnese digital do Lume?',
+        answer:
+          'É a ficha de anamnese preenchida pela própria cliente, direto no celular ou tablet, em vez de papel. Ela informa dados pessoais e responde perguntas de saúde relevantes para o procedimento, e assina o termo de responsabilidade com o dedo na tela. Tudo fica salvo automaticamente no prontuário, revisável pelo profissional antes da sessão — sem digitar nada manualmente depois.',
+      },
+      {
+        question: 'A cliente precisa instalar o Lume para preencher a anamnese?',
+        answer:
+          'Não. Existem dois jeitos de preencher: presencialmente, entregando o tablet ou celular da clínica com o formulário já aberto na sessão autenticada do profissional, ou remotamente, enviando um link individual pelo WhatsApp ou mostrando um QR code. Em ambos os casos, a cliente responde direto no navegador, sem baixar app nem criar conta.',
+      },
+      {
+        question: 'Posso editar as perguntas da anamnese?',
+        answer:
+          'Sim. O Lume vem com 24 perguntas clínicas padrão, extraídas de um modelo de ficha de anamnese usado no mercado, mas você pode editar o texto de qualquer uma, remover as que não fazem sentido para sua especialidade, adicionar perguntas próprias e reordenar tudo como preferir. Anamneses já respondidas mantêm as perguntas vigentes no momento do preenchimento, mesmo que você edite o formulário depois.',
+      },
+      {
+        question: 'Como acompanho as anamneses das minhas clientes?',
+        answer:
+          'No prontuário de cada cliente, o Lume mostra o histórico de anamneses com status — pendente, em andamento ou concluída — além das respostas completas e da assinatura, sempre que precisar consultar. Você também escolhe se quer uma anamnese única por cliente, reaproveitada entre sessões, ou uma nova a cada procedimento.',
       },
     ],
   },
@@ -137,6 +172,11 @@ const CATEGORIES = [
         answer:
           'O mapa de pontos é uma funcionalidade do Lume que permite marcar, diretamente sobre a foto da sessão, os pontos exatos onde foram feitas as aplicações ou os pontos de referência do tratamento. Após tirar a foto, você toca na tela para adicionar pontos coloridos — há cinco cores disponíveis para diferenciar produtos, regiões ou categorias. Os pontos podem ser desfeitos ou apagados a qualquer momento, e a imagem pode ser ampliada para marcações mais precisas. Na sessão seguinte, você abre o resumo e tem o mapa exato do que foi feito como referência.',
       },
+      {
+        question: 'Dá para compartilhar informações da cliente pelo WhatsApp direto do Lume?',
+        answer:
+          'Sim. O link de anamnese e a imagem de antes e depois podem ser enviados pelo WhatsApp sem sair do app. Se o telefone da cliente já está cadastrado em formato válido, o Lume abre a conversa direto com ela; se o número estiver ausente ou inválido, o WhatsApp abre com a mensagem pronta para você escolher o contato manualmente.',
+      },
     ],
   },
   {
@@ -175,7 +215,7 @@ const CATEGORIES = [
       {
         question: 'Preciso de cartão de crédito para usar o Lume?',
         answer:
-          'Não. O Lume é gratuito para baixar e não exige cartão de crédito para criar uma conta ou usar o plano gratuito. Você cria a conta com Google, Apple ou e-mail e senha, e já tem acesso imediato a todas as funcionalidades. O cartão só é necessário se você optar por assinar o Lume Pro após o encerramento do período de beta, e o pagamento é processado pela App Store ou Google Play — o Lume não armazena dados de pagamento.',
+          'Não. O Lume é gratuito para baixar e não exige cartão de crédito nem criação de conta para usar o plano gratuito — você pode começar como convidado imediatamente. O cartão só é necessário se você optar por assinar o Lume Pro após o encerramento do período de beta, e o pagamento é processado pela App Store ou Google Play — o Lume não armazena dados de pagamento.',
       },
     ],
   },
@@ -212,7 +252,7 @@ export default function FaqPage() {
               Tudo sobre o Lume
             </h1>
             <p className="text-gray-400 text-base max-w-md mx-auto">
-              Respostas para as dúvidas mais comuns sobre câmera ghost, ficha clínica, antes e depois e organização de clientes.
+              Respostas para as dúvidas mais comuns sobre câmera ghost, ficha clínica, anamnese digital, antes e depois e organização de clientes.
             </p>
           </div>
 

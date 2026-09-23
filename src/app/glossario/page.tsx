@@ -14,6 +14,26 @@ export const metadata: Metadata = {
 
 const terms = [
   {
+    id: 'acido-hialuronico',
+    letter: 'A',
+    name: 'Ácido Hialurônico',
+    body: [
+      'O ácido hialurônico é um polissacarídeo naturalmente presente na pele, nas articulações e nos tecidos conjuntivos do corpo humano, com alta capacidade de retenção de água — cada grama pode reter até seis litros. Em sua forma sintetizada e reticulada (cross-linked), é o composto mais utilizado em preenchedores dérmicos injetáveis, usado para repor volume, hidratar profundamente e corrigir sulcos e assimetrias faciais.',
+      'Existem diferentes densidades e graus de reticulação de ácido hialurônico, escolhidos conforme a região a ser tratada: produtos mais fluidos para lábios e olheiras, e mais densos e firmes para malar e mandíbula. O efeito é temporário — o corpo metaboliza o produto gradualmente ao longo de meses, e o tempo de duração varia conforme a região, o metabolismo do paciente e a densidade do produto.',
+      'No Lume, cada aplicação de filler à base de ácido hialurônico é registrada com marca, lote e volume em ml por região tratada, no formulário clínico específico de filler.',
+    ],
+  },
+  {
+    id: 'anamnese',
+    letter: 'A',
+    name: 'Anamnese',
+    body: [
+      'Anamnese é o processo de coleta de informações de saúde e histórico clínico de um paciente antes de um procedimento, feito por meio de um questionário estruturado. Na estética, a anamnese costuma abranger alergias, uso de medicamentos, cirurgias prévias, condições de pele e expectativas em relação ao tratamento — dados que ajudam o profissional a avaliar riscos e contraindicações antes de aplicar botox, filler ou qualquer outro procedimento.',
+      'Tradicionalmente preenchida em papel, a anamnese vem sendo digitalizada por clínicas e profissionais autônomos, tanto pela praticidade quanto pela rastreabilidade — um formulário digital não se perde, fica vinculado ao histórico do cliente e pode incluir assinatura eletrônica do termo de responsabilidade.',
+      'O Lume oferece anamnese digital com 24 perguntas clínicas padrão, editáveis e reordenáveis, preenchida pela própria cliente no celular ou tablet — presencialmente ou por um link enviado a distância — com assinatura direto na tela e revisão pelo profissional antes da sessão.',
+    ],
+  },
+  {
     id: 'antes-e-depois',
     letter: 'A',
     name: 'Antes e Depois (Before & After)',
@@ -21,6 +41,16 @@ const terms = [
       'O antes e depois é o comparativo visual entre duas fotos de um mesmo cliente em momentos diferentes — geralmente antes de iniciar um tratamento estético e após uma ou mais sessões. É um dos recursos mais importantes para demonstrar a eficácia de um procedimento e comunicar resultados de forma objetiva tanto para o próprio cliente quanto para o público nas redes sociais.',
       'Um antes e depois de qualidade exige que as duas fotos tenham o mesmo ângulo, enquadramento e iluminação. Quando esses elementos variam entre as fotos, a diferença visual pode ser atribuída à mudança de posicionamento em vez do tratamento — o que compromete a credibilidade do profissional e obscurece o resultado real. Por isso, a consistência fotográfica não é um detalhe estético, mas uma exigência técnica.',
       'O Lume gera imagens de antes e depois diretamente do histórico de sessões do cliente. O profissional seleciona duas datas, posiciona a logo da clínica e escolhe entre os formatos quadrado (1:1), retrato (4:5) e stories (9:16). O resultado é exportado e compartilhado em segundos, sem necessidade de aplicativos externos.',
+    ],
+  },
+  {
+    id: 'bioestimulador',
+    letter: 'B',
+    name: 'Bioestimulador de Colágeno',
+    body: [
+      'Bioestimuladores de colágeno são substâncias injetáveis que, diferente dos preenchedores tradicionais, não entregam volume imediato — elas estimulam o próprio organismo a produzir colágeno de forma gradual ao longo de semanas ou meses. Os compostos mais utilizados são a hidroxiapatita de cálcio e o poli-L-ácido láctico, indicados principalmente para melhora de flacidez e firmeza da pele.',
+      'O resultado de um bioestimulador é progressivo e mais duradouro que o de um preenchedor convencional, mas exige mais de uma sessão de aplicação, geralmente espaçadas em intervalos de 30 a 45 dias, para atingir o efeito completo. Por isso, o planejamento e o registro de cada sessão — data, produto, região e diluição — são especialmente importantes nesse tipo de protocolo.',
+      'No Lume, sessões com bioestimulador podem ser documentadas no mesmo formulário clínico usado para filler, com foto da sessão via câmera ghost para acompanhar a evolução da firmeza da pele ao longo do protocolo.',
     ],
   },
   {
@@ -45,6 +75,26 @@ const terms = [
     ],
   },
   {
+    id: 'comissura-labial',
+    letter: 'C',
+    name: 'Comissura Labial',
+    body: [
+      'A comissura labial é o canto da boca, ponto de encontro entre o lábio superior e o inferior. Com o envelhecimento e a perda de sustentação óssea e de colágeno na região, os cantos da boca tendem a cair, formando um sulco vertical — conhecido popularmente como "linha de marionete" — que confere uma expressão de tristeza ou cansaço ao rosto em repouso.',
+      'O tratamento da comissura labial costuma combinar preenchimento com ácido hialurônico, para repor volume e suavizar o sulco de marionete, com aplicação pontual de toxina botulínica no músculo depressor do ângulo da boca (DAO), que reduz a tração para baixo. A combinação das duas técnicas costuma gerar resultado mais natural do que qualquer uma isoladamente.',
+      'No Lume, a comissura labial está disponível como região pré-cadastrada no formulário clínico de filler, permitindo registrar volume em ml aplicado especificamente nessa área.',
+    ],
+  },
+  {
+    id: 'consentimento-informado',
+    letter: 'C',
+    name: 'Consentimento Informado (Termo de Responsabilidade)',
+    body: [
+      'O consentimento informado é o documento, assinado pelo paciente, que confirma ter sido esclarecido sobre a natureza do procedimento estético, os riscos envolvidos, os resultados esperados e as alternativas disponíveis, antes de autorizar a aplicação. É uma exigência ética e, em muitos casos, legal, que protege tanto o paciente quanto o profissional.',
+      'Historicamente preenchido em papel junto com a ficha de anamnese, o termo de consentimento vem sendo incorporado a fluxos digitais, o que facilita o armazenamento, evita extravio e possibilita assinatura eletrônica com validade jurídica. A ausência de consentimento documentado é um dos principais fatores que fragilizam a defesa de um profissional em caso de contestação judicial.',
+      'No Lume, o termo de responsabilidade é parte da anamnese digital: a cliente assina com o dedo na tela ao final do formulário, e o documento assinado fica salvo permanentemente vinculado ao seu perfil.',
+    ],
+  },
+  {
     id: 'dao',
     letter: 'D',
     name: 'DAO (Depressor do Ângulo da Boca)',
@@ -65,6 +115,16 @@ const terms = [
     ],
   },
   {
+    id: 'ficha-clinica',
+    letter: 'F',
+    name: 'Ficha Clínica Estética',
+    body: [
+      'A ficha clínica estética é o registro estruturado de cada procedimento realizado em um paciente — produto utilizado, marca, lote, diluição, regiões anatômicas tratadas e quantidades aplicadas. Diferente de uma anotação livre, a ficha clínica segue um formato padronizado que facilita consulta, auditoria e comparação entre sessões.',
+      'Manter a ficha clínica atualizada é considerado boa prática em harmonização facial e, em muitos conselhos profissionais, é uma exigência regulatória. Além da função de proteção jurídica em caso de intercorrência, a ficha clínica bem documentada permite ao profissional reproduzir com precisão o protocolo de sessões anteriores.',
+      'O Lume digitaliza a ficha clínica com formulários específicos para botox (13 regiões pré-cadastradas) e filler (11 regiões), com cálculo automático do total de UI ou ml da sessão, tudo vinculado ao perfil do cliente e acessível na nuvem.',
+    ],
+  },
+  {
     id: 'filler',
     letter: 'F',
     name: 'Filler (Preenchedor Dérmico)',
@@ -82,6 +142,16 @@ const terms = [
       'Harmonização facial, frequentemente abreviada como HOF, é o conjunto de procedimentos estéticos minimamente invasivos que visam equilibrar e harmonizar as proporções do rosto. O objetivo não é necessariamente eliminar sinais de envelhecimento, mas sim melhorar a simetria, as proporções e a estética geral do rosto de acordo com a percepção do paciente e os critérios técnicos do profissional.',
       'Os procedimentos mais comuns em harmonização facial incluem a aplicação de toxina botulínica para suavizar rugas e relaxar músculos hiperativos, preenchimentos dérmicos com ácido hialurônico para repor volume e corrigir sulcos, bioremodeladores para melhora da qualidade da pele, e procedimentos como a rinomodelação para ajustes no nariz sem cirurgia. Muitos tratamentos combinam mais de uma técnica na mesma sessão.',
       'A documentação de cada sessão de harmonização facial é essencial tanto para acompanhar a evolução dos resultados quanto para garantir a segurança jurídica do profissional. Registros adequados incluem fotos padronizadas antes e após o procedimento, descrição dos produtos utilizados com marca e lote, regiões tratadas com dosagens e mapa visual dos pontos de aplicação. O Lume centraliza todos esses elementos em um único prontuário digital por cliente.',
+    ],
+  },
+  {
+    id: 'lgpd-estetica',
+    letter: 'L',
+    name: 'LGPD na Estética',
+    body: [
+      'A Lei Geral de Proteção de Dados (LGPD) classifica dados de saúde — incluindo fotos de procedimentos estéticos, fichas clínicas e anamneses — como dados pessoais sensíveis, sujeitos a regras mais rígidas de tratamento, armazenamento e consentimento. Profissionais de estética que fotografam e documentam clientes são, tecnicamente, controladores de dados sensíveis perante a lei.',
+      'Na prática, isso significa que fotos de clientes armazenadas sem controle de acesso — misturadas na galeria pessoal do celular, em grupos de WhatsApp ou em pastas compartilhadas sem autenticação — representam um risco de conformidade. A LGPD exige que o acesso a esses dados seja restrito, que haja consentimento para o uso das informações e que o titular possa solicitar a exclusão dos seus dados a qualquer momento.',
+      'O Lume foi desenvolvido em conformidade com a LGPD: cada profissional acessa exclusivamente seus próprios dados, o acesso exige autenticação, e ao encerrar a conta todos os dados do usuário — fotos, fichas e anamneses — são removidos permanentemente.',
     ],
   },
   {
@@ -125,6 +195,16 @@ const terms = [
     ],
   },
   {
+    id: 'nasalis',
+    letter: 'N',
+    name: 'Nasalis',
+    body: [
+      'O nasalis é o músculo responsável pela contração das asas do nariz, ativado principalmente ao sorrir ou franzir o nariz com força — o que gera as chamadas "bunny lines", pequenas rugas horizontais nas laterais do nariz. Nem todas as pessoas apresentam essa contração de forma visível, o que torna a avaliação individual importante antes de indicar tratamento.',
+      'A aplicação de toxina botulínica no nasalis é indicada especificamente para quem apresenta as bunny lines de forma acentuada ao sorrir. É um procedimento que exige baixa dosagem e alta precisão, já que a proximidade com outros músculos da região pode gerar efeitos indesejados se a técnica não for cuidadosa.',
+      'O nasalis é uma das 13 regiões anatômicas pré-cadastradas no formulário clínico de botox do Lume.',
+    ],
+  },
+  {
     id: 'orbicular-do-olho',
     letter: 'O',
     name: 'Orbicular do Olho',
@@ -135,6 +215,16 @@ const terms = [
     ],
   },
   {
+    id: 'periorbital',
+    letter: 'P',
+    name: 'Periorbital',
+    body: [
+      'A região periorbital é a área ao redor dos olhos, que inclui as pálpebras superior e inferior, as têmporas próximas ao canto externo do olho e a região da olheira. É uma das primeiras áreas do rosto a mostrar sinais de envelhecimento — perda de volume, escurecimento e formação de rugas finas (pés de galinha) — por ter pele particularmente fina e delicada.',
+      'O tratamento estético da região periorbital combina abordagens diferentes conforme a queixa: toxina botulínica no músculo orbicular lateral para os pés de galinha, preenchimento com ácido hialurônico de baixa densidade para olheiras e sulco lacrimal, e bioestimuladores para melhora da qualidade da pele ao redor dos olhos.',
+      'No Lume, a região periorbital está disponível no formulário clínico de filler para registro de volume aplicado em olheiras e áreas adjacentes.',
+    ],
+  },
+  {
     id: 'platisma',
     letter: 'P',
     name: 'Platisma',
@@ -142,6 +232,26 @@ const terms = [
       'O platisma é um músculo largo e fino localizado na região anterior do pescoço, que se estende desde a clavícula até o queixo. Com o envelhecimento e a perda de tônus, suas fibras verticais tornam-se visíveis como "bandas platismais" — as cordas verticais no pescoço que se acentuam ao contrair o músculo e que estão associadas ao envelhecimento do terço inferior da face e do pescoço.',
       'A aplicação de toxina botulínica no platisma, conhecida como "Nefertiti lift", é utilizada para relaxar as bandas, melhorar o contorno do pescoço e definir o ângulo cervico-mentoniano. O efeito é uma aparência mais definida e jovem na região do pescoço e da mandíbula sem necessidade de procedimentos invasivos.',
       'O platisma é uma das regiões anatômicas disponíveis no formulário clínico de botox do Lume, junto com outras regiões do terço inferior da face como DAO, Mentoniano e Masseter.',
+    ],
+  },
+  {
+    id: 'pre-jowl',
+    letter: 'P',
+    name: 'Pré-Jowl',
+    body: [
+      'A região pré-jowl fica na linha da mandíbula, entre o queixo e o ângulo mandibular, exatamente onde se forma o "jowl" — o acúmulo de tecido flácido que aparece com o envelhecimento e quebra o contorno reto da mandíbula, dando uma aparência menos definida ao rosto.',
+      'O preenchimento da região pré-jowl com ácido hialurônico busca restaurar a continuidade da linha da mandíbula, criando uma transição mais suave entre o queixo e o ângulo mandibular. É uma técnica frequentemente combinada com preenchimento do próprio mento e do ângulo da mandíbula para um resultado de contorno facial mais completo.',
+      'A pré-jowl é uma das 11 regiões pré-cadastradas no formulário clínico de filler do Lume.',
+    ],
+  },
+  {
+    id: 'preenchimento-labial',
+    letter: 'P',
+    name: 'Preenchimento Labial',
+    body: [
+      'O preenchimento labial é a aplicação de ácido hialurônico nos lábios com o objetivo de aumentar volume, definir contorno, corrigir assimetrias ou repor a perda de volume natural que ocorre com a idade. É um dos procedimentos estéticos injetáveis mais procurados, com técnicas que variam desde a hidratação sutil até a projeção mais acentuada.',
+      'A técnica de aplicação varia conforme o objetivo: preenchimento do corpo do lábio para volume, definição do contorno (border) para um efeito de delineamento, e reforço do arco do cupido para realçar o formato natural. A escolha do produto — mais fluido ou mais firme — também influencia diretamente o resultado final.',
+      'No Lume, os lábios são uma região pré-cadastrada no formulário clínico de filler, com registro de marca, lote e volume em ml aplicado.',
     ],
   },
   {
@@ -165,6 +275,16 @@ const terms = [
     ],
   },
   {
+    id: 'rastreabilidade',
+    letter: 'R',
+    name: 'Rastreabilidade Clínica',
+    body: [
+      'Rastreabilidade clínica é a capacidade de identificar, a qualquer momento, exatamente qual produto (marca e lote) foi aplicado em qual paciente, em qual data, em qual região e em qual quantidade. É um princípio fundamental de segurança em procedimentos injetáveis, especialmente em caso de recall de produto ou reação adversa.',
+      'Sem rastreabilidade, um evento adverso associado a um lote específico de toxina botulínica ou filler pode ser impossível de correlacionar retroativamente — o profissional simplesmente não tem como saber quais pacientes receberam aquele lote. Isso compromete tanto a resposta clínica ao evento quanto a defesa jurídica do profissional.',
+      'O Lume constrói rastreabilidade automaticamente: cada sessão de botox ou filler fica vinculada ao cliente, à data, ao produto, ao lote e à região tratada, permitindo localizar qualquer aplicação em segundos, mesmo anos depois.',
+    ],
+  },
+  {
     id: 'rinomodelacao',
     letter: 'R',
     name: 'Rinomodelação',
@@ -175,6 +295,26 @@ const terms = [
     ],
   },
   {
+    id: 'skinbooster',
+    letter: 'S',
+    name: 'Skinbooster',
+    body: [
+      'Skinbooster é uma categoria de produtos injetáveis à base de ácido hialurônico de baixa densidade, aplicados em microinjeções superficiais e distribuídas por toda a área tratada — geralmente rosto, pescoço ou mãos — com o objetivo de hidratar profundamente a pele e melhorar sua qualidade, elasticidade e luminosidade, sem gerar volume perceptível como um preenchedor convencional.',
+      'Diferente do preenchimento tradicional, que corrige volume em pontos específicos, o skinbooster trata a pele de forma global e costuma exigir protocolo de mais de uma sessão, com intervalos de semanas, para atingir o resultado completo de melhora textural.',
+      'Sessões de skinbooster podem ser documentadas no Lume no formulário clínico de filler, com foto via câmera ghost para acompanhar a evolução da qualidade da pele ao longo do protocolo.',
+    ],
+  },
+  {
+    id: 'sorriso-gengival',
+    letter: 'S',
+    name: 'Sorriso Gengival',
+    body: [
+      'O sorriso gengival é a exposição excessiva da gengiva superior ao sorrir, geralmente causada por hiperatividade dos músculos elevadores do lábio superior. É uma queixa estética comum, que pode ser tratada de forma minimamente invasiva sem necessidade de cirurgia.',
+      'A aplicação de toxina botulínica em pontos específicos da musculatura elevadora do lábio superior reduz temporariamente sua contração, diminuindo a exposição gengival ao sorrir. É um procedimento de dosagem baixa e alta precisão, já que o excesso de relaxamento pode comprometer a simetria do sorriso.',
+      'O Lume permite registrar aplicações de botox para sorriso gengival no formulário clínico, com a quantidade em UI documentada junto às demais regiões tratadas na mesma sessão.',
+    ],
+  },
+  {
     id: 'sulco-nasogeniano',
     letter: 'S',
     name: 'Sulco Nasogeniano',
@@ -182,6 +322,16 @@ const terms = [
       'O sulco nasogeniano é a prega que vai do canto da narina até o canto da boca, separando a bochecha do lábio superior. Presente em diferentes graus em pessoas de todas as idades, ele tende a se aprofundar com o envelhecimento à medida que há perda de gordura e ptose dos tecidos da face média, tornando-se um dos principais marcos visíveis do envelhecimento facial.',
       'O preenchimento do sulco nasogeniano com ácido hialurônico é um dos procedimentos mais realizados em harmonização facial. A técnica deposita volume sob a prega para suavizá-la, criando uma transição mais gradual entre a bochecha e o lábio. A abordagem direta ao sulco pode ser combinada com o preenchimento malar, que ao repor volume na maçã do rosto contribui indiretamente para elevar e suavizar o sulco.',
       'O sulco nasogeniano é uma das 11 regiões de filler disponíveis no formulário clínico do Lume.',
+    ],
+  },
+  {
+    id: 'temporal',
+    letter: 'T',
+    name: 'Têmpora (Temporal)',
+    body: [
+      'A têmpora, ou região temporal, é a área lateral do rosto, entre o canto externo do olho, a sobrancelha e a linha do cabelo. Com o envelhecimento, essa região costuma perder volume ósseo e de tecido adiposo, criando uma depressão que acentua a aparência de cansaço e afeta o contorno lateral do rosto — inclusive o formato e a sustentação da sobrancelha.',
+      'O preenchimento da têmpora com ácido hialurônico é uma técnica de harmonização facial que repõe o volume perdido, suaviza a transição entre a têmpora e a sobrancelha, e pode indiretamente elevar levemente a cauda da sobrancelha. É considerada uma região de risco moderado a alto pela proximidade de estruturas vasculares, exigindo técnica apropriada.',
+      'A têmpora é uma das 11 regiões pré-cadastradas no formulário clínico de filler do Lume, com registro de volume em ml por sessão.',
     ],
   },
   {

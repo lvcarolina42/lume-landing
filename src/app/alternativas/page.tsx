@@ -195,11 +195,13 @@ export default function AlternativasPage() {
                 jurídica do que um prontuário digital com timestamps auditáveis.
               </p>
               <p>
-                A planilha ainda faz sentido para o que ela foi criada: controle financeiro,
-                agendamento, fluxo de caixa. O Lume não substitui essas funções — ele resolve
-                especificamente o prontuário visual e clínico que a planilha não consegue cobrir.
-                Muitos profissionais usam os dois: planilha para o financeiro, Lume para o histórico
-                clínico e fotográfico.
+                A planilha ainda faz sentido para controle financeiro e fluxo de caixa — o Lume
+                não registra valores de sessão nem emite relatórios financeiros, e não pretende.
+                Já o agendamento de clientes, que antes exigia uma planilha ou app à parte, o Lume
+                resolve nativamente: cada cliente tem sua agenda com visão de semana e mês,
+                vinculada ao catálogo de serviços (nome, duração, preço) e ao prontuário da sessão.
+                Muitos profissionais usam os dois: planilha para o financeiro, Lume para agenda,
+                histórico clínico e fotográfico.
               </p>
             </Prose>
           </section>
@@ -373,22 +375,27 @@ export default function AlternativasPage() {
             <H2>Quando outras ferramentas complementam o Lume</H2>
             <Prose>
               <p>
-                O Lume é um prontuário visual e clínico. Ele não é um sistema de agendamento,
-                não é um controle financeiro e não é um app de comunicação. Essas são funções
-                que outras ferramentas fazem bem e que continuam sendo necessárias ao lado do Lume.
+                O Lume é um prontuário visual e clínico com agenda e catálogo de serviços
+                integrados. O que ele não é: um controle financeiro completo e um app de
+                comunicação. Essas são funções que outras ferramentas fazem bem e que continuam
+                sendo necessárias ao lado do Lume.
               </p>
               <p>
                 A planilha ou um app de controle financeiro ainda são a melhor forma de acompanhar
-                faturamento, comissões, custos de produto e fluxo de caixa. O Lume não registra
-                valores de sessão nem emite relatórios financeiros — e não pretende. Para esse
-                controle, uma planilha bem configurada ou um app como Notion, Conta Azul ou até
-                uma planilha simples do Google Sheets continua sendo a ferramenta certa.
+                faturamento, comissões e fluxo de caixa detalhado. O Lume registra o preço de cada
+                serviço no catálogo, mas não emite relatórios financeiros nem substitui um sistema
+                de gestão contábil. Para esse controle, uma planilha bem configurada ou um app como
+                Notion, Conta Azul ou até uma planilha simples do Google Sheets continua sendo a
+                ferramenta certa.
               </p>
               <p>
-                Para agendamento, apps como Google Agenda, Calendly ou sistemas específicos de
-                clínica resolvem melhor do que qualquer prontuário. O Lume não tem calendário
-                nem confirmação automática de consultas. A agenda e o prontuário são ferramentas
-                complementares — não concorrentes.
+                Para agendamento, o Lume já resolve nativamente: cada cliente pode ser agendado
+                diretamente no app, com visão de semana e mês, vinculado ao serviço (nome, cor,
+                duração e preço) e à sessão que será registrada no prontuário. Quem precisa de
+                confirmação automática por SMS/WhatsApp ou de agenda compartilhada entre múltiplos
+                profissionais de uma clínica grande ainda pode preferir um sistema dedicado como
+                Google Agenda ou Calendly — mas para o profissional autônomo ou pequena clínica,
+                agenda e prontuário já funcionam juntos dentro do Lume.
               </p>
               <p>
                 O WhatsApp continua sendo insubstituível para comunicação com o cliente: confirmar

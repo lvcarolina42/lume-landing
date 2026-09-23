@@ -1,0 +1,40 @@
+# Lume
+
+> Lume é um aplicativo gratuito para iOS e Android voltado a profissionais de estética (esteticistas, médicos estetas, dermatologistas) que precisam registrar e acompanhar a evolução visual e clínica de clientes. Principais recursos: câmera ghost (sobreposição da foto anterior para manter o ângulo consistente entre sessões), ficha clínica de botox (13 regiões anatômicas pré-cadastradas) e filler (11 regiões), anamnese digital com assinatura, mapa de pontos de aplicação, geração de imagens de antes e depois com logo da clínica, e agenda com catálogo de serviços (nome, cor, duração e preço) integrada ao prontuário.
+
+## Páginas principais
+
+- [Página inicial](https://brlume.app/): visão geral do produto, recursos, planos e download.
+- [Como funciona](https://brlume.app/como-funciona): guia passo a passo do fluxo de atendimento no app, do cadastro do cliente ao compartilhamento do antes e depois.
+- [Perguntas frequentes](https://brlume.app/faq): respostas detalhadas sobre câmera ghost, ficha clínica de botox e filler, anamnese digital, agenda e serviços, antes e depois, organização de clientes e planos.
+- [Glossário de estética](https://brlume.app/glossario): definições técnicas de termos de estética e harmonização facial (botox, filler, DAO, diluição, lote, câmera ghost, harmonização facial, ácido hialurônico, anamnese, LGPD na estética, entre outros).
+- [Lume vs alternativas](https://brlume.app/alternativas): comparação entre o Lume e planilha, papel, WhatsApp e apps genéricos de fotos/agenda para gestão de clientes de estética.
+- [Sobre](https://brlume.app/sobre): quem faz o Lume (Lívia Carolina Lima, Belo Horizonte-MG), história, missão e números do app.
+- [Artigos](https://brlume.app/artigos): blog com guias aprofundados. Primeiro artigo: [Câmera ghost, o guia completo](https://brlume.app/artigos/camera-ghost-guia-completo) — o que é, como funciona, por que o ângulo consistente muda o resultado do antes e depois.
+
+## Funcionalidades
+
+- Câmera ghost: sobreposição semitransparente da última foto da sessão anterior, para manter ângulo e enquadramento consistentes.
+- Ficha clínica de botox: 13 regiões anatômicas pré-cadastradas, registro de marca/lote/diluição, cálculo automático de UI total.
+- Ficha clínica de filler: 11 regiões anatômicas pré-cadastradas, registro de marca/lote, cálculo automático de volume em ml.
+- Anamnese digital: 24 perguntas clínicas editáveis, preenchimento pela própria cliente (presencial ou por link), assinatura na tela.
+- Mapa de pontos: marcação de pontos de aplicação diretamente sobre a foto da sessão, com 5 cores.
+- Antes e depois: geração de imagem comparativa com logo da clínica, nos formatos quadrado, retrato e stories, pronta para Instagram/WhatsApp.
+- Agenda: agendamento de sessões por cliente com visão de semana e mês.
+- Catálogo de serviços: cadastro de serviços com nome, cor, duração e preço, vinculado à agenda e ao prontuário.
+- Organização de clientes: perfil por cliente com histórico cronológico de sessões, busca por nome, importação de contatos.
+
+## Dados-chave
+
+- Gratuito para iOS e Android; plano gratuito permite até 50 clientes com até 30 sessões cada.
+- Disponível em português, inglês e espanhol.
+- Não exige criação de conta (uso como convidado disponível).
+- Em conformidade com a LGPD; dados armazenados na nuvem com autenticação obrigatória.
+- Não é um sistema financeiro completo (não emite relatórios de faturamento/comissão).
+- Lançado em abril de 2026; desenvolvido por Lívia Carolina Lima, em Belo Horizonte (MG), como projeto de pessoa física, sem empresa por trás.
+- Atualmente em período de beta, com acesso gratuito ao plano Pro.
+- Números (setembro de 2026): 600+ downloads, 403 clientes ativos, 2.276 procedimentos cadastrados, 723 pacientes, 326 anamneses preenchidas.
+
+## Optional
+
+- [Política de privacidade](https://brlume.app/privacidade)

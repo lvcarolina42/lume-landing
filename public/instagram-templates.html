@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Lume — Templates Instagram</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Roboto:wght@500&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/html-to-image@1.11.11/dist/html-to-image.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<style>
+* { box-sizing:border-box; margin:0; padding:0; }
+body { font-family:'Inter',sans-serif; background:#f1f5f9; }
+header { background:linear-gradient(135deg,#00897B,#002B22); color:#fff; padding:14px 24px; display:flex; align-items:center; gap:12px; position:sticky; top:0; z-index:100; box-shadow:0 2px 12px rgba(0,0,0,.3); }
+header strong { font-size:17px; font-weight:800; }
+header span { font-size:12px; opacity:.65; }
+.grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(270px,1fr)); gap:20px; padding:24px; }
+.cw { background:#fff; border-radius:12px; overflow:hidden; box-shadow:0 1px 4px rgba(0,0,0,.08); cursor:zoom-in; transition:transform .15s,box-shadow .15s; }
+.cw:hover { transform:translateY(-3px); box-shadow:0 10px 28px rgba(0,0,0,.12); }
+.pb { position:relative; overflow:hidden; background:#0f172a; }
+.pb .in { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; overflow:hidden; }
+.cl { padding:10px 14px; font-size:11px; font-weight:700; color:#94a3b8; border-top:1px solid #f1f5f9; display:flex; justify-content:space-between; align-items:center; gap:8px; }
+.cl b { color:#334155; font-size:12px; flex:1; min-width:0; }
+.dl { background:#0d9488; color:#fff; border:none; border-radius:8px; padding:6px 12px; font-size:11px; font-weight:700; font-family:inherit; cursor:pointer; display:flex; align-items:center; gap:5px; white-space:nowrap; flex-shrink:0; transition:background .15s; }
+.dl:hover { background:#0f766e; }
+.dl:disabled { background:#94a3b8; cursor:wait; }
+.dl-all { background:rgba(255,255,255,.15); border:1px solid rgba(255,255,255,.3); color:#fff; border-radius:8px; padding:7px 16px; font-size:12px; font-weight:700; font-family:inherit; cursor:pointer; display:flex; align-items:center; gap:6px; transition:background .15s; }
+.dl-all:hover { background:rgba(255,255,255,.25); }
+#prog { font-size:12px; opacity:.7; }
+#modal { display:none; position:fixed; inset:0; background:rgba(0,0,0,.93); z-index:200; align-items:center; justify-content:center; padding:16px; }
+#modal.open { display:flex; }
+#mi { position:relative; }
+#mx { position:absolute; top:-42px; right:0; background:none; border:none; color:#fff; font-size:24px; cursor:pointer; font-weight:800; opacity:.7; }
+#mx:hover { opacity:1; }
+#mf { position:absolute; bottom:-28px; left:0; color:rgba(255,255,255,.4); font-size:11px; font-family:inherit; }
+
+/* Template base */
+.tpl { width:1080px; font-family:'Inter',sans-serif; position:relative; overflow:hidden; }
+.tpl * { box-sizing:border-box; }
+</style>
+</head>
+<body>
+
+<header>
+  <strong>✦ Lume — Templates Instagram</strong>
+  <span>15 posts · 4:5 · 1080×1350 · clique para ampliar</span>
+  <span style="flex:1"></span>
+  <span id="prog"></span>
+  <button class="dl-all" onclick="downloadAll()">⬇ Baixar todos</button>
+</header>
+
+<div class="grid" id="grid"></div>
+<div id="modal"><div id="mi"><button id="mx" onclick="cls()">✕</button><div id="mc"></div><div id="mf"></div></div></div>
+
+<script>
+const W = 1080, H = 1350
+
+/* ── Phone frames — exact match to landing page ─────────────────── */
+
+// Hero phone: bg-gray-950 rounded-[2.5rem] p-[7px] ring-1 ring-white/10 shadow-2xl
+function phoneDark(src, w=390, imgStyle='') {
+  return `<div style="background:#030712;border-radius:40px;padding:7px;box-shadow:0 0 0 1px rgba(255,255,255,.12),0 0 60px rgba(0,0,0,.55),0 8px 24px rgba(0,0,0,.45);display:inline-block;flex-shrink:0">
+    <div style="border-radius:33px;overflow:hidden;line-height:0;display:block"><img src="${src}" width="${w}" style="display:block;${imgStyle}"></div>
+  </div>`
+}
+
+// Feature phone: bg-gray-100 rounded-[2.5rem] p-2 ring-1 ring-black/5 shadow-2xl + teal glow
+function phoneLight(src, w=340) {
+  return `<div style="position:relative;display:inline-block;flex-shrink:0">
+    <div style="position:absolute;inset:-20px;background:rgba(20,184,166,.12);border-radius:60px;filter:blur(32px);pointer-events:none"></div>
+    <div style="position:relative;background:#f3f4f6;border-radius:40px;padding:8px;box-shadow:0 0 0 1px rgba(0,0,0,.05),0 0 40px rgba(0,0,0,.12),0 8px 20px rgba(0,0,0,.14);display:inline-block">
+      <div style="border-radius:32px;overflow:hidden;line-height:0;display:block"><img src="${src}" width="${w}" style="display:block"></div>
+    </div>
+  </div>`
+}
+
+/* ── Shared atoms ──────────────────────────────────────────────── */
+const avs = () => 'ARCLM'.split('').map((l,i)=>
+  `<div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#2dd4bf,#0f766e);border:2.5px solid rgba(0,30,20,.5);display:flex;align-items:center;justify-content:center;color:#fff;font-size:12px;font-weight:800;margin-left:${i?-10:0}px">${l}</div>`
+).join('')
+
+// Matching landing page hero bullet: rounded-full bg-teal-400/30 border border-teal-400/60
+const crHero = () => `<span style="width:22px;height:22px;border-radius:50%;background:rgba(45,212,191,.25);border:1.5px solid rgba(45,212,191,.55);display:inline-flex;align-items:center;justify-content:center;color:#5eead4;font-size:9px;font-weight:900;flex-shrink:0">✓</span>`
+
+// Matching landing page feature chip: bg-teal-50 text-teal-700 rounded-full
+const chip = (t) => `<span style="background:#f0fdfa;color:#0f766e;font-size:20px;font-weight:600;padding:11px 20px;border-radius:100px;display:inline-flex;align-items:center;gap:8px"><span style="color:#2dd4bf;font-size:14px">✓</span>${t}</span>`
+
+// Matching landing page feature badge: text-teal-600 bg-teal-50 rounded-full tracking-wide
+const badge = (t) => `<span style="font-size:20px;font-weight:700;color:#0d9488;background:#f0fdfa;padding:11px 24px;border-radius:100px;display:inline-block;letter-spacing:.03em;margin-bottom:28px">${t}</span>`
+
+// Dark section badge
+const pilld = (t) => `<span style="background:rgba(255,255,255,.08);color:rgba(255,255,255,.55);font-size:20px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;padding:11px 24px;border-radius:100px;display:inline-block">${t}</span>`
+
+// Bug watermark
+const bug = (dark=true) => `<div style="position:absolute;bottom:28px;right:36px;display:flex;align-items:center;gap:10px;opacity:${dark?.28:.32}">
+  <img src="/images/site/${dark?'white_logo':'green_logo'}.png" width="48" style="display:block">
+  <span style="font-size:28px;font-weight:500;font-family:'Roboto',sans-serif;color:${dark?'#fff':'#0f766e'};letter-spacing:.01em">Lume</span>
+</div>`
+
+/* Feature section text block */
+function featText(bdg, title, desc, highlights, align='left') {
+  const ta = align==='center' ? 'text-align:center' : ''
+  return `<div style="${ta}">
+    ${badge(bdg)}
+    <h3 style="font-size:70px;font-weight:900;color:#111827;line-height:1.06;letter-spacing:-2px;margin-bottom:24px">${title}</h3>
+    <p style="font-size:22px;color:#6b7280;line-height:1.6;margin-bottom:32px">${desc}</p>
+    <div style="display:flex;flex-wrap:wrap;gap:12px">${highlights.map(chip).join('')}</div>
+  </div>`
+}
+
+/* Problem section text block */
+function painText(emoji, hl, body, fix) {
+  return `<div>
+    <h2 style="font-size:68px;font-weight:900;color:#fff;line-height:1.05;letter-spacing:-2px;margin-bottom:28px">${hl}</h2>
+    <p style="font-size:22px;color:rgba(255,255,255,.52);line-height:1.65;margin-bottom:40px">${body}</p>
+    <div style="display:flex;align-items:flex-start;gap:18px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:20px;padding:26px 30px">
+      <span style="width:32px;height:32px;border-radius:50%;background:rgba(45,212,191,.2);border:1.5px solid rgba(45,212,191,.45);display:inline-flex;align-items:center;justify-content:center;color:#5eead4;font-size:13px;font-weight:900;flex-shrink:0;margin-top:2px">✓</span>
+      <span style="font-size:22px;color:#2dd4bf;font-weight:600;line-height:1.5">${fix}</span>
+    </div>
+  </div>`
+}
+
+/* ── Templates ─────────────────────────────────────────────────── */
+const T = [
+
+/* 1 — Hero: Headline */
+{ n:1, title:'Hero — Headline', html:`
+<div class="tpl" style="height:${H}px;background:linear-gradient(135deg,#00897B 0%,#005548 50%,#002B22 100%)">
+  <div style="display:flex;height:100%">
+
+    <div style="flex:1;padding:80px 68px;display:flex;flex-direction:column;justify-content:center;gap:40px;min-width:0">
+      <div style="display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22);color:rgba(255,255,255,.85);font-size:20px;font-weight:600;padding:12px 24px;border-radius:100px;width:fit-content;letter-spacing:.02em">
+        <span style="width:8px;height:8px;border-radius:50%;background:#5eead4;flex-shrink:0"></span>
+        Grátis · iOS e Android
+      </div>
+      <div>
+        <h1 style="font-size:74px;font-weight:900;color:#fff;line-height:1.04;letter-spacing:-2.5px;margin-bottom:28px">
+          Cada cliente<br>tem uma história.<br>
+          <span style="color:#99f6e4">Registrada.</span>
+        </h1>
+        <div style="display:flex;flex-direction:column;gap:20px">
+          ${['Mesmo ângulo em toda sessão','Registro completo de cada procedimento','Antes/depois com sua logo em 30s'].map(t=>`
+          <div style="display:flex;align-items:center;gap:16px;color:rgba(255,255,255,.88);font-size:24px;font-weight:600">
+            ${crHero()}<span>${t}</span>
+          </div>`).join('')}
+        </div>
+      </div>
+      <div style="display:flex;align-items:center;gap:24px">
+        <div style="display:flex">${avs()}</div>
+        <div>
+          <div style="color:#fbbf24;font-size:28px;letter-spacing:4px;margin-bottom:8px">★★★★★</div>
+          <div style="font-size:23px;font-weight:600;color:rgba(255,255,255,.65);line-height:1.35">+500 profissionais<br>5 estrelas na App Store</div>
+        </div>
+      </div>
+    </div>
+
+    <div style="width:380px;flex-shrink:0;display:flex;align-items:center;justify-content:center;padding:36px 36px 36px 8px">
+      ${phoneDark('/images/site/screen_home.jpeg', 340)}
+    </div>
+
+  </div>
+  ${bug()}
+</div>`},
+
+/* 2 — Hero: O que o Lume faz */
+{ n:2, title:'Hero — O que o Lume faz', html:`
+<div class="tpl" style="height:${H}px;background:linear-gradient(135deg,#00897B 0%,#005548 50%,#002B22 100%)">
+  <div style="display:flex;height:100%">
+
+    <div style="flex:1;padding:80px 68px;display:flex;flex-direction:column;justify-content:center;gap:44px;min-width:0">
+      <h2 style="font-size:78px;font-weight:900;color:#fff;line-height:1.03;letter-spacing:-2.5px">
+        Duas sessões.<br>Uma imagem.<br><span style="color:#99f6e4">Em 30 segundos.</span>
+      </h2>
+      <div style="display:flex;flex-direction:column;gap:26px">
+        ${['Linha do tempo visual de cada cliente','Mesmo ângulo garantido em toda sessão','Antes/depois com logo pronto para o Instagram','Prontuário completo salvo na nuvem'].map(t=>`
+        <div style="display:flex;align-items:center;gap:16px">
+          ${crHero()}
+          <span style="font-size:24px;color:rgba(255,255,255,.85);font-weight:600;line-height:1.35">${t}</span>
+        </div>`).join('')}
+      </div>
+    </div>
+
+    <div style="width:520px;flex-shrink:0;display:flex;align-items:center;justify-content:center;padding:36px 52px 36px 8px">
+      ${phoneDark('/images/site/screen_before_after_select.jpeg', 430)}
+    </div>
+
+  </div>
+  ${bug()}
+</div>`},
+
+/* 3 — Problem: Foto sumiu */
+{ n:3, title:'Problema — Foto sumiu', html:`
+<div class="tpl" style="height:${H}px;background:#0a0f1a">
+  <div style="display:flex;height:100%">
+
+    <div style="flex:1;padding:80px 68px;display:flex;flex-direction:column;justify-content:center;gap:40px;min-width:0">
+      ${pilld('Soa familiar?')}
+      ${painText('📱',
+        'A foto de antes<br>simplesmente<br><span style="color:#f87171">sumiu.</span>',
+        'O resultado ficou incrível, mas a foto está enterrada entre centenas de imagens no WhatsApp.',
+        'Histórico visual completo, organizado por cliente e data.'
+      )}
+    </div>
+
+    <div style="width:520px;flex-shrink:0;display:flex;align-items:center;justify-content:center;padding:32px 48px 32px 8px">
+      ${phoneDark('/images/site/screen_patient_details.jpeg', 440)}
+    </div>
+
+  </div>
+  ${bug()}
+</div>`},
+
+/* 4 — Problem: Ângulo */
+{ n:4, title:'Problema — Ângulo inconsistente', html:`
+<div class="tpl" style="height:${H}px;background:#0a0f1a">
+  <div style="display:flex;height:100%">
+
+    <div style="flex:1;padding:80px 68px;display:flex;flex-direction:column;justify-content:center;gap:40px;min-width:0">
+      ${pilld('Soa familiar?')}
+      ${painText('📷',
+        'Sem o mesmo ângulo,<br>o resultado parece<br><span style="color:#f87171">menor.</span>',
+        'Uma foto depois não prova nada sem o mesmo ângulo. O Lume resolve isso.',
+        'Câmera ghost sobrepõe a última foto. Basta alinhar e tirar.'
+      )}
+    </div>
+
+    <div style="width:520px;flex-shrink:0;display:flex;align-items:center;justify-content:center;padding:32px 48px 32px 8px">
+      ${phoneDark('/images/site/screen_camera_ghost.jpeg', 440)}
+    </div>
+
+  </div>
+  ${bug()}
+</div>`},
+
+/* 5 — Problem: Ficha clínica */
+{ n:5, title:'Problema — Ficha clínica', html:`
+<div class="tpl" style="height:${H}px;background:#0a0f1a">
+  <div style="display:flex;height:100%">
+
+    <div style="flex:1;padding:80px 68px;display:flex;flex-direction:column;justify-content:center;gap:40px;min-width:0">
+      ${pilld('Soa familiar?')}
+      ${painText('⚖️',
+        'O que você aplicou<br>na última sessão<br><span style="color:#f87171">está em risco.</span>',
+        'Marca, lote, diluição, regiões. Se essas informações estão na memória ou numa folha de papel, você sabe o risco — com a cliente e com o Conselho.',
+        'Ficha clínica completa, salva na nuvem. Acessível quando precisar.'
+      )}
+    </div>
+
+    <div style="width:520px;flex-shrink:0;display:flex;align-items:center;justify-content:center;padding:32px 48px 32px 8px">
+      ${phoneDark('/images/site/screen_procedure_record.jpeg', 440)}
+    </div>
+
+  </div>
+  ${bug()}
+</div>`},
+
+/* 6 — Problem: Antes/depois */
+{ n:6, title:'Problema — Antes/depois não postado', html:`
+<div class="tpl" style="height:${H}px;background:#0a0f1a">
+  <div style="display:flex;height:100%">
+
+    <div style="flex:1;padding:80px 68px;display:flex;flex-direction:column;justify-content:center;gap:40px;min-width:0">
+      ${pilld('Soa familiar?')}
+      ${painText('📸',
+        'Cada antes/depois<br>que você não posta é<br><span style="color:#f87171">uma cliente a menos.</span>',
+        'Você poderia ter conteúdo novo toda semana. Em vez disso, passa 40 minutos tentando juntar duas fotos. O trabalho existe. O conteúdo, não.',
+        'Antes/depois com logo em quadrado, retrato ou stories. Em 30 segundos.'
+      )}
+    </div>
+
+    <div style="width:520px;flex-shrink:0;display:flex;align-items:center;justify-content:center;padding:32px 48px 32px 8px">
+      ${phoneDark('/images/site/screen_compose_final.jpeg', 440, 'filter:brightness(1.45) contrast(1.05)')}
+    </div>
+
+  </div>
+  ${bug()}
+</div>`},
+
+/* 7 — Feature: Câmera Ghost (phone right, bg-white) */
+{ n:7, title:'Feature — Câmera Ghost', html:`
+<div class="tpl" style="height:${H}px;background:#fff">
+  <div style="display:flex;height:100%">
+
+    <div style="flex:1;padding:72px 64px 72px 72px;display:flex;flex-direction:column;justify-content:center;min-width:0">
+      ${featText(
+        'O segredo dos melhores antes/depois',
+        'A câmera que lembra onde você estava.',
+        'A câmera exibe a última foto em sobreposição semitransparente. Você alinha, tira — e os dois registros ficam com o mesmo ângulo, mesma distância, mesma expressão.',
+        ['Opacidade ajustável','Câmera frontal e traseira','Funciona sem internet']
+      )}
+    </div>
+
+    <div style="width:490px;flex-shrink:0;display:flex;align-items:center;justify-content:center;padding:32px 56px 32px 8px">
+      ${phoneLight('/images/site/screen_camera_ghost.jpeg', 380)}
+    </div>
+
+  </div>
+  ${bug(false)}
+</div>`},
+
+/* 8 — Feature: Antes e Depois (phone left, bg-gray-50) */
+{ n:8, title:'Feature — Antes e Depois', html:`
+<div class="tpl" style="height:${H}px;background:#f8fafc">
+  <div style="display:flex;height:100%">
+
+    <div style="width:490px;flex-shrink:0;display:flex;align-items:center;justify-content:center;padding:32px 8px 32px 56px">
+      ${phoneLight('/images/site/screen_before_after_select.jpeg', 380)}
+    </div>
+
+    <div style="flex:1;padding:72px 72px 72px 48px;display:flex;flex-direction:column;justify-content:center;min-width:0">
+      ${featText(
+        'Do prontuário ao Instagram em 30 segundos',
+        'Transformação resumida em 30 segundos',
+        'Escolha duas sessões, coloque as fotos lado a lado ou empilhadas, adicione sua logo arrastando com o dedo e compartilhe direto no Instagram.',
+        ['Quadrado, 4:5 e stories 9:16','Logo posicionável','Compartilha sem sair do app']
+      )}
+    </div>
+
+  </div>
+  ${bug(false)}
+</div>`},
+
+/* 9 — Feature: Ficha Clínica (phone right, bg-white) */
+{ n:9, title:'Feature — Ficha Clínica', html:`
+<div class="tpl" style="height:${H}px;background:#fff">
+  <div style="display:flex;height:100%">
+
+    <div style="flex:1;padding:72px 64px 72px 72px;display:flex;flex-direction:column;justify-content:center;min-width:0">
+      ${featText(
+        'Prontuário que fica com você',
+        'Lote 001. Diluição 12. Orbicular, 12 UI. Você lembrava disso?',
+        'Registre marca, lote, diluição e cada região com as quantidades em UI ou ml. São 13 regiões de botox e 11 de filler já pré-cadastradas — o total calcula sozinho.',
+        ['13 regiões de botox','11 regiões de filler','Cálculo automático']
+      )}
+    </div>
+
+    <div style="width:490px;flex-shrink:0;display:flex;align-items:center;justify-content:center;padding:32px 56px 32px 8px">
+      ${phoneLight('/images/site/screen_procedure_record.jpeg', 380)}
+    </div>
+
+  </div>
+  ${bug(false)}
+</div>`},
+
+/* 10 — Feature: Mapa de Pontos (phone left, bg-gray-50) */
+{ n:10, title:'Feature — Mapa de Pontos', html:`
+<div class="tpl" style="height:${H}px;background:#f8fafc">
+  <div style="display:flex;height:100%">
+
+    <div style="width:490px;flex-shrink:0;display:flex;align-items:center;justify-content:center;padding:32px 8px 32px 56px">
+      ${phoneLight('/images/site/screen_annotation.jpeg', 380)}
+    </div>
+
+    <div style="flex:1;padding:72px 72px 72px 48px;display:flex;flex-direction:column;justify-content:center;min-width:0">
+      <h3 style="font-size:72px;font-weight:900;color:#111827;line-height:1.06;letter-spacing:-2px;margin-bottom:16px">Precisão que não depende de memória</h3>
+      <p style="font-size:26px;font-weight:700;color:#0d9488;margin-bottom:24px">Mapeie exatamente onde você aplicou</p>
+      <p style="font-size:22px;color:#6b7280;line-height:1.6;margin-bottom:32px">Toque na foto para marcar cada ponto de aplicação. Use cores diferentes para produtos diferentes. O mapa fica vinculado àquela sessão e serve de referência na próxima.</p>
+      <div style="display:flex;flex-direction:column;gap:12px;align-items:flex-start">
+        ${['5 cores por produto','Desfazer com 1 toque','Zoom para precisão'].map(chip).join('')}
+      </div>
+    </div>
+
+  </div>
+  ${bug(false)}
+</div>`},
+
+/* 11 — Feature: Histórico (phone right, bg-white) */
+{ n:11, title:'Feature — Histórico de Clientes', html:`
+<div class="tpl" style="height:${H}px;background:#fff">
+  <div style="display:flex;height:100%">
+
+    <div style="flex:1;padding:72px 64px 72px 72px;display:flex;flex-direction:column;justify-content:center;min-width:0">
+      ${featText(
+        'A linha do tempo de cada cliente',
+        'Abriu o perfil. Viu tudo. Em segundos.',
+        'Cada sessão aparece em ordem cronológica com foto, data e tudo que foi registrado. Você abre o perfil da cliente e vê a evolução desde a primeira visita.',
+        ['Busca por nome','Grade visual por data','Histórico que não some com o celular']
+      )}
+    </div>
+
+    <div style="width:490px;flex-shrink:0;display:flex;align-items:center;justify-content:center;padding:32px 56px 32px 8px">
+      ${phoneLight('/images/site/screen_home.jpeg', 380)}
+    </div>
+
+  </div>
+  ${bug(false)}
+</div>`},
+
+/* 12 — Para Quem É */
+{ n:12, title:'Para Quem É', html:`
+<div class="tpl" style="height:${H}px;background:linear-gradient(135deg,#00897B 0%,#005548 50%,#002B22 100%);display:flex;flex-direction:column;padding:80px 80px 72px;justify-content:center;gap:52px">
+
+  <div style="text-align:center">
+    ${pilld('Para quem é')}
+    <h2 style="font-size:76px;font-weight:900;color:#fff;line-height:1.05;letter-spacing:-2.5px;margin-top:28px">
+      Se a evolução do cliente<br>faz parte do seu trabalho,<br>
+      <span style="color:#99f6e4;font-weight:500">é para você.</span>
+    </h2>
+  </div>
+
+  <div style="display:flex;flex-wrap:wrap;gap:20px;justify-content:center">
+    ${[
+      {e:'💉',t:'Esteticistas',    s:'Botox, filler e skin care'},
+      {e:'🩺',t:'Médicos Estetas', s:'Prontuário visual e clínico'},
+      {e:'🏋️',t:'Personal Trainers',s:'Transformação corporal'},
+      {e:'🥗',t:'Nutricionistas',  s:'Evolução e acompanhamento'},
+      {e:'🦴',t:'Fisioterapeutas', s:'Reabilitação registrada'},
+    ].map(p=>`
+      <div style="background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);border-radius:24px;padding:36px 20px;text-align:center;width:calc(33.333% - 14px);box-sizing:border-box">
+        <div style="width:68px;height:68px;border-radius:18px;background:rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;margin:0 auto 18px;font-size:32px">${p.e}</div>
+        <div style="font-size:21px;font-weight:800;color:#fff;margin-bottom:8px">${p.t}</div>
+        <div style="font-size:16px;color:rgba(153,246,228,.7);line-height:1.5">${p.s}</div>
+      </div>`).join('')}
+  </div>
+
+  <div style="display:flex;align-items:center;justify-content:center;gap:14px">
+    <span style="width:32px;height:32px;border-radius:50%;background:rgba(45,212,191,.2);border:1.5px solid rgba(45,212,191,.45);display:inline-flex;align-items:center;justify-content:center;color:#5eead4;font-size:14px;font-weight:900;flex-shrink:0">✓</span>
+    <span style="font-size:26px;color:rgba(255,255,255,.75);font-weight:600">Grátis · iOS e Android · +500 profissionais</span>
+  </div>
+
+  ${bug()}
+</div>`},
+
+/* 13 — Stats */
+{ n:13, title:'Números do Lume', html:`
+<div class="tpl" style="height:${H}px;background:#115e59;display:flex;flex-direction:column;padding:72px 80px;justify-content:center;gap:56px;align-items:stretch">
+
+  <div style="text-align:center">
+    <span style="background:rgba(255,255,255,.1);color:rgba(255,255,255,.7);font-size:20px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;padding:12px 28px;border-radius:100px;display:inline-block">
+      Lume em números
+    </span>
+  </div>
+
+  <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:28px">
+    ${[
+      {v:'+500',l:'Profissionais\nregistrando evoluções',e:'👥'},
+      {v:'30s', l:'Para montar um\nantes/depois completo',e:'⚡'},
+      {v:'5 ★', l:'Avaliação média\nna App Store',e:'⭐'},
+      {v:'Grátis',l:'Para iOS\ne Android',e:'📱'},
+    ].map(s=>`
+      <div style="background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:24px;padding:56px 40px;text-align:center">
+        <div style="font-size:36px;margin-bottom:18px">${s.e}</div>
+        <div style="font-size:88px;font-weight:900;color:#fff;letter-spacing:-2px;line-height:1;margin-bottom:16px">${s.v}</div>
+        <div style="font-size:22px;color:rgba(153,246,228,.75);line-height:1.4;white-space:pre-line">${s.l}</div>
+      </div>`).join('')}
+  </div>
+
+  <div style="text-align:center">
+    <span style="font-size:24px;font-weight:600;color:rgba(255,255,255,.55)">brlume.app · Baixe grátis na App Store</span>
+  </div>
+
+  ${bug()}
+</div>`},
+
+/* 14 — Depoimentos */
+{ n:14, title:'Depoimentos', html:`
+<div class="tpl" style="height:${H}px;background:#0a0f1a;display:flex;flex-direction:column;padding:96px 88px;justify-content:center;gap:52px">
+
+  ${pilld('Depoimento real')}
+
+  <div style="color:#fbbf24;font-size:48px;letter-spacing:4px;line-height:1">★★★★★</div>
+
+  <blockquote style="font-size:50px;font-weight:700;color:#fff;line-height:1.25;letter-spacing:-.5px;margin:0">
+    "Abri o Lume, mostrei a linha do tempo completa. Ela ficou em silêncio — e quis continuar o tratamento."
+  </blockquote>
+
+  <div>
+    <div style="display:flex;align-items:center;gap:22px;margin-bottom:28px">
+      <div style="width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,#2dd4bf,#0f766e);color:#fff;font-weight:800;font-size:18px;display:flex;align-items:center;justify-content:center;flex-shrink:0">AM</div>
+      <div>
+        <div style="font-size:26px;font-weight:800;color:#fff">Dra. Ana M.</div>
+        <div style="font-size:20px;color:rgba(255,255,255,.45);margin-top:4px">Médica Esteticista · São Paulo</div>
+      </div>
+    </div>
+    <div style="font-size:20px;font-weight:600;color:#2dd4bf;letter-spacing:.03em;text-transform:uppercase">Evolução que convenceu a cliente a continuar o tratamento</div>
+  </div>
+
+  ${bug()}
+</div>`},
+
+/* 15 — CTA */
+{ n:15, title:'CTA — Download', html:`
+<div class="tpl" style="height:${H}px;background:linear-gradient(135deg,#00897B 0%,#005548 50%,#002B22 100%)">
+  <div style="display:flex;height:100%">
+
+    <div style="flex:1;padding:80px 72px;display:flex;flex-direction:column;justify-content:center;gap:40px;min-width:0">
+      <span style="background:rgba(45,212,191,.15);color:#5eead4;font-size:20px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:12px 26px;border-radius:100px;display:inline-block;width:fit-content">Disponível agora</span>
+      <div>
+        <h2 style="font-size:74px;font-weight:900;color:#fff;line-height:1.0;letter-spacing:-2px;margin-bottom:32px">
+          Comece hoje.<br>Registre tudo.<br>
+          <span style="color:#99f6e4">De graça.</span>
+        </h2>
+        <div style="display:flex;flex-direction:column;gap:18px">
+          ${['Câmera ghost para ângulo consistente','Ficha clínica de botox e filler completa','Antes e depois com logo em 30 segundos','Histórico na nuvem, sempre acessível'].map(f=>`
+          <div style="display:flex;align-items:center;gap:14px">
+            ${crHero()}
+            <span style="font-size:23px;color:rgba(255,255,255,.82);font-weight:500">${f}</span>
+          </div>`).join('')}
+        </div>
+      </div>
+      <div>
+        <div style="display:flex;flex-direction:column;gap:18px;align-items:flex-start">
+          <!-- App Store -->
+          <div style="display:inline-flex;align-items:center;gap:18px;background:#fff;color:#111827;padding:20px 40px;border-radius:100px">
+            <svg width="30" height="36" viewBox="0 0 24 24" fill="#111827"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+            <div><div style="font-size:14px;font-weight:600;opacity:.45;margin-bottom:3px">Disponível na</div><div style="font-size:26px;font-weight:800">App Store</div></div>
+          </div>
+          <!-- Google Play -->
+          <div style="display:inline-flex;align-items:center;gap:18px;background:#fff;color:#111827;padding:20px 40px;border-radius:100px">
+            <svg width="32" height="32" viewBox="0 0 24 24"><path d="M3.18 23.76a2.1 2.1 0 0 0 1.95-.06l12.33-7.12-2.68-2.68z" fill="#EA4335"/><path d="M21.15 10.5l-3.44-1.98-3.05 3.05 3.05 3.05 3.47-2a1.84 1.84 0 0 0 0-3.12z" fill="#FBBC04"/><path d="M3.18.24A1.84 1.84 0 0 0 2 1.93v20.14a1.84 1.84 0 0 0 1.18 1.69L15.57 12z" fill="#4285F4"/><path d="M15.57 12 3.18.24a2.1 2.1 0 0 1 1.95.06l12.33 7.12z" fill="#34A853"/></svg>
+            <div><div style="font-size:14px;font-weight:600;opacity:.45;margin-bottom:3px">Disponível no</div><div style="font-size:26px;font-weight:800">Google Play</div></div>
+          </div>
+        </div>
+        <p style="font-size:19px;color:rgba(255,255,255,.35);margin-top:20px">Gratuito · Sem cartão de crédito</p>
+      </div>
+    </div>
+
+    <div style="width:520px;flex-shrink:0;display:flex;align-items:center;justify-content:center;padding:36px 52px 36px 12px">
+      ${phoneDark('/images/site/screen_home.jpeg', 430)}
+    </div>
+
+  </div>
+  ${bug()}
+</div>`},
+
+]
+
+/* ── Render ─────────────────────────────────────────────────────── */
+function render() {
+  const PV = 270
+  const pH = Math.round(PV * H / W)
+  const sc = PV / W
+  document.getElementById('grid').innerHTML = T.map(t => `
+    <div class="cw">
+      <div class="pb" style="height:${pH}px;cursor:zoom-in" onclick="opn(${t.n})">
+        <div class="in">
+          <div style="width:${W}px;transform:scale(${sc});transform-origin:center center;flex-shrink:0">${t.html}</div>
+        </div>
+      </div>
+      <div class="cl">
+        <b>${t.n}. ${t.title}</b>
+        <button class="dl" id="dl${t.n}" onclick="dl(${t.n})">⬇ Baixar</button>
+      </div>
+    </div>`).join('')
+}
+
+function opn(n) {
+  const t = T.find(x=>x.n===n)
+  const sc = Math.min(window.innerHeight*.9/H, window.innerWidth*.9/W)
+  const dw = Math.round(W*sc), dh = Math.round(H*sc)
+  document.getElementById('mc').innerHTML = `
+    <div style="width:${dw}px;height:${dh}px;overflow:hidden;border-radius:10px;box-shadow:0 24px 80px rgba(0,0,0,.7)">
+      <div style="width:${W}px;height:${H}px;transform:scale(${sc});transform-origin:top left">${t.html}</div>
+    </div>`
+  document.getElementById('mf').textContent = `Post ${n} — ${t.title} — 4:5 · 1080×1350`
+  document.getElementById('modal').classList.add('open')
+}
+
+function cls() { document.getElementById('modal').classList.remove('open') }
+document.getElementById('modal').addEventListener('click',e=>{if(e.target===document.getElementById('modal'))cls()})
+document.addEventListener('keydown',e=>{if(e.key==='Escape')cls()})
+
+/* ── Download ───────────────────────────────────────────────────── */
+async function capture(n) {
+  const t = T.find(x=>x.n===n)
+  const wrap = document.createElement('div')
+  wrap.style.cssText = `position:fixed;left:-${W+100}px;top:0;width:${W}px;height:${H}px`
+  wrap.innerHTML = t.html
+  document.body.appendChild(wrap)
+
+  const imgs = [...wrap.querySelectorAll('img')]
+  await Promise.all(imgs.map(img => {
+    if (img.complete && img.naturalWidth > 0) return Promise.resolve()
+    return new Promise(resolve => { img.onload = resolve; img.onerror = resolve })
+  }))
+
+  const blob = await htmlToImage.toBlob(wrap.firstElementChild, {
+    width: W, height: H, pixelRatio: 1,
+  })
+  document.body.removeChild(wrap)
+  return blob
+}
+
+async function dl(n) {
+  const btn = document.getElementById('dl'+n)
+  btn.disabled = true
+  btn.textContent = '⏳'
+  try {
+    const blob = await capture(n)
+    const a = document.createElement('a')
+    a.download = `lume-template-${String(n).padStart(2,'0')}.png`
+    a.href = URL.createObjectURL(blob)
+    a.click()
+    URL.revokeObjectURL(a.href)
+  } finally {
+    btn.disabled = false
+    btn.textContent = '⬇ Baixar'
+  }
+}
+
+async function downloadAll() {
+  const prog = document.getElementById('prog')
+  const zip = new JSZip()
+  const folder = zip.folder('lume-templates')
+
+  for (let i = 0; i < T.length; i++) {
+    const n = T[i].n
+    prog.textContent = `Exportando ${i+1}/${T.length}…`
+    const btn = document.getElementById('dl'+n)
+    if (btn) { btn.disabled = true; btn.textContent = '⏳' }
+    try {
+      const blob = await capture(n)
+      const arrayBuffer = await blob.arrayBuffer()
+      folder.file(`lume-template-${String(n).padStart(2,'0')}.png`, arrayBuffer)
+    } finally {
+      if (btn) { btn.disabled = false; btn.textContent = '⬇ Baixar' }
+    }
+  }
+
+  prog.textContent = 'Criando ZIP…'
+  const zipBlob = await zip.generateAsync({ type: 'blob' })
+  const a = document.createElement('a')
+  a.download = 'lume-templates.zip'
+  a.href = URL.createObjectURL(zipBlob)
+  a.click()
+  URL.revokeObjectURL(a.href)
+
+  prog.textContent = '✓ lume-templates.zip baixado!'
+  setTimeout(() => prog.textContent = '', 4000)
+}
+
+render()
+</script>
+</body>
+</html>

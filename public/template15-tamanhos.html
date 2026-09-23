@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Lume — Template 15 · 3 Tamanhos</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Roboto:wght@500&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/html-to-image@1.11.11/dist/html-to-image.min.js"></script>
+<style>
+* { box-sizing:border-box; margin:0; padding:0; }
+body { font-family:'Inter',sans-serif; background:#f1f5f9; }
+header { background:linear-gradient(135deg,#00897B,#002B22); color:#fff; padding:14px 28px; display:flex; align-items:center; gap:16px; position:sticky; top:0; z-index:100; box-shadow:0 2px 12px rgba(0,0,0,.3); }
+header strong { font-size:17px; font-weight:800; }
+header span { font-size:12px; opacity:.65; }
+.grid { display:flex; flex-wrap:wrap; gap:32px; padding:32px; justify-content:center; align-items:flex-start; }
+.cw { background:#fff; border-radius:14px; overflow:hidden; box-shadow:0 2px 8px rgba(0,0,0,.1); transition:transform .15s,box-shadow .15s; }
+.cw:hover { transform:translateY(-3px); box-shadow:0 12px 32px rgba(0,0,0,.14); }
+.pb { position:relative; overflow:hidden; background:#002B22; cursor:zoom-in; }
+.pb .in { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; overflow:hidden; }
+.cl { padding:12px 16px; border-top:1px solid #f1f5f9; display:flex; justify-content:space-between; align-items:center; gap:12px; }
+.cl .info { display:flex; flex-direction:column; gap:2px; }
+.cl b { color:#334155; font-size:13px; font-weight:700; }
+.cl small { color:#94a3b8; font-size:11px; font-weight:600; }
+.dl { background:#0d9488; color:#fff; border:none; border-radius:8px; padding:8px 16px; font-size:12px; font-weight:700; font-family:inherit; cursor:pointer; display:flex; align-items:center; gap:6px; white-space:nowrap; transition:background .15s; }
+.dl:hover { background:#0f766e; }
+.dl:disabled { background:#94a3b8; cursor:wait; }
+#modal { display:none; position:fixed; inset:0; background:rgba(0,0,0,.93); z-index:200; align-items:center; justify-content:center; padding:16px; }
+#modal.open { display:flex; }
+#mi { position:relative; }
+#mx { position:absolute; top:-44px; right:0; background:none; border:none; color:#fff; font-size:26px; cursor:pointer; font-weight:800; opacity:.7; }
+#mx:hover { opacity:1; }
+#mf { position:absolute; bottom:-30px; left:0; color:rgba(255,255,255,.4); font-size:11px; font-family:inherit; }
+.tpl { font-family:'Inter',sans-serif; position:relative; overflow:hidden; }
+.tpl * { box-sizing:border-box; }
+</style>
+</head>
+<body>
+
+<header>
+  <strong>✦ Lume — Template 15 · CTA Download</strong>
+  <span>3 tamanhos: Quadrado 1:1 · Vertical 9:16 · Horizontal 1,91:1</span>
+</header>
+
+<div class="grid" id="grid"></div>
+<div id="modal"><div id="mi"><button id="mx" onclick="cls()">✕</button><div id="mc"></div><div id="mf"></div></div></div>
+
+<script>
+
+/* ─── Shared helpers ─────────────────────────────────────────── */
+function phoneDark(src, w, imgStyle='') {
+  return `<div style="background:#030712;border-radius:40px;padding:7px;box-shadow:0 0 0 1px rgba(255,255,255,.12),0 0 60px rgba(0,0,0,.55),0 8px 24px rgba(0,0,0,.45);display:inline-block;flex-shrink:0">
+    <div style="border-radius:33px;overflow:hidden;line-height:0;display:block"><img src="${src}" width="${w}" style="display:block;${imgStyle}"></div>
+  </div>`
+}
+
+function bug() {
+  return `<div style="position:absolute;bottom:28px;right:36px;display:flex;align-items:center;gap:10px;opacity:.28">
+    <img src="/images/site/white_logo.png" width="48" style="display:block">
+    <span style="font-size:28px;font-weight:500;font-family:'Roboto',sans-serif;color:#fff;letter-spacing:.01em">Lume</span>
+  </div>`
+}
+
+const BG = 'background:linear-gradient(135deg,#00897B 0%,#005548 50%,#002B22 100%)'
+
+const appleIcon = (w=30,h=36) =>
+  `<svg width="${w}" height="${h}" viewBox="0 0 24 24" fill="#111827"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>`
+
+const gpIcon = (w=32,h=32) =>
+  `<svg width="${w}" height="${h}" viewBox="0 0 24 24"><path d="M3.18 23.76a2.1 2.1 0 0 0 1.95-.06l12.33-7.12-2.68-2.68z" fill="#EA4335"/><path d="M21.15 10.5l-3.44-1.98-3.05 3.05 3.05 3.05 3.47-2a1.84 1.84 0 0 0 0-3.12z" fill="#FBBC04"/><path d="M3.18.24A1.84 1.84 0 0 0 2 1.93v20.14a1.84 1.84 0 0 0 1.18 1.69L15.57 12z" fill="#4285F4"/><path d="M15.57 12 3.18.24a2.1 2.1 0 0 1 1.95.06l12.33 7.12z" fill="#34A853"/></svg>`
+
+function storeBtn(type, labelSz=26, pad='20px 40px', iconScale=1) {
+  const iw = Math.round(30*iconScale), ih = Math.round(36*iconScale)
+  const gw = Math.round(32*iconScale), gh = Math.round(32*iconScale)
+  if (type === 'apple') return `
+    <div style="display:inline-flex;align-items:center;gap:16px;background:#fff;color:#111827;padding:${pad};border-radius:100px">
+      ${appleIcon(iw,ih)}
+      <div><div style="font-size:${Math.round(labelSz*.54)}px;font-weight:600;opacity:.45;margin-bottom:3px">Disponível na</div><div style="font-size:${labelSz}px;font-weight:800">App Store</div></div>
+    </div>`
+  return `
+    <div style="display:inline-flex;align-items:center;gap:16px;background:#fff;color:#111827;padding:${pad};border-radius:100px">
+      ${gpIcon(gw,gh)}
+      <div><div style="font-size:${Math.round(labelSz*.54)}px;font-weight:600;opacity:.45;margin-bottom:3px">Disponível no</div><div style="font-size:${labelSz}px;font-weight:800">Google Play</div></div>
+    </div>`
+}
+
+function checkItem(text, fontSize=23) {
+  const sz = Math.round(fontSize * .87)
+  return `<div style="display:flex;align-items:center;gap:${Math.round(fontSize*.6)}px">
+    <span style="width:${sz}px;height:${sz}px;border-radius:50%;background:rgba(45,212,191,.25);border:1.5px solid rgba(45,212,191,.55);display:inline-flex;align-items:center;justify-content:center;color:#5eead4;font-size:${Math.round(sz*.4)}px;font-weight:900;flex-shrink:0">✓</span>
+    <span style="font-size:${fontSize}px;color:rgba(255,255,255,.82);font-weight:500">${text}</span>
+  </div>`
+}
+
+const BULLETS = [
+  'Câmera ghost para ângulo consistente',
+  'Ficha clínica de botox e filler completa',
+  'Antes e depois com logo em 30 segundos',
+  'Histórico na nuvem, sempre acessível',
+]
+
+/* ─── Templates ──────────────────────────────────────────────── */
+const T = [
+
+/* ── QUADRADO 1:1 — 1080×1080 ─────────────────────────────────── */
+{
+  id: 'square',
+  label: 'Quadrado 1:1',
+  dim: '1080×1080',
+  W: 1080, H: 1080,
+  filename: 'lume-template15-quadrado-1080x1080.png',
+  html: `
+<div class="tpl" style="width:1080px;height:1080px;${BG}">
+  <div style="display:flex;height:100%">
+
+    <!-- Texto -->
+    <div style="flex:1;padding:64px 36px 64px 68px;display:flex;flex-direction:column;justify-content:center;gap:28px;min-width:0">
+
+      <span style="background:rgba(45,212,191,.18);color:#5eead4;font-size:20px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:11px 24px;border-radius:100px;display:inline-block;width:fit-content">Disponível agora</span>
+
+      <div>
+        <h2 style="font-size:58px;font-weight:900;color:#fff;line-height:1.0;letter-spacing:-1.5px;margin-bottom:24px">
+          Comece hoje.<br>Registre tudo.<br><span style="color:#99f6e4">De graça.</span>
+        </h2>
+        <div style="display:flex;flex-direction:column;gap:14px">
+          ${BULLETS.map(b => checkItem(b, 19)).join('')}
+        </div>
+      </div>
+
+      <div>
+        <div style="display:flex;flex-direction:column;gap:14px;align-items:flex-start">
+          ${storeBtn('apple', 22, '16px 32px', .8)}
+          ${storeBtn('gplay', 22, '16px 32px', .8)}
+        </div>
+        <p style="font-size:17px;color:rgba(255,255,255,.35);margin-top:16px">Gratuito · Sem cartão de crédito</p>
+      </div>
+
+    </div>
+
+    <!-- Celular -->
+    <div style="width:430px;flex-shrink:0;display:flex;align-items:center;justify-content:center;padding:28px 44px 28px 8px">
+      ${phoneDark('/images/site/screen_home.jpeg', 340)}
+    </div>
+
+  </div>
+  ${bug()}
+</div>`
+},
+
+/* ── VERTICAL 9:16 — 1080×1920 ────────────────────────────────── */
+{
+  id: 'vertical',
+  label: 'Vertical 9:16',
+  dim: '1080×1920',
+  W: 1080, H: 1920,
+  filename: 'lume-template15-vertical-1080x1920.png',
+  html: `
+<div class="tpl" style="width:1080px;height:1920px;${BG};display:flex;flex-direction:column;align-items:center;padding:100px 88px 76px;gap:0">
+
+  <!-- Badge -->
+  <span style="background:rgba(45,212,191,.18);color:#5eead4;font-size:30px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:14px 32px;border-radius:100px;display:inline-block;margin-bottom:52px">Disponível agora</span>
+
+  <!-- Título domina o frame -->
+  <h2 style="font-size:102px;font-weight:900;color:#fff;line-height:1.0;letter-spacing:-3px;text-align:center;margin-bottom:52px">
+    Comece hoje.<br>Registre tudo.<br><span style="color:#99f6e4">De graça.</span>
+  </h2>
+
+  <!-- Bullets com mais respiro -->
+  <div style="display:flex;flex-direction:column;gap:28px;width:100%;margin-bottom:52px">
+    ${BULLETS.map(b => checkItem(b, 28)).join('')}
+  </div>
+
+  <!-- Botões lado a lado -->
+  <div style="display:flex;flex-direction:row;gap:20px;align-items:center;justify-content:center;margin-bottom:22px;flex-wrap:wrap">
+    ${storeBtn('apple', 24, '17px 34px', .88)}
+    ${storeBtn('gplay', 24, '17px 34px', .88)}
+  </div>
+  <p style="font-size:22px;color:rgba(255,255,255,.32);margin-bottom:68px">Gratuito · Sem cartão de crédito</p>
+
+  <!-- Celular na base -->
+  <div style="flex-shrink:0">
+    ${phoneDark('/images/site/screen_home.jpeg', 370)}
+  </div>
+
+  ${bug()}
+</div>`
+},
+
+/* ── HORIZONTAL 1,91:1 — 1200×628 ─────────────────────────────── */
+{
+  id: 'horizontal',
+  label: 'Horizontal 1,91:1',
+  dim: '1200×628',
+  W: 1200, H: 628,
+  filename: 'lume-template15-horizontal-1200x628.png',
+  html: `
+<div class="tpl" style="width:1200px;height:628px;${BG};display:flex;overflow:hidden">
+
+  <!-- Texto -->
+  <div style="flex:1;padding:48px 36px 48px 64px;display:flex;flex-direction:column;justify-content:center;gap:18px;min-width:0">
+
+    <span style="background:rgba(45,212,191,.18);color:#5eead4;font-size:15px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:8px 18px;border-radius:100px;display:inline-block;width:fit-content">Disponível agora</span>
+
+    <h2 style="font-size:44px;font-weight:900;color:#fff;line-height:1.02;letter-spacing:-1.5px">
+      Comece hoje.<br>Registre tudo.<br><span style="color:#99f6e4">De graça.</span>
+    </h2>
+
+    <div style="display:flex;flex-direction:column;gap:10px">
+      ${BULLETS.map(b => checkItem(b, 15)).join('')}
+    </div>
+
+    <div>
+      <div style="display:flex;flex-direction:row;gap:12px;align-items:center;flex-wrap:wrap">
+        ${storeBtn('apple', 17, '12px 22px', .62)}
+        ${storeBtn('gplay', 17, '12px 22px', .62)}
+      </div>
+      <p style="font-size:13px;color:rgba(255,255,255,.35);margin-top:12px">Gratuito · Sem cartão de crédito</p>
+    </div>
+
+  </div>
+
+  <!-- Celular (cortado nas bordas — efeito intencional) -->
+  <div style="width:340px;flex-shrink:0;height:628px;overflow:hidden;display:flex;align-items:center;justify-content:center;padding:0 40px 0 0">
+    ${phoneDark('/images/site/screen_home.jpeg', 250)}
+  </div>
+
+  ${bug()}
+</div>`
+},
+
+]
+
+/* ─── Render preview cards ───────────────────────────────────── */
+const PW = 300
+
+function render() {
+  document.getElementById('grid').innerHTML = T.map(t => {
+    const pH = Math.round(PW * t.H / t.W)
+    const sc  = PW / t.W
+    return `
+    <div class="cw">
+      <div class="pb" style="width:${PW}px;height:${pH}px" onclick="opn('${t.id}')">
+        <div class="in">
+          <div style="width:${t.W}px;transform:scale(${sc});transform-origin:center center;flex-shrink:0">${t.html}</div>
+        </div>
+      </div>
+      <div class="cl">
+        <div class="info">
+          <b>${t.label}</b>
+          <small>${t.dim}</small>
+        </div>
+        <button class="dl" id="dl-${t.id}" onclick="dl('${t.id}')">⬇ Baixar</button>
+      </div>
+    </div>`
+  }).join('')
+}
+
+/* ─── Modal (zoom) ───────────────────────────────────────────── */
+function opn(id) {
+  const t = T.find(x => x.id === id)
+  const sc = Math.min(
+    (window.innerHeight * .9) / t.H,
+    (window.innerWidth  * .9) / t.W
+  )
+  const dw = Math.round(t.W * sc)
+  const dh = Math.round(t.H * sc)
+  document.getElementById('mc').innerHTML = `
+    <div style="width:${dw}px;height:${dh}px;overflow:hidden;border-radius:10px;box-shadow:0 24px 80px rgba(0,0,0,.7)">
+      <div style="width:${t.W}px;height:${t.H}px;transform:scale(${sc});transform-origin:top left">${t.html}</div>
+    </div>`
+  document.getElementById('mf').textContent = `${t.label} · ${t.dim}`
+  document.getElementById('modal').classList.add('open')
+}
+
+function cls() { document.getElementById('modal').classList.remove('open') }
+document.getElementById('modal').addEventListener('click', e => { if (e.target === document.getElementById('modal')) cls() })
+document.addEventListener('keydown', e => { if (e.key === 'Escape') cls() })
+
+/* ─── Download ───────────────────────────────────────────────── */
+async function dl(id) {
+  const t   = T.find(x => x.id === id)
+  const btn = document.getElementById('dl-' + id)
+  btn.disabled    = true
+  btn.textContent = '⏳'
+
+  try {
+    const wrap = document.createElement('div')
+    wrap.style.cssText = `position:fixed;left:-${t.W + 100}px;top:0;width:${t.W}px;height:${t.H}px`
+    wrap.innerHTML = t.html
+    document.body.appendChild(wrap)
+
+    const imgs = [...wrap.querySelectorAll('img')]
+    await Promise.all(imgs.map(img => {
+      if (img.complete && img.naturalWidth > 0) return Promise.resolve()
+      return new Promise(resolve => { img.onload = resolve; img.onerror = resolve })
+    }))
+
+    const blob = await htmlToImage.toBlob(wrap.firstElementChild, {
+      width: t.W, height: t.H, pixelRatio: 1,
+    })
+    document.body.removeChild(wrap)
+
+    const a = document.createElement('a')
+    a.download = t.filename
+    a.href = URL.createObjectURL(blob)
+    a.click()
+    URL.revokeObjectURL(a.href)
+  } finally {
+    btn.disabled    = false
+    btn.textContent = '⬇ Baixar'
+  }
+}
+
+render()
+</script>
+</body>
+</html>

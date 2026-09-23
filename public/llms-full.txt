@@ -1,0 +1,449 @@
+# Lume — Conteúdo completo
+
+> Versão expandida do llms.txt, com o texto completo do FAQ e do Glossário embutido, para ferramentas de IA que não seguem links. Ver também https://brlume.app/llms.txt (versão resumida) e https://brlume.app/ (site).
+
+Lume é um aplicativo gratuito para iOS e Android para profissionais de estética (esteticistas, médicos estetas, dermatologistas) registrarem e acompanharem a evolução visual e clínica de clientes: câmera ghost, ficha clínica de botox e filler, anamnese digital, mapa de pontos, antes e depois com logo, e agenda com catálogo de serviços.
+
+## Sobre (https://brlume.app/sobre)
+
+O Lume é desenvolvido por Lívia Carolina Lima, em Belo Horizonte (MG), como projeto de pessoa física — sem empresa nem investimento externo por trás. É um app feito, mantido e atualizado por uma única pessoa.
+
+A ideia nasceu da observação de que profissionais de estética autônomos ou de clínicas pequenas não tinham uma solução 100% mobile que resolvesse a gestão da clínica de ponta a ponta — o fluxo de trabalho vivia espalhado entre galeria de fotos, WhatsApp, papel e planilhas. O Lume une câmera ghost, ficha clínica de botox e filler, anamnese digital, agenda com catálogo de serviços e geração de antes e depois num único aplicativo mobile.
+
+Missão: ser a solução 100% mobile de gestão de clínica para o profissional autônomo de estética, do primeiro cadastro de cliente ao registro clínico mais detalhado, sem exigir computador, planilha ou treinamento.
+
+Lançado em abril de 2026, disponível desde então na App Store (iOS) e na Google Play Store (Android). Está atualmente em período de beta, com acesso gratuito ao plano Lume Pro para todos os usuários.
+
+Números (atualizado em setembro de 2026): 600+ downloads nas lojas, 403 clientes ativos, 2.276 procedimentos cadastrados, 723 pacientes registrados, 326 anamneses preenchidas.
+
+Contato: lvcarolina42@gmail.com — Instagram @br_lume.
+
+## Artigo: Câmera Ghost — o guia completo (https://brlume.app/artigos/camera-ghost-guia-completo)
+
+Câmera ghost é uma funcionalidade de câmera que exibe a última foto registrada de um cliente em sobreposição semitransparente sobre a imagem ao vivo da câmera do celular, permitindo alinhar o cliente no mesmo ângulo, distância e enquadramento da sessão anterior antes de fotografar.
+
+Como funciona: (1) o app carrega automaticamente a última foto do cliente ao abrir a câmera na sessão; (2) o profissional posiciona o cliente com a foto de referência sobreposta; (3) alinha pontos de referência anatômicos (nariz, olhos, contorno do rosto) até coincidirem com a foto anterior; (4) dispara a foto só quando o alinhamento está satisfatório.
+
+Por que importa: pequenas variações de ângulo ou distância alteram a percepção de volume e simetria de um rosto, fazendo resultados reais parecerem discretos ou exagerados em comparações malfeitas. A câmera ghost elimina essa variável ao garantir que as duas fotos partem da mesma posição.
+
+Comparada a outras técnicas — marcações no chão, tripé em posição fixa, ou "tirar de memória" — a câmera ghost é a única que dá referência visual direta em tempo real do enquadramento exato da sessão anterior, sem exigir espaço físico fixo nem depender de memória do profissional.
+
+No Lume, a opacidade da sobreposição é ajustável por controle deslizante, funciona com câmera frontal e traseira, e aceita como referência tanto a última foto do app quanto uma imagem importada da galeria.
+
+## FAQ completo (https://brlume.app/faq)
+
+### Sobre o Lume
+
+**O que é o Lume?**
+
+O Lume é um aplicativo para iOS e Android criado para profissionais de estética que precisam registrar e acompanhar a evolução dos seus clientes. Com ele, você cadastra clientes em segundos, fotografa cada sessão com uma câmera especial que mantém o ângulo consistente e gera imagens de antes e depois prontas para compartilhar. Para quem trabalha com botox e preenchimento facial, o Lume também funciona como prontuário clínico completo, registrando produtos, lotes, diluições e pontos de aplicação por região anatômica. Tudo organizado por cliente, acessível de qualquer dispositivo, sem perder nada.
+
+**Para quem é o Lume?**
+
+O Lume foi pensado para qualquer profissional que acompanha resultados visuais ao longo do tempo. Esteticistas, médicos estetas, dermatologistas, personal trainers, nutricionistas e fisioterapeutas usam o app para manter um histórico visual organizado por cliente. Para quem aplica botox, filler ou realiza harmonização facial, o Lume vai além: é também um prontuário clínico com registros de produtos, lotes e regiões anatômicas. Se a evolução do cliente faz parte do seu trabalho, o Lume é para você.
+
+**O Lume é gratuito?**
+
+Sim, o Lume é gratuito para baixar e usar. O plano gratuito permite cadastrar até 50 clientes com até 30 sessões cada, com acesso completo a todas as funcionalidades — câmera ghost, ficha clínica, anamnese digital, antes e depois. Para quem precisa de mais capacidade, o Lume Pro oferece clientes e sessões ilimitados. Durante o período de beta, todos os usuários têm acesso ao plano Pro sem custo.
+
+**Preciso criar conta para usar o Lume?**
+
+Não. Ao abrir o Lume pela primeira vez, você pode escolher "continuar como convidado" e já cadastrar clientes, tirar fotos e registrar sessões sem preencher nenhum formulário de cadastro. Criar uma conta com Google ou Apple é opcional e pode ser feito depois, a qualquer momento, sem perder nada do que já foi registrado como convidado — útil principalmente se você quiser acessar os mesmos dados de outro aparelho.
+
+**O Lume está disponível para iOS e Android?**
+
+Sim, o Lume está disponível para iOS na App Store e para Android na Google Play Store. O app funciona em iPhones e iPads com iOS 15 ou superior, e em versões recentes do Android. Os dados ficam sincronizados na nuvem, então você pode trocar de celular ou usar em mais de um dispositivo sem perder nenhum registro — basta entrar com a mesma conta Google ou Apple para ter acesso a todos os seus clientes e sessões.
+
+**O Lume funciona em outros idiomas além do português?**
+
+Sim. O Lume está disponível em português, inglês e espanhol. O idioma do app segue automaticamente a configuração do celular, o que é útil para profissionais que atendem clientes internacionais ou trabalham fora do Brasil. Campos como telefone também aceitam números de outros países, com seletor de código internacional.
+
+**Meus dados ficam seguros?**
+
+Sim. Cada profissional acessa exclusivamente seus próprios dados — nenhum outro usuário tem acesso à sua lista de clientes. As fotos, fichas clínicas e anamneses são armazenadas na nuvem com autenticação obrigatória, e o Lume foi desenvolvido em conformidade com a LGPD. Se você decidir encerrar a conta, todos os dados — fotos, fichas e histórico — são removidos permanentemente, sem exceções.
+
+### Câmera Ghost
+
+**O que é câmera ghost para esteticistas?**
+
+A câmera ghost é uma funcionalidade do Lume que exibe a última foto de uma sessão anterior em sobreposição semitransparente sobre a câmera ao vivo. Isso permite posicionar o cliente exatamente como estava na sessão anterior — mesma distância, mesmo ângulo, mesma expressão — antes de tirar a nova foto. O resultado é que as comparações antes e depois ficam muito mais precisas e impactantes, porque as duas fotos realmente se comparam de igual para igual. Para esteticistas e médicos que precisam documentar evolução de tratamentos, a câmera ghost é a ferramenta que transforma um simples registro em evidência clínica.
+
+**Como garantir o mesmo ângulo nas fotos entre sessões?**
+
+O maior desafio das fotos de acompanhamento é que pequenas variações de ângulo e distância fazem o resultado parecer menor do que é. O Lume resolve isso com a câmera ghost: ao abrir a câmera para uma nova sessão, a última foto do cliente aparece em sobreposição com opacidade ajustável. Você alinha os pontos de referência — nariz, olhos, contorno do rosto — e tira a foto quando as duas imagens estão sobrepostas perfeitamente. Com esse método, a consistência entre sessões deixa de depender de memória ou de sorte.
+
+**Posso ajustar a intensidade da sobreposição ghost?**
+
+Sim. No Lume, a opacidade da imagem ghost é ajustável diretamente na tela da câmera com um controle deslizante. Você pode aumentar a intensidade para facilitar o alinhamento de detalhes finos ou diminuir para ter uma visão mais clara do cliente ao vivo. A configuração pode ser ajustada a qualquer momento durante o registro. Isso dá flexibilidade para usar a câmera ghost tanto em procedimentos faciais precisos quanto em registros de transformação corporal.
+
+**A câmera ghost funciona com câmera frontal e traseira?**
+
+Sim, a câmera ghost do Lume funciona tanto com a câmera frontal quanto com a traseira. Você pode alternar entre elas durante o registro da sessão conforme a necessidade do procedimento. Para tratamentos faciais, a câmera frontal costuma oferecer melhor controle de distância. Para registros de transformação corporal ou regiões específicas, a câmera traseira pode ser mais prática. A sobreposição ghost funciona da mesma forma em ambas as câmeras.
+
+### Ficha Clínica de Botox e Filler
+
+**Como registrar a aplicação de botox no celular?**
+
+No Lume, o registro de botox é feito diretamente na tela de sessão, após tirar a foto. Você preenche a marca do produto, o número do lote e a diluição utilizada. Em seguida, seleciona as regiões anatômicas tratadas e informa a quantidade em unidades (UI) para cada região — o total é calculado automaticamente pelo app. Todo o registro fica vinculado à sessão e ao cliente, acessível a qualquer momento, inclusive em auditorias ou na consulta pré-sessão seguinte. O processo inteiro leva menos de dois minutos.
+
+**Quais regiões anatômicas de botox o Lume registra?**
+
+O Lume tem 13 regiões pré-cadastradas para registro de botox, cobrindo os principais pontos de aplicação em harmonização facial: Frontal, Prócero, Corrugador, Orbicular Superior, Orbicular Inferior, Orbicular Lateral, Nasalis, Mentalis, Platisma, Masseter, DAO, DLI e LLSAN. Para cada região, você informa a quantidade em unidades (UI) e o total da sessão é calculado automaticamente. Esse nível de detalhe transforma o Lume em um prontuário clínico completo, não apenas um álbum de fotos.
+
+**Como registrar preenchimento facial no celular?**
+
+O registro de filler no Lume segue a mesma lógica do botox: você seleciona a marca, informa o lote e escolhe as regiões de aplicação. O app tem 11 regiões pré-cadastradas para preenchimento facial: Lábios, Sulco Nasogeniano, Malar, Bigode Chinês, Pré-jowl, Mento, Comissura Labial, Periorbital, Temporal, Nariz e Mandíbula. Para cada região, você informa o volume em ml e o total é calculado automaticamente. É possível registrar múltiplas seringas e regiões na mesma sessão, com todos os dados salvos na nuvem.
+
+**É possível registrar botox e filler na mesma sessão?**
+
+Sim. No Lume, uma única sessão pode conter o registro completo de botox, filler ou ambos simultaneamente. O formulário clínico aceita qualquer combinação — você preenche as seções aplicáveis à sessão e deixa em branco o que não for usado. Isso é especialmente útil para médicos estetas e dermatologistas que combinam diferentes procedimentos em uma mesma consulta. Tudo fica documentado sob um único registro, vinculado à data e à foto da sessão.
+
+**Por que é importante registrar o lote do botox?**
+
+O registro do número de lote de botox e filler é uma exigência de boas práticas clínicas e pode ser decisivo em situações de reação adversa, auditoria ou ação judicial. Com o lote documentado no Lume, você consegue identificar rapidamente qual produto foi usado em cada paciente e em qual data — informação essencial para comunicar à vigilância sanitária em caso de recall ou evento adverso. Além da proteção profissional, o registro de lote demonstra seriedade e fortalece a confiança do paciente. O Lume armazena essas informações na nuvem, acessíveis a qualquer momento.
+
+### Anamnese Digital
+
+**O que é a anamnese digital do Lume?**
+
+É a ficha de anamnese preenchida pela própria cliente, direto no celular ou tablet, em vez de papel. Ela informa dados pessoais e responde perguntas de saúde relevantes para o procedimento, e assina o termo de responsabilidade com o dedo na tela. Tudo fica salvo automaticamente no prontuário, revisável pelo profissional antes da sessão — sem digitar nada manualmente depois.
+
+**A cliente precisa instalar o Lume para preencher a anamnese?**
+
+Não. Existem dois jeitos de preencher: presencialmente, entregando o tablet ou celular da clínica com o formulário já aberto na sessão autenticada do profissional, ou remotamente, enviando um link individual pelo WhatsApp ou mostrando um QR code. Em ambos os casos, a cliente responde direto no navegador, sem baixar app nem criar conta.
+
+**Posso editar as perguntas da anamnese?**
+
+Sim. O Lume vem com 24 perguntas clínicas padrão, extraídas de um modelo de ficha de anamnese usado no mercado, mas você pode editar o texto de qualquer uma, remover as que não fazem sentido para sua especialidade, adicionar perguntas próprias e reordenar tudo como preferir. Anamneses já respondidas mantêm as perguntas vigentes no momento do preenchimento, mesmo que você edite o formulário depois.
+
+**Como acompanho as anamneses das minhas clientes?**
+
+No prontuário de cada cliente, o Lume mostra o histórico de anamneses com status — pendente, em andamento ou concluída — além das respostas completas e da assinatura, sempre que precisar consultar. Você também escolhe se quer uma anamnese única por cliente, reaproveitada entre sessões, ou uma nova a cada procedimento.
+
+### Antes e Depois
+
+**Como criar antes e depois profissional para Instagram?**
+
+No Lume, o processo começa selecionando duas sessões do mesmo cliente. O app coloca as fotos lado a lado ou empilhadas, você adiciona sua logo arrastando com o dedo, define o formato — quadrado 1:1, retrato 4:5 ou stories 9:16 — e compartilha direto para o Instagram, WhatsApp ou qualquer outro app. A linha divisória entre as fotos tem espessura e cor ajustáveis. O resultado é uma imagem com cara de agência, pronta para publicar, sem precisar de outro app de edição.
+
+**Como adicionar minha logo no antes e depois?**
+
+No editor de antes e depois do Lume, você importa a logo da sua clínica ou estúdio diretamente da galeria do celular. Em seguida, posiciona a logo arrastando com o dedo e ajusta o tamanho com um gesto de pinça. O app salva a posição e o tamanho automaticamente para a próxima vez — você não precisa reconfigurar a cada uso. A logo pode ser colocada em qualquer área da imagem, normalmente no rodapé ou em um dos cantos.
+
+**Quais formatos o Lume gera para antes e depois?**
+
+O Lume gera imagens em três formatos: quadrado 1:1 (ideal para feed do Instagram), retrato 4:5 (o formato padrão de foto do Instagram, que ocupa mais espaço no feed) e stories 9:16 (para Instagram Stories, TikTok e WhatsApp Status). Você escolhe o formato no editor antes de exportar. As imagens são geradas em alta resolução, prontas para publicação direta nas redes sociais sem perda de qualidade.
+
+**Posso colocar a data da sessão no antes e depois?**
+
+Sim. No editor do Lume, você pode ativar a exibição da data de cada sessão diretamente sobre a respectiva foto. As etiquetas de texto são personalizáveis — o padrão é "ANTES" e "DEPOIS", mas você pode escrever o que preferir. A posição das etiquetas pode ser ajustada para qualquer um dos quatro cantos da imagem. Mostrar a data reforça a credibilidade do resultado e demonstra a consistência do acompanhamento ao longo do tempo.
+
+### Organização de Clientes
+
+**Como organizar fotos de clientes de estética no celular?**
+
+O problema de guardar fotos de clientes na galeria do celular é que elas se misturam com outras fotos pessoais, ficam sem identificação e impossibilitam comparações confiáveis. No Lume, cada cliente tem um perfil próprio com todas as sessões organizadas cronologicamente. Você encontra qualquer cliente em segundos pela busca por nome, vê a linha do tempo completa de evolução com miniaturas das fotos e sabe exatamente o que foi feito em cada sessão. Nenhuma foto avulsa, nenhuma pasta de WhatsApp, nenhuma planilha extra.
+
+**O que é o mapa de pontos de aplicação do Lume?**
+
+O mapa de pontos é uma funcionalidade do Lume que permite marcar, diretamente sobre a foto da sessão, os pontos exatos onde foram feitas as aplicações ou os pontos de referência do tratamento. Após tirar a foto, você toca na tela para adicionar pontos coloridos — há cinco cores disponíveis para diferenciar produtos, regiões ou categorias. Os pontos podem ser desfeitos ou apagados a qualquer momento, e a imagem pode ser ampliada para marcações mais precisas. Na sessão seguinte, você abre o resumo e tem o mapa exato do que foi feito como referência.
+
+**Dá para compartilhar informações da cliente pelo WhatsApp direto do Lume?**
+
+Sim. O link de anamnese e a imagem de antes e depois podem ser enviados pelo WhatsApp sem sair do app. Se o telefone da cliente já está cadastrado em formato válido, o Lume abre a conversa direto com ela; se o número estiver ausente ou inválido, o WhatsApp abre com a mensagem pronta para você escolher o contato manualmente.
+
+### Comparações
+
+**Qual a diferença entre o Lume e uma planilha?**
+
+Uma planilha registra números e texto, mas não fotos — e é exatamente a foto que prova a evolução de um tratamento estético. O Lume combina o registro visual (fotos com ângulo consistente via câmera ghost) com o registro clínico (lotes, regiões, quantidades) em um único lugar por cliente. Além disso, o Lume gera o antes e depois pronto para compartilhar, o que uma planilha jamais fará. Para profissionais de estética, a planilha resolve o lado burocrático mas ignora o que realmente convence o cliente: ver a própria transformação.
+
+**Por que não usar o WhatsApp para guardar fotos de clientes?**
+
+O WhatsApp foi feito para comunicação, não para gestão clínica. As fotos de clientes ficam misturadas com conversas, não têm identificação por pessoa, não permitem comparações padronizadas e não oferecem proteção de privacidade específica para dados de saúde. Com o Lume, cada cliente tem um perfil separado, as fotos são tiradas com câmera ghost para consistência de ângulo, e o acesso é protegido por autenticação. Do ponto de vista da LGPD, armazenar prontuários clínicos em aplicativos de mensagens representa um risco que o Lume elimina.
+
+**Existe app específico para registrar botox e harmonização facial?**
+
+Sim — o Lume é o app criado especificamente para esse fim. Diferente de apps genéricos de anotação ou galeria de fotos, o Lume tem um formulário clínico com 13 regiões de botox e 11 de filler pré-cadastradas, cálculo automático de unidades e volume, câmera ghost para consistência de ângulo e geração de antes e depois com logo. Tudo em um único aplicativo, gratuito para iOS e Android. Para médicos estetas, dermatologistas e esteticistas que trabalham com harmonização facial, o Lume é a única ferramenta que une prontuário clínico e documentação visual em um só lugar.
+
+**O Lume substitui um prontuário em papel?**
+
+Para o registro fotográfico e clínico de sessões de estética, sim — o Lume substitui e supera o prontuário em papel. O app registra data, observações, produtos (marca, lote, diluição), regiões tratadas com quantidades precisas e a foto da sessão com mapa de pontos, tudo vinculado ao cliente e acessível na nuvem de qualquer dispositivo. Diferente do papel, os dados não se perdem, não se deterioram e são recuperáveis mesmo se você trocar de celular. Para prontuários que exigem assinatura do paciente ou documentos jurídicos, o papel ainda pode ser necessário dependendo da regulamentação do conselho profissional.
+
+### Planos
+
+**Qual a diferença entre o plano gratuito e o Lume Pro?**
+
+O plano gratuito do Lume permite cadastrar até 50 clientes com até 30 sessões por cliente, com acesso completo a todas as funcionalidades — câmera ghost, ficha clínica de botox e filler, geração de antes e depois, mapa de pontos. O Lume Pro remove esses limites e oferece clientes e sessões ilimitados. Durante o período de beta atual, todos os usuários têm acesso automático ao Lume Pro sem custo adicional. Quando o beta encerrar, será dado aviso com antecedência para quem quiser manter o plano Pro.
+
+**Preciso de cartão de crédito para usar o Lume?**
+
+Não. O Lume é gratuito para baixar e não exige cartão de crédito nem criação de conta para usar o plano gratuito — você pode começar como convidado imediatamente. O cartão só é necessário se você optar por assinar o Lume Pro após o encerramento do período de beta, e o pagamento é processado pela App Store ou Google Play — o Lume não armazena dados de pagamento.
+
+## Glossário completo (https://brlume.app/glossario)
+
+### Ácido Hialurônico
+
+O ácido hialurônico é um polissacarídeo naturalmente presente na pele, nas articulações e nos tecidos conjuntivos do corpo humano, com alta capacidade de retenção de água — cada grama pode reter até seis litros. Em sua forma sintetizada e reticulada (cross-linked), é o composto mais utilizado em preenchedores dérmicos injetáveis, usado para repor volume, hidratar profundamente e corrigir sulcos e assimetrias faciais.
+
+Existem diferentes densidades e graus de reticulação de ácido hialurônico, escolhidos conforme a região a ser tratada: produtos mais fluidos para lábios e olheiras, e mais densos e firmes para malar e mandíbula. O efeito é temporário — o corpo metaboliza o produto gradualmente ao longo de meses, e o tempo de duração varia conforme a região, o metabolismo do paciente e a densidade do produto.
+
+No Lume, cada aplicação de filler à base de ácido hialurônico é registrada com marca, lote e volume em ml por região tratada, no formulário clínico específico de filler.
+
+### Anamnese
+
+Anamnese é o processo de coleta de informações de saúde e histórico clínico de um paciente antes de um procedimento, feito por meio de um questionário estruturado. Na estética, a anamnese costuma abranger alergias, uso de medicamentos, cirurgias prévias, condições de pele e expectativas em relação ao tratamento — dados que ajudam o profissional a avaliar riscos e contraindicações antes de aplicar botox, filler ou qualquer outro procedimento.
+
+Tradicionalmente preenchida em papel, a anamnese vem sendo digitalizada por clínicas e profissionais autônomos, tanto pela praticidade quanto pela rastreabilidade — um formulário digital não se perde, fica vinculado ao histórico do cliente e pode incluir assinatura eletrônica do termo de responsabilidade.
+
+O Lume oferece anamnese digital com 24 perguntas clínicas padrão, editáveis e reordenáveis, preenchida pela própria cliente no celular ou tablet — presencialmente ou por um link enviado a distância — com assinatura direto na tela e revisão pelo profissional antes da sessão.
+
+### Antes e Depois (Before & After)
+
+O antes e depois é o comparativo visual entre duas fotos de um mesmo cliente em momentos diferentes — geralmente antes de iniciar um tratamento estético e após uma ou mais sessões. É um dos recursos mais importantes para demonstrar a eficácia de um procedimento e comunicar resultados de forma objetiva tanto para o próprio cliente quanto para o público nas redes sociais.
+
+Um antes e depois de qualidade exige que as duas fotos tenham o mesmo ângulo, enquadramento e iluminação. Quando esses elementos variam entre as fotos, a diferença visual pode ser atribuída à mudança de posicionamento em vez do tratamento — o que compromete a credibilidade do profissional e obscurece o resultado real. Por isso, a consistência fotográfica não é um detalhe estético, mas uma exigência técnica.
+
+O Lume gera imagens de antes e depois diretamente do histórico de sessões do cliente. O profissional seleciona duas datas, posiciona a logo da clínica e escolhe entre os formatos quadrado (1:1), retrato (4:5) e stories (9:16). O resultado é exportado e compartilhado em segundos, sem necessidade de aplicativos externos.
+
+### Bioestimulador de Colágeno
+
+Bioestimuladores de colágeno são substâncias injetáveis que, diferente dos preenchedores tradicionais, não entregam volume imediato — elas estimulam o próprio organismo a produzir colágeno de forma gradual ao longo de semanas ou meses. Os compostos mais utilizados são a hidroxiapatita de cálcio e o poli-L-ácido láctico, indicados principalmente para melhora de flacidez e firmeza da pele.
+
+O resultado de um bioestimulador é progressivo e mais duradouro que o de um preenchedor convencional, mas exige mais de uma sessão de aplicação, geralmente espaçadas em intervalos de 30 a 45 dias, para atingir o efeito completo. Por isso, o planejamento e o registro de cada sessão — data, produto, região e diluição — são especialmente importantes nesse tipo de protocolo.
+
+No Lume, sessões com bioestimulador podem ser documentadas no mesmo formulário clínico usado para filler, com foto da sessão via câmera ghost para acompanhar a evolução da firmeza da pele ao longo do protocolo.
+
+### Botox (Toxina Botulínica)
+
+A toxina botulínica — popularmente conhecida como botox — é uma proteína produzida pela bactéria Clostridium botulinum. Em concentrações terapêuticas e estéticas, ela é utilizada para bloquear temporariamente a transmissão de sinais entre nervos e músculos, provocando um relaxamento muscular localizado. O efeito reduz as rugas de expressão e pode ser utilizado para fins funcionais, como o tratamento de bruxismo.
+
+Em procedimentos estéticos, a toxina botulínica é medida em unidades internacionais (UI) e aplicada com agulha fina diretamente no músculo alvo. Cada região anatômica recebe uma quantidade específica de UI, que varia conforme o músculo, a intensidade desejada e o protocolo do profissional. O registro correto de produto, lote, diluição e regiões tratadas é obrigatório em boas práticas clínicas e fundamental para a segurança do paciente.
+
+O Lume possui formulário clínico específico para botox com 13 regiões anatômicas pré-definidas: Frontal, Prócero, Corrugador, Orbicular do Olho, Nasal, Sorriso Gengival, DAO, Mentoniano, Masseter, Platisma, entre outras. O total de UI da sessão é calculado automaticamente conforme as regiões são preenchidas, eliminando erros de soma manual.
+
+### Câmera Ghost (Ghost Camera)
+
+A câmera ghost é uma funcionalidade de câmera que exibe a última foto registrada de um cliente em sobreposição semitransparente sobre a imagem ao vivo da câmera. Isso permite que o profissional alinhe o rosto do cliente exatamente como estava na sessão anterior antes de tirar a nova foto, garantindo consistência de ângulo e enquadramento entre todas as fotografias do mesmo cliente.
+
+O princípio é simples: a imagem de referência age como um "fantasma" guia. O profissional posiciona o cliente até que os pontos de referência anatômicos — nariz, olhos, contorno do rosto — coincidam com a sobreposição, e só então registra a foto. A opacidade da sobreposição é ajustável com um controle deslizante, permitindo equilibrar visibilidade do guia e clareza do cliente ao vivo.
+
+A câmera ghost é compatível com câmera frontal e traseira e aceita uma foto da galeria do celular como imagem de referência, caso o profissional queira comparar com uma foto tirada fora do app. O Lume foi um dos primeiros aplicativos de gestão estética a implementar câmera ghost nativamente, tornando-a acessível a qualquer profissional sem necessidade de equipamentos ou aplicativos adicionais.
+
+O impacto direto da câmera ghost é na qualidade do antes e depois. Fotos com ângulo consistente tornam a diferença entre sessões imediatamente evidente, passam mais credibilidade profissional e geram resultados mais convincentes nas redes sociais.
+
+### Comissura Labial
+
+A comissura labial é o canto da boca, ponto de encontro entre o lábio superior e o inferior. Com o envelhecimento e a perda de sustentação óssea e de colágeno na região, os cantos da boca tendem a cair, formando um sulco vertical — conhecido popularmente como "linha de marionete" — que confere uma expressão de tristeza ou cansaço ao rosto em repouso.
+
+O tratamento da comissura labial costuma combinar preenchimento com ácido hialurônico, para repor volume e suavizar o sulco de marionete, com aplicação pontual de toxina botulínica no músculo depressor do ângulo da boca (DAO), que reduz a tração para baixo. A combinação das duas técnicas costuma gerar resultado mais natural do que qualquer uma isoladamente.
+
+No Lume, a comissura labial está disponível como região pré-cadastrada no formulário clínico de filler, permitindo registrar volume em ml aplicado especificamente nessa área.
+
+### Consentimento Informado (Termo de Responsabilidade)
+
+O consentimento informado é o documento, assinado pelo paciente, que confirma ter sido esclarecido sobre a natureza do procedimento estético, os riscos envolvidos, os resultados esperados e as alternativas disponíveis, antes de autorizar a aplicação. É uma exigência ética e, em muitos casos, legal, que protege tanto o paciente quanto o profissional.
+
+Historicamente preenchido em papel junto com a ficha de anamnese, o termo de consentimento vem sendo incorporado a fluxos digitais, o que facilita o armazenamento, evita extravio e possibilita assinatura eletrônica com validade jurídica. A ausência de consentimento documentado é um dos principais fatores que fragilizam a defesa de um profissional em caso de contestação judicial.
+
+No Lume, o termo de responsabilidade é parte da anamnese digital: a cliente assina com o dedo na tela ao final do formulário, e o documento assinado fica salvo permanentemente vinculado ao seu perfil.
+
+### DAO (Depressor do Ângulo da Boca)
+
+O DAO, sigla para Depressor do Ângulo da Boca (ou Depressor Anguli Oris), é o músculo responsável por puxar os cantos da boca para baixo. Quando hiperativo, contribui para uma expressão de tristeza ou ranço em repouso e pode acentuar a aparência de envelhecimento facial ao longo do tempo.
+
+A aplicação de toxina botulínica no DAO é um procedimento comum em harmonização facial com o objetivo de elevar levemente os cantos da boca e suavizar a expressão em repouso. A técnica exige precisão no ponto de aplicação para evitar assimetrias ou o relaxamento indesejado de músculos adjacentes responsáveis pelo sorriso.
+
+O DAO é uma das 13 regiões anatômicas disponíveis no formulário clínico de botox do Lume, junto com outras regiões da região inferior da face como Mentoniano, Masseter e Platisma.
+
+### Diluição (de toxina botulínica)
+
+A diluição é o processo de adição de solução salina fisiológica à toxina botulínica liofilizada (em pó) para reconstituí-la em forma líquida e prepará-la para aplicação. A quantidade de solução salina adicionada determina a concentração final do produto: quanto mais diluída a solução, menor a concentração de toxina por volume injetado.
+
+Diferentes protocolos e marcas de toxina botulínica indicam diluições distintas. O registro da diluição utilizada é parte obrigatória da documentação clínica, pois permite que o profissional reproduza ou ajuste o protocolo com precisão em sessões futuras e garante rastreabilidade em caso de intercorrências.
+
+No Lume, a diluição utilizada em cada sessão é registrada no formulário clínico de botox junto com a marca e o número de lote do produto. Esse conjunto de informações compõe a rastreabilidade completa de cada aplicação.
+
+### Ficha Clínica Estética
+
+A ficha clínica estética é o registro estruturado de cada procedimento realizado em um paciente — produto utilizado, marca, lote, diluição, regiões anatômicas tratadas e quantidades aplicadas. Diferente de uma anotação livre, a ficha clínica segue um formato padronizado que facilita consulta, auditoria e comparação entre sessões.
+
+Manter a ficha clínica atualizada é considerado boa prática em harmonização facial e, em muitos conselhos profissionais, é uma exigência regulatória. Além da função de proteção jurídica em caso de intercorrência, a ficha clínica bem documentada permite ao profissional reproduzir com precisão o protocolo de sessões anteriores.
+
+O Lume digitaliza a ficha clínica com formulários específicos para botox (13 regiões pré-cadastradas) e filler (11 regiões), com cálculo automático do total de UI ou ml da sessão, tudo vinculado ao perfil do cliente e acessível na nuvem.
+
+### Filler (Preenchedor Dérmico)
+
+Filler, ou preenchedor dérmico, é o termo genérico para substâncias injetáveis utilizadas para repor volume, preencher sulcos, corrigir assimetrias e rejuvenescer o contorno facial. Os fillers mais utilizados na estética são à base de ácido hialurônico, um polissacarídeo naturalmente presente no organismo humano com alta capacidade de retenção de água. Existem também fillers de outros compostos, como hidroxiapatita de cálcio e poli-L-ácido láctico, indicados para diferentes indicações clínicas.
+
+Diferente da toxina botulínica, que atua nos músculos, o filler age diretamente nos tecidos moles, adicionando volume imediato à região tratada. A dosagem é medida em mililitros (ml) e varia conforme a região, a profundidade de aplicação e o objetivo do procedimento. O registro clínico de cada aplicação deve incluir a marca do produto, o número do lote e o volume utilizado por região.
+
+O Lume disponibiliza formulário clínico de filler com 11 regiões pré-definidas: Lábios, Sulco Nasogeniano, Malar, Olheira, Mento, Ângulo da Mandíbula, Contorno da Mandíbula, Pré-Jowls, Têmpora, Rinomodelação e outras. O volume total em ml é calculado automaticamente, e o profissional pode registrar botox e filler na mesma sessão em formulários separados.
+
+### Harmonização Facial (HOF)
+
+Harmonização facial, frequentemente abreviada como HOF, é o conjunto de procedimentos estéticos minimamente invasivos que visam equilibrar e harmonizar as proporções do rosto. O objetivo não é necessariamente eliminar sinais de envelhecimento, mas sim melhorar a simetria, as proporções e a estética geral do rosto de acordo com a percepção do paciente e os critérios técnicos do profissional.
+
+Os procedimentos mais comuns em harmonização facial incluem a aplicação de toxina botulínica para suavizar rugas e relaxar músculos hiperativos, preenchimentos dérmicos com ácido hialurônico para repor volume e corrigir sulcos, bioremodeladores para melhora da qualidade da pele, e procedimentos como a rinomodelação para ajustes no nariz sem cirurgia. Muitos tratamentos combinam mais de uma técnica na mesma sessão.
+
+A documentação de cada sessão de harmonização facial é essencial tanto para acompanhar a evolução dos resultados quanto para garantir a segurança jurídica do profissional. Registros adequados incluem fotos padronizadas antes e após o procedimento, descrição dos produtos utilizados com marca e lote, regiões tratadas com dosagens e mapa visual dos pontos de aplicação. O Lume centraliza todos esses elementos em um único prontuário digital por cliente.
+
+### LGPD na Estética
+
+A Lei Geral de Proteção de Dados (LGPD) classifica dados de saúde — incluindo fotos de procedimentos estéticos, fichas clínicas e anamneses — como dados pessoais sensíveis, sujeitos a regras mais rígidas de tratamento, armazenamento e consentimento. Profissionais de estética que fotografam e documentam clientes são, tecnicamente, controladores de dados sensíveis perante a lei.
+
+Na prática, isso significa que fotos de clientes armazenadas sem controle de acesso — misturadas na galeria pessoal do celular, em grupos de WhatsApp ou em pastas compartilhadas sem autenticação — representam um risco de conformidade. A LGPD exige que o acesso a esses dados seja restrito, que haja consentimento para o uso das informações e que o titular possa solicitar a exclusão dos seus dados a qualquer momento.
+
+O Lume foi desenvolvido em conformidade com a LGPD: cada profissional acessa exclusivamente seus próprios dados, o acesso exige autenticação, e ao encerrar a conta todos os dados do usuário — fotos, fichas e anamneses — são removidos permanentemente.
+
+### Lote (Número de Lote)
+
+O número de lote é o código alfanumérico que identifica um conjunto de produtos fabricados nas mesmas condições e no mesmo ciclo de produção. Cada frasco de toxina botulínica ou preenchedor dérmico possui um lote impresso na embalagem primária e secundária, e esse código conecta o produto ao seu histórico de fabricação, testes e distribuição.
+
+O registro do número de lote é obrigatório em boas práticas clínicas por uma razão prática e regulatória: rastreabilidade. Em caso de intercorrências com um paciente, o lote permite identificar se outros pacientes que receberam produtos do mesmo lote apresentaram reações semelhantes. Em caso de recall de um produto, o lote é a informação que determina quais pacientes precisam ser notificados.
+
+No Lume, o número de lote do botox e do filler é registrado em cada sessão como parte da ficha clínica. Junto com a marca e a diluição, forma o conjunto mínimo de rastreabilidade exigido para documentação clínica responsável.
+
+### Malar
+
+A região malar corresponde à maçã do rosto, a área sobre o osso zigomático que dá volume e projeção à parte média da face. Com o envelhecimento, a gordura malar tende a se deslocar inferiormente e diminuir em volume, resultando no achatamento da face média e no aprofundamento dos sulcos nasolabiais.
+
+O preenchimento malar com ácido hialurônico é um dos procedimentos mais requisitados em harmonização facial, utilizado tanto para reposição de volume em pacientes mais velhos quanto para projeção e definição em pacientes jovens. A técnica exige conhecimento da anatomia profunda da região para evitar complicações vasculares.
+
+O malar é uma das 11 regiões de filler disponíveis no formulário clínico do Lume, ao lado de regiões como Sulco Nasogeniano, Lábios, Mento e Rinomodelação.
+
+### Mapa de Pontos de Aplicação
+
+O mapa de pontos de aplicação é um registro visual que documenta exatamente onde foram feitas as injeções de botox ou filler durante uma sessão, marcado diretamente sobre a foto do cliente. Ao contrário de uma descrição textual de regiões, o mapa visual preserva a precisão espacial dos pontos — incluindo a profundidade aparente, a lateralidade e a proximidade com estruturas anatômicas específicas.
+
+Um mapa de pontos bem documentado tem três funções principais: serve como referência para o profissional reproduzir ou ajustar o protocolo na sessão seguinte; funciona como documentação clínica em caso de intercorrências ou avaliações posteriores; e permite que o próprio cliente visualize onde foram feitas as aplicações, aumentando a transparência da consulta.
+
+No Lume, o mapa é criado tocando diretamente sobre a foto da sessão. Estão disponíveis cinco cores para as marcações, permitindo diferenciar produtos, regiões ou técnicas dentro de uma mesma sessão. Os pontos podem ser desfeitos individualmente, a imagem pode ser ampliada com gesto de pinça para maior precisão, e o mapa fica salvo permanentemente no prontuário da sessão.
+
+### Masseter
+
+O masseter é o principal músculo da mastigação, localizado na lateral do rosto, sobre o osso mandibular. Visualmente, corresponde à região que se projeta quando o paciente aperta os dentes. Em pessoas com hipertrofia masseterina — seja por bruxismo ou por predisposição genética — o músculo apresenta volume aumentado, alargando o terço inferior do rosto e conferindo um contorno mais quadrado à mandíbula.
+
+A aplicação de toxina botulínica no masseter é utilizada para reduzir o volume muscular ao longo de semanas, afinar o contorno da face e, em pacientes com bruxismo, aliviar os sintomas de dor e desgaste dentário. É um dos procedimentos de harmonização facial mais procurados no Brasil, especialmente por pacientes que desejam um rosto mais oval ou em V.
+
+O masseter é uma das regiões anatômicas disponíveis no formulário clínico de botox do Lume, onde o profissional registra a quantidade em UI aplicada em cada lado do rosto.
+
+### Nasalis
+
+O nasalis é o músculo responsável pela contração das asas do nariz, ativado principalmente ao sorrir ou franzir o nariz com força — o que gera as chamadas "bunny lines", pequenas rugas horizontais nas laterais do nariz. Nem todas as pessoas apresentam essa contração de forma visível, o que torna a avaliação individual importante antes de indicar tratamento.
+
+A aplicação de toxina botulínica no nasalis é indicada especificamente para quem apresenta as bunny lines de forma acentuada ao sorrir. É um procedimento que exige baixa dosagem e alta precisão, já que a proximidade com outros músculos da região pode gerar efeitos indesejados se a técnica não for cuidadosa.
+
+O nasalis é uma das 13 regiões anatômicas pré-cadastradas no formulário clínico de botox do Lume.
+
+### Orbicular do Olho
+
+O músculo orbicular do olho é o músculo circular que circunda a órbita ocular e controla o fechamento da pálpebra. Sua contração repetida ao longo dos anos — no sorriso, no franzir, na exposição ao sol — cria as linhas de expressão laterais ao canto externo do olho, conhecidas popularmente como "pés de galinha" ou "linhas de sorriso".
+
+A aplicação de toxina botulínica no orbicular do olho é um dos procedimentos mais frequentes em rejuvenescimento facial. A técnica reduz as contrações musculares na região lateral dos olhos, suavizando as linhas de expressão sem comprometer o sorriso ou a expressividade natural do paciente. A precisão no ponto de aplicação é fundamental para evitar ptose palpebral ou comprometimento da musculatura adjacente.
+
+O orbicular do olho é uma das 13 regiões anatômicas disponíveis no formulário clínico de botox do Lume.
+
+### Periorbital
+
+A região periorbital é a área ao redor dos olhos, que inclui as pálpebras superior e inferior, as têmporas próximas ao canto externo do olho e a região da olheira. É uma das primeiras áreas do rosto a mostrar sinais de envelhecimento — perda de volume, escurecimento e formação de rugas finas (pés de galinha) — por ter pele particularmente fina e delicada.
+
+O tratamento estético da região periorbital combina abordagens diferentes conforme a queixa: toxina botulínica no músculo orbicular lateral para os pés de galinha, preenchimento com ácido hialurônico de baixa densidade para olheiras e sulco lacrimal, e bioestimuladores para melhora da qualidade da pele ao redor dos olhos.
+
+No Lume, a região periorbital está disponível no formulário clínico de filler para registro de volume aplicado em olheiras e áreas adjacentes.
+
+### Platisma
+
+O platisma é um músculo largo e fino localizado na região anterior do pescoço, que se estende desde a clavícula até o queixo. Com o envelhecimento e a perda de tônus, suas fibras verticais tornam-se visíveis como "bandas platismais" — as cordas verticais no pescoço que se acentuam ao contrair o músculo e que estão associadas ao envelhecimento do terço inferior da face e do pescoço.
+
+A aplicação de toxina botulínica no platisma, conhecida como "Nefertiti lift", é utilizada para relaxar as bandas, melhorar o contorno do pescoço e definir o ângulo cervico-mentoniano. O efeito é uma aparência mais definida e jovem na região do pescoço e da mandíbula sem necessidade de procedimentos invasivos.
+
+O platisma é uma das regiões anatômicas disponíveis no formulário clínico de botox do Lume, junto com outras regiões do terço inferior da face como DAO, Mentoniano e Masseter.
+
+### Pré-Jowl
+
+A região pré-jowl fica na linha da mandíbula, entre o queixo e o ângulo mandibular, exatamente onde se forma o "jowl" — o acúmulo de tecido flácido que aparece com o envelhecimento e quebra o contorno reto da mandíbula, dando uma aparência menos definida ao rosto.
+
+O preenchimento da região pré-jowl com ácido hialurônico busca restaurar a continuidade da linha da mandíbula, criando uma transição mais suave entre o queixo e o ângulo mandibular. É uma técnica frequentemente combinada com preenchimento do próprio mento e do ângulo da mandíbula para um resultado de contorno facial mais completo.
+
+A pré-jowl é uma das 11 regiões pré-cadastradas no formulário clínico de filler do Lume.
+
+### Preenchimento Labial
+
+O preenchimento labial é a aplicação de ácido hialurônico nos lábios com o objetivo de aumentar volume, definir contorno, corrigir assimetrias ou repor a perda de volume natural que ocorre com a idade. É um dos procedimentos estéticos injetáveis mais procurados, com técnicas que variam desde a hidratação sutil até a projeção mais acentuada.
+
+A técnica de aplicação varia conforme o objetivo: preenchimento do corpo do lábio para volume, definição do contorno (border) para um efeito de delineamento, e reforço do arco do cupido para realçar o formato natural. A escolha do produto — mais fluido ou mais firme — também influencia diretamente o resultado final.
+
+No Lume, os lábios são uma região pré-cadastrada no formulário clínico de filler, com registro de marca, lote e volume em ml aplicado.
+
+### Prontuário Estético
+
+O prontuário estético é o documento que reúne todo o histórico clínico e fotográfico de um cliente em tratamentos estéticos. Um prontuário completo inclui dados de identificação do cliente, histórico de saúde relevante, registro fotográfico padronizado antes e após cada sessão, descrição dos procedimentos realizados com produtos, marcas, lotes e dosagens, regiões tratadas com mapa de pontos de aplicação e observações clínicas do profissional.
+
+A manutenção de prontuários adequados não é apenas uma boa prática clínica — é uma necessidade jurídica. Em caso de intercorrências, queixas ou processos, o prontuário é o documento primário de defesa do profissional. Um registro incompleto ou inexistente pode ser interpretado como ausência de diligência clínica. Para médicos, a obrigatoriedade do prontuário está prevista no Código de Ética Médica; para esteticistas e outros profissionais, as normas de seus conselhos de classe estabelecem exigências equivalentes.
+
+O Lume é um prontuário visual digital desenvolvido especificamente para profissionais de estética. Centraliza em um único app os dados do cliente, as fotos de cada sessão com câmera ghost para ângulo consistente, o mapa de pontos de aplicação, a ficha clínica de botox e filler com registro de lote e dosagem, e o gerador de antes e depois com logo. Todos os dados ficam armazenados na nuvem com acesso exclusivo do profissional.
+
+### Prócero
+
+O prócero (ou prócer) é um músculo pequeno localizado entre as sobrancelhas, na parte superior do nariz. Sua contração produz as linhas horizontais na raiz do nariz e contribui para as rugas verticais entre as sobrancelhas — conhecidas como "linhas de raiva" ou "glabelares" — em conjunto com o músculo corrugador do supercílio.
+
+A aplicação de toxina botulínica no prócero é frequentemente combinada com a aplicação no corrugador como parte do tratamento da região glabelar. Essa combinação relaxa o conjunto muscular responsável pela expressão de raiva ou preocupação em repouso, suavizando as linhas entre as sobrancelhas.
+
+O prócero é uma das 13 regiões anatômicas disponíveis no formulário clínico de botox do Lume.
+
+### Rastreabilidade Clínica
+
+Rastreabilidade clínica é a capacidade de identificar, a qualquer momento, exatamente qual produto (marca e lote) foi aplicado em qual paciente, em qual data, em qual região e em qual quantidade. É um princípio fundamental de segurança em procedimentos injetáveis, especialmente em caso de recall de produto ou reação adversa.
+
+Sem rastreabilidade, um evento adverso associado a um lote específico de toxina botulínica ou filler pode ser impossível de correlacionar retroativamente — o profissional simplesmente não tem como saber quais pacientes receberam aquele lote. Isso compromete tanto a resposta clínica ao evento quanto a defesa jurídica do profissional.
+
+O Lume constrói rastreabilidade automaticamente: cada sessão de botox ou filler fica vinculada ao cliente, à data, ao produto, ao lote e à região tratada, permitindo localizar qualquer aplicação em segundos, mesmo anos depois.
+
+### Rinomodelação
+
+A rinomodelação é um procedimento de harmonização nasal realizado com preenchedores dérmicos, sem cirurgia. Utiliza injeções de ácido hialurônico ou outros fillers para corrigir assimetrias, suavizar irregularidades no dorso nasal, elevar ou definir a ponta do nariz e melhorar a projeção nasal. O resultado é imediato e temporário, com duração que varia conforme o produto e a região tratada.
+
+Por ser um procedimento não cirúrgico, a rinomodelação tem recuperação mínima e risco de complicações menores do que uma rinoplastia cirúrgica. No entanto, exige profundo conhecimento anatômico da vascularização nasal, pois complicações vasculares nessa região podem ser graves. É considerada uma das técnicas de maior exigência técnica entre os procedimentos de harmonização facial.
+
+A rinomodelação é uma das 11 regiões de filler disponíveis no formulário clínico do Lume.
+
+### Skinbooster
+
+Skinbooster é uma categoria de produtos injetáveis à base de ácido hialurônico de baixa densidade, aplicados em microinjeções superficiais e distribuídas por toda a área tratada — geralmente rosto, pescoço ou mãos — com o objetivo de hidratar profundamente a pele e melhorar sua qualidade, elasticidade e luminosidade, sem gerar volume perceptível como um preenchedor convencional.
+
+Diferente do preenchimento tradicional, que corrige volume em pontos específicos, o skinbooster trata a pele de forma global e costuma exigir protocolo de mais de uma sessão, com intervalos de semanas, para atingir o resultado completo de melhora textural.
+
+Sessões de skinbooster podem ser documentadas no Lume no formulário clínico de filler, com foto via câmera ghost para acompanhar a evolução da qualidade da pele ao longo do protocolo.
+
+### Sorriso Gengival
+
+O sorriso gengival é a exposição excessiva da gengiva superior ao sorrir, geralmente causada por hiperatividade dos músculos elevadores do lábio superior. É uma queixa estética comum, que pode ser tratada de forma minimamente invasiva sem necessidade de cirurgia.
+
+A aplicação de toxina botulínica em pontos específicos da musculatura elevadora do lábio superior reduz temporariamente sua contração, diminuindo a exposição gengival ao sorrir. É um procedimento de dosagem baixa e alta precisão, já que o excesso de relaxamento pode comprometer a simetria do sorriso.
+
+O Lume permite registrar aplicações de botox para sorriso gengival no formulário clínico, com a quantidade em UI documentada junto às demais regiões tratadas na mesma sessão.
+
+### Sulco Nasogeniano
+
+O sulco nasogeniano é a prega que vai do canto da narina até o canto da boca, separando a bochecha do lábio superior. Presente em diferentes graus em pessoas de todas as idades, ele tende a se aprofundar com o envelhecimento à medida que há perda de gordura e ptose dos tecidos da face média, tornando-se um dos principais marcos visíveis do envelhecimento facial.
+
+O preenchimento do sulco nasogeniano com ácido hialurônico é um dos procedimentos mais realizados em harmonização facial. A técnica deposita volume sob a prega para suavizá-la, criando uma transição mais gradual entre a bochecha e o lábio. A abordagem direta ao sulco pode ser combinada com o preenchimento malar, que ao repor volume na maçã do rosto contribui indiretamente para elevar e suavizar o sulco.
+
+O sulco nasogeniano é uma das 11 regiões de filler disponíveis no formulário clínico do Lume.
+
+### Têmpora (Temporal)
+
+A têmpora, ou região temporal, é a área lateral do rosto, entre o canto externo do olho, a sobrancelha e a linha do cabelo. Com o envelhecimento, essa região costuma perder volume ósseo e de tecido adiposo, criando uma depressão que acentua a aparência de cansaço e afeta o contorno lateral do rosto — inclusive o formato e a sustentação da sobrancelha.
+
+O preenchimento da têmpora com ácido hialurônico é uma técnica de harmonização facial que repõe o volume perdido, suaviza a transição entre a têmpora e a sobrancelha, e pode indiretamente elevar levemente a cauda da sobrancelha. É considerada uma região de risco moderado a alto pela proximidade de estruturas vasculares, exigindo técnica apropriada.
+
+A têmpora é uma das 11 regiões pré-cadastradas no formulário clínico de filler do Lume, com registro de volume em ml por sessão.
+
+### UI (Unidade Internacional)
+
+A Unidade Internacional (UI) é a unidade de medida padronizada utilizada para dosagem de toxina botulínica. A UI não é uma medida de volume ou de massa — é uma medida biológica que representa a quantidade de toxina necessária para produzir um efeito específico em condições controladas de laboratório. Diferentes marcas comerciais de toxina botulínica utilizam protocolos de calibração distintos, o que significa que 1 UI de uma marca não é diretamente equivalente a 1 UI de outra.
+
+Cada região anatômica tratada com botox recebe uma quantidade específica de UI, determinada pelo protocolo do profissional com base no músculo, na intensidade desejada e nas características individuais do paciente. A soma das UI de todas as regiões tratadas determina o total da sessão, que é relevante tanto para o cálculo de custo quanto para rastreabilidade clínica.
+
+No Lume, o profissional registra a quantidade em UI para cada região anatômica tratada no formulário de botox. O total de UI da sessão é calculado automaticamente à medida que as regiões são preenchidas, eliminando cálculos manuais e reduzindo riscos de erro na documentação.
