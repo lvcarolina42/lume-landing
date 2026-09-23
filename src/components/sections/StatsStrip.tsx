@@ -1,14 +1,13 @@
 const STATS = [
-  { value: '+500', label: 'Profissionais\nregistrando evoluções' },
+  { value: '600+', label: 'Downloads\nnas lojas' },
   { value: '30s', label: 'Para montar um\nantes/depois completo' },
-  { value: '5 ★', label: 'Avaliação média\nna App Store' },
   { value: 'Grátis', label: 'Para iOS\ne Android' },
 ]
 
 export default function StatsStrip() {
   return (
     <section className="bg-teal-800 py-10 px-6" aria-label="Números do Lume">
-      <dl className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8">
+      <dl className="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-8">
         {STATS.map((s, i) => (
           <div
             key={s.value}

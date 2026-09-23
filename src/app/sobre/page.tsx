@@ -12,6 +12,15 @@ export const metadata: Metadata = {
   },
 }
 
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Início', item: 'https://brlume.app/' },
+    { '@type': 'ListItem', position: 2, name: 'Sobre', item: 'https://brlume.app/sobre' },
+  ],
+}
+
 const aboutSchema = {
   '@context': 'https://schema.org',
   '@type': 'AboutPage',
@@ -210,6 +219,10 @@ export default function SobrePage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
     </>
   )

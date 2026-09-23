@@ -80,6 +80,16 @@ const REGIONS = [
   },
 ]
 
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Início', item: 'https://brlume.app/' },
+    { '@type': 'ListItem', position: 2, name: 'Artigos', item: 'https://brlume.app/artigos' },
+    { '@type': 'ListItem', position: 3, name: 'Guia das 13 regiões de botox', item: 'https://brlume.app/artigos/guia-regioes-botox' },
+  ],
+}
+
 const articleSchema = {
   '@context': 'https://schema.org',
   '@type': 'BlogPosting',
@@ -271,6 +281,10 @@ export default function RegioesBotoxArticle() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
     </>
   )

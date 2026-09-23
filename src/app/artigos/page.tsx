@@ -44,6 +44,26 @@ const ARTICLES = [
   },
 ]
 
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Início', item: 'https://brlume.app/' },
+    { '@type': 'ListItem', position: 2, name: 'Artigos', item: 'https://brlume.app/artigos' },
+  ],
+}
+
+const itemListSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  itemListElement: ARTICLES.map((a, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    url: `https://brlume.app/artigos/${a.slug}`,
+    name: a.title,
+  })),
+}
+
 export default function ArtigosPage() {
   return (
     <>
@@ -82,6 +102,14 @@ export default function ArtigosPage() {
         </div>
       </main>
       <Footer />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }}
+      />
     </>
   )
 }

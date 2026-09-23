@@ -96,16 +96,11 @@ export function SocialProof() {
     <section className="bg-gray-50 py-24 px-6" aria-labelledby="testimonials-heading">
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-14">
-          <div className="flex justify-center gap-1 mb-4">
-            {[...Array(5)].map((_, i) => (
-              <span key={i} className="text-yellow-400 text-xl">★</span>
-            ))}
-          </div>
           <h2 id="testimonials-heading" className="text-3xl font-extrabold text-gray-900 mb-2">
             O que muda quando a evolução fica registrada
           </h2>
           <p className="text-gray-400 text-base">
-            Profissionais reais. Situações reais.
+            Exemplos de como profissionais usam o Lume no dia a dia.
           </p>
         </div>
 
@@ -114,39 +109,13 @@ export function SocialProof() {
             <blockquote
               key={t.name}
               className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 text-left hover:-translate-y-1 transition-transform duration-300 flex flex-col"
-              itemScope
-              itemType="https://schema.org/Review"
             >
-              <div itemProp="itemReviewed" itemScope itemType="https://schema.org/SoftwareApplication" hidden>
-                <meta itemProp="name" content="Lume" />
-                <meta itemProp="operatingSystem" content="iOS, Android" />
-                <meta itemProp="applicationCategory" content="HealthApplication" />
-                <div itemProp="offers" itemScope itemType="https://schema.org/Offer">
-                  <meta itemProp="price" content="0" />
-                  <meta itemProp="priceCurrency" content="BRL" />
-                </div>
-                <div itemProp="aggregateRating" itemScope itemType="https://schema.org/AggregateRating">
-                  <meta itemProp="ratingValue" content="5" />
-                  <meta itemProp="ratingCount" content="500" />
-                  <meta itemProp="bestRating" content="5" />
-                </div>
-              </div>
-              <div itemProp="reviewRating" itemScope itemType="https://schema.org/Rating" hidden>
-                <meta itemProp="ratingValue" content="5" />
-                <meta itemProp="bestRating" content="5" />
-              </div>
               <p className="text-xs font-bold text-teal-600 bg-teal-50 px-3 py-1.5 rounded-full inline-block mb-5 self-start leading-snug">
                 {t.highlight}
               </p>
-              <p
-                className="text-gray-600 text-sm leading-relaxed mb-6 flex-1"
-                itemProp="reviewBody"
-              >
+              <p className="text-gray-600 text-sm leading-relaxed mb-6 flex-1">
                 &ldquo;{t.quote}&rdquo;
               </p>
-              <span itemProp="author" itemScope itemType="https://schema.org/Person" hidden>
-                <meta itemProp="name" content={t.name} />
-              </span>
               <footer className="flex items-center gap-3 pt-5 border-t border-gray-100">
                 <span className="w-10 h-10 rounded-full bg-gradient-to-br from-teal-400 to-teal-700 text-white text-xs font-bold flex items-center justify-center shrink-0">
                   {t.initials}

@@ -12,6 +12,16 @@ export const metadata: Metadata = {
   },
 }
 
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Início', item: 'https://brlume.app/' },
+    { '@type': 'ListItem', position: 2, name: 'Artigos', item: 'https://brlume.app/artigos' },
+    { '@type': 'ListItem', position: 3, name: 'Câmera Ghost, o guia completo', item: 'https://brlume.app/artigos/camera-ghost-guia-completo' },
+  ],
+}
+
 const articleSchema = {
   '@context': 'https://schema.org',
   '@type': 'BlogPosting',
@@ -337,6 +347,10 @@ export default function CameraGhostArticle() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
     </>
   )

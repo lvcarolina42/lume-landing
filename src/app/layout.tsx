@@ -78,11 +78,6 @@ const schemaJsonLd = {
   url: 'https://brlume.app',
   inLanguage: ['pt-BR', 'en', 'es'],
   installUrl: 'https://apps.apple.com/us/app/lume-prontu%C3%A1rio-est%C3%A9tico/id6760568566',
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '5',
-    ratingCount: '47',
-  },
 }
 
 export default function RootLayout({

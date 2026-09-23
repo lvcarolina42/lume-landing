@@ -11,6 +11,15 @@ export const metadata: Metadata = {
   },
 }
 
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Início', item: 'https://brlume.app/' },
+    { '@type': 'ListItem', position: 2, name: 'Privacidade', item: 'https://brlume.app/privacidade' },
+  ],
+}
+
 const SECTIONS = [
   {
     title: '1. Introdução',
@@ -129,6 +138,10 @@ export default function PrivacidadePage() {
         </div>
       </main>
       <Footer />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
     </>
   )
 }

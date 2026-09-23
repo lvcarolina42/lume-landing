@@ -346,6 +346,15 @@ const terms = [
   },
 ]
 
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Início', item: 'https://brlume.app/' },
+    { '@type': 'ListItem', position: 2, name: 'Glossário', item: 'https://brlume.app/glossario' },
+  ],
+}
+
 const definedTermSetSchema = {
   '@context': 'https://schema.org',
   '@type': 'DefinedTermSet',
@@ -450,6 +459,10 @@ export default function GlossarioPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(definedTermSetSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
     </>
   )

@@ -221,6 +221,15 @@ const CATEGORIES = [
   },
 ]
 
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Início', item: 'https://brlume.app/' },
+    { '@type': 'ListItem', position: 2, name: 'FAQ', item: 'https://brlume.app/faq' },
+  ],
+}
+
 const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
@@ -302,6 +311,10 @@ export default function FaqPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
     </>
   )

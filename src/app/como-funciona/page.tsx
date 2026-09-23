@@ -12,6 +12,15 @@ export const metadata: Metadata = {
   },
 }
 
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Início', item: 'https://brlume.app/' },
+    { '@type': 'ListItem', position: 2, name: 'Como funciona', item: 'https://brlume.app/como-funciona' },
+  ],
+}
+
 const howToSchema = {
   '@context': 'https://schema.org',
   '@type': 'HowTo',
@@ -453,6 +462,10 @@ export default function ComoFuncionaPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
     </>
   )
