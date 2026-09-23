@@ -69,6 +69,7 @@ const STATS = [
   { value: '2.276', label: 'Procedimentos cadastrados' },
   { value: '723', label: 'Pacientes registrados' },
   { value: '326', label: 'Anamneses preenchidas' },
+  { value: '8+', label: 'Países com usuários ativos' },
 ]
 
 export default function SobrePage() {
@@ -101,21 +102,24 @@ export default function SobrePage() {
             <H2>Por que o Lume existe</H2>
             <Prose>
               <p>
-                A ideia do Lume nasceu de uma observação simples: profissionais de estética que
-                trabalham sozinhos ou em clínicas pequenas — esteticistas, médicos estetas,
-                dermatologistas, biomédicos — não tinham uma solução 100% mobile que resolvesse a
-                gestão da clínica de ponta a ponta. O que existia era um quebra-cabeça de
-                ferramentas soltas: fotos na galeria do celular ou em pastas do WhatsApp, ficha
-                clínica em papel ou planilha, agenda em outro app, anamnese impressa. Cada pedaço
-                do fluxo de atendimento vivia num lugar diferente, e nada conversava entre si.
+                A ideia do Lume nasceu numa conversa casual. Num curso de oratória, Lívia ouviu de
+                uma colega de turma — esteticista — que ainda usava papel para marcar os pontos de
+                aplicação de procedimentos e preencher a anamnese das clientes. Dali surgiu a
+                primeira versão do Lume: um catálogo simples de pacientes, com cadastro de fotos de
+                procedimentos, marcação direta na imagem, registro de botox e preenchimento, e uma
+                câmera "ghost" que sobrepõe a última foto para facilitar o reposicionamento exato
+                do paciente na hora de gerar o antes e depois.
               </p>
               <p>
-                O Lume foi criado para unir tudo isso num único aplicativo pensado desde o início
-                para celular: câmera ghost para fotos comparáveis de verdade, ficha clínica de
-                botox e filler com regiões anatômicas pré-cadastradas, anamnese digital com
-                assinatura, agenda com catálogo de serviços, e geração de antes e depois prontos
-                para postar. A meta não é adicionar mais uma ferramenta à pilha do profissional —
-                é substituir a pilha inteira por um app só.
+                O resto do produto cresceu ouvindo quem já usava. Uma esteticista de Belo
+                Horizonte testou o app e sugeriu incluir anamnese digital — foi incluída. Uma
+                pesquisa com os usuários ativos revelou interesse em agendamento e catálogo de
+                serviços — foram implementados. Pesquisando o mercado, Lívia percebeu que as
+                soluções completas que já existiam exigiam computador e tinham curva de
+                aprendizado alta, algumas até com onboarding obrigatório — o Lume foi construído
+                no caminho oposto: simples, direto ao ponto, e totalmente personalizável. Quem não
+                usa anamnese pode desativar; quem não quer marcação a cada foto, desativa também;
+                dá pra escolher idioma, moeda e o que aparece ou não na tela.
               </p>
             </Prose>
           </section>

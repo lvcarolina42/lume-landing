@@ -6,15 +6,15 @@ Lume é um aplicativo gratuito para iOS e Android para profissionais de estétic
 
 ## Sobre (https://brlume.app/sobre)
 
-O Lume é desenvolvido por Lívia Carolina Lima, em Belo Horizonte (MG), como projeto de pessoa física — sem empresa nem investimento externo por trás. É um app feito, mantido e atualizado por uma única pessoa.
+O Lume é desenvolvido por Lívia Carolina Lima, desenvolvedora mobile de Belo Horizonte (MG), como projeto de pessoa física — sem empresa nem investimento externo por trás. É um app feito, mantido e atualizado por uma única pessoa.
 
-A ideia nasceu da observação de que profissionais de estética autônomos ou de clínicas pequenas não tinham uma solução 100% mobile que resolvesse a gestão da clínica de ponta a ponta — o fluxo de trabalho vivia espalhado entre galeria de fotos, WhatsApp, papel e planilhas. O Lume une câmera ghost, ficha clínica de botox e filler, anamnese digital, agenda com catálogo de serviços e geração de antes e depois num único aplicativo mobile.
+A ideia nasceu numa conversa casual: num curso de oratória, Lívia ouviu de uma colega de turma esteticista que ainda usava papel para marcar pontos de aplicação de procedimentos e preencher anamnese de pacientes. Dali surgiu a primeira versão do Lume — catálogo de pacientes com cadastro de fotos, marcação direta na imagem, registro de botox e preenchimento, e câmera "ghost" que sobrepõe a última foto para facilitar o reposicionamento exato do paciente. O produto cresceu ouvindo quem já usava: uma esteticista de Belo Horizonte sugeriu incluir anamnese digital (incluída); uma pesquisa com usuários ativos revelou interesse em agendamento e catálogo de serviços (implementados). Diferente das soluções completas do mercado, que exigem computador e têm curva de aprendizado alta, o Lume foi construído simples e totalmente personalizável — anamnese, marcação de pontos, agenda, idioma e moeda podem ser ativados ou desativados conforme a preferência de cada profissional.
 
 Missão: ser a solução 100% mobile de gestão de clínica para o profissional autônomo de estética, do primeiro cadastro de cliente ao registro clínico mais detalhado, sem exigir computador, planilha ou treinamento.
 
 Lançado em abril de 2026, disponível desde então na App Store (iOS) e na Google Play Store (Android). Está atualmente em período de beta, com acesso gratuito ao plano Lume Pro para todos os usuários.
 
-Números (atualizado em setembro de 2026): 600+ downloads nas lojas, 403 clientes ativos, 2.276 procedimentos cadastrados, 723 pacientes registrados, 326 anamneses preenchidas.
+Números (atualizado em setembro de 2026): 600+ downloads nas lojas, 403 clientes ativos, 2.276 procedimentos cadastrados, 723 pacientes registrados, 326 anamneses preenchidas, usuários em mais de 8 países.
 
 Contato: lvcarolina42@gmail.com — Instagram @br_lume.
 

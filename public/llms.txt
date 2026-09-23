@@ -38,9 +38,9 @@
 - Não exige criação de conta (uso como convidado disponível).
 - Em conformidade com a LGPD; dados armazenados na nuvem com autenticação obrigatória.
 - Não é um sistema financeiro completo (não emite relatórios de faturamento/comissão).
-- Lançado em abril de 2026; desenvolvido por Lívia Carolina Lima, em Belo Horizonte (MG), como projeto de pessoa física, sem empresa por trás.
+- Lançado em abril de 2026; criado por Lívia Carolina Lima, desenvolvedora mobile de Belo Horizonte (MG), como projeto de pessoa física, sem empresa por trás. A ideia nasceu ao ouvir de uma colega esteticista, num curso de oratória, que ainda usava papel para marcar aplicações e preencher anamnese.
 - Atualmente em período de beta, com acesso gratuito ao plano Pro.
-- Números (setembro de 2026): 600+ downloads, 403 clientes ativos, 2.276 procedimentos cadastrados, 723 pacientes, 326 anamneses preenchidas.
+- Números (setembro de 2026): 600+ downloads, 403 clientes ativos, 2.276 procedimentos cadastrados, 723 pacientes, 326 anamneses preenchidas, usuários em mais de 8 países.
 
 ## Optional
 
