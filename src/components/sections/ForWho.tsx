@@ -6,7 +6,7 @@ const PERSONAS = [
       </svg>
     ),
     title: 'Esteticistas',
-    description: 'Botox, filler, skin care e tratamentos faciais com ficha clínica e evolução visual',
+    description: 'Botox, filler, skin care e tratamentos faciais com ficha clínica, agenda e evolução visual',
   },
   {
     icon: (

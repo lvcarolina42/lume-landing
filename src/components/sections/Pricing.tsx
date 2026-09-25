@@ -12,6 +12,7 @@ const PLANS = [
       'Câmera ghost e anotação de pontos',
       'Comparação antes/depois com logo',
       'Ficha clínica de botox e filler',
+      'Agenda com catálogo de serviços',
     ],
     highlight: false,
   },

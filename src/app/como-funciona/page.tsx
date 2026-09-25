@@ -6,7 +6,7 @@ import { APP_STORE_URL } from '@/lib/stores'
 export const metadata: Metadata = {
   title: 'Como funciona o Lume — Guia completo do app',
   description:
-    'Guia detalhado de todas as funcionalidades do Lume: câmera ghost, ficha clínica de botox e filler, mapa de pontos, antes e depois com logo e organização de clientes.',
+    'Guia detalhado de todas as funcionalidades do Lume: câmera ghost, ficha clínica de botox e filler, mapa de pontos, agenda com catálogo de serviços, anamnese digital, antes e depois com logo e organização de clientes.',
   alternates: {
     canonical: 'https://brlume.app/como-funciona',
   },
@@ -103,8 +103,8 @@ export default function ComoFuncionaPage() {
             </h1>
             <p className="text-gray-500 text-base leading-relaxed">
               O Lume é um aplicativo para iOS e Android que centraliza todo o fluxo de atendimento
-              em um único lugar — do cadastro do cliente ao compartilhamento do antes e depois com
-              logo. Foi pensado para qualquer profissional que acompanha resultados visuais ao longo
+              em um único lugar — do agendamento e cadastro do cliente ao compartilhamento do antes
+              e depois com logo. Foi pensado para qualquer profissional que acompanha resultados visuais ao longo
               do tempo: esteticistas, médicos estetas, dermatologistas, personal trainers,
               nutricionistas, fisioterapeutas e outros. Para quem aplica botox, filler ou realiza
               harmonização facial, o app vai além: funciona também como prontuário clínico com
@@ -150,6 +150,45 @@ export default function ComoFuncionaPage() {
                 'Importação direta da agenda do celular',
                 'Busca por nome em tempo real',
                 'Exclusão permanente com remoção completa do histórico',
+              ]}
+            />
+          </Section>
+
+          {/* 1.5 Agenda e serviços */}
+          <Section>
+            <H2>Agenda com catálogo de serviços vinculado ao prontuário</H2>
+            <Prose>
+              <p>
+                Muitos profissionais autônomos organizam horário em uma planilha ou app à parte,
+                sem nenhuma ligação com o histórico do cliente. O Lume resolve isso com uma agenda
+                nativa: cada agendamento fica vinculado ao cliente, ao serviço escolhido e, no dia
+                do atendimento, à sessão registrada no prontuário. A visão de semana e de mês
+                mostra rapidamente os horários livres e ocupados.
+              </p>
+              <p>
+                Antes de agendar, o profissional cadastra o catálogo de serviços uma única vez —
+                nome, cor, duração e preço de cada procedimento oferecido. A partir daí, marcar um
+                horário é só escolher o cliente e o serviço: a duração e a cor já vêm preenchidas
+                automaticamente na agenda, sem precisar redigitar nada a cada agendamento.
+              </p>
+              <p>
+                No dia do atendimento, o profissional abre a agenda, toca no horário marcado e vai
+                direto para o registro da sessão — sem precisar procurar o cliente de novo em
+                outra tela. O Lume também envia um lembrete local automático antes de cada horário,
+                direto no celular, mesmo sem internet.
+              </p>
+              <p>
+                A agenda e o catálogo de serviços fazem parte tanto do plano gratuito quanto do
+                Lume Pro, sem diferença de funcionalidade entre os dois planos.
+              </p>
+            </Prose>
+            <Highlights
+              items={[
+                'Visão de semana e de mês',
+                'Cada agendamento vinculado ao cliente, serviço e sessão',
+                'Catálogo de serviços com nome, cor, duração e preço',
+                'Lembrete local automático antes de cada horário',
+                'Disponível no plano gratuito e no Pro',
               ]}
             />
           </Section>
@@ -293,6 +332,41 @@ export default function ComoFuncionaPage() {
             />
           </Section>
 
+          {/* 4.5 Anamnese digital */}
+          <Section>
+            <H2>Anamnese digital preenchida pela própria cliente</H2>
+            <Prose>
+              <p>
+                Antes de iniciar um tratamento, é comum coletar dados pessoais, histórico de saúde
+                e a assinatura do termo de responsabilidade — tradicionalmente em papel. No Lume,
+                esse processo é digital: a cliente preenche a própria anamnese, presencialmente no
+                tablet ou celular da clínica, ou remotamente por um link enviado pelo WhatsApp ou
+                um QR code, sem precisar instalar nenhum aplicativo.
+              </p>
+              <p>
+                O formulário vem com 24 perguntas clínicas padrão, mas todas podem ser editadas,
+                removidas ou reordenadas, além de ser possível adicionar perguntas próprias. O
+                profissional também escolhe se cada cliente tem uma ficha única, reaproveitada
+                entre sessões, ou uma nova anamnese a cada procedimento.
+              </p>
+              <p>
+                A cliente assina o termo de responsabilidade com o dedo na própria tela. No
+                prontuário, o profissional acompanha o status de cada anamnese — pendente, em
+                andamento ou concluída — e revisa respostas e assinatura antes da sessão, tudo
+                salvo permanentemente junto ao histórico do cliente.
+              </p>
+            </Prose>
+            <Highlights
+              items={[
+                '24 perguntas clínicas padrão, editáveis',
+                'Preenchimento presencial ou por link/QR code',
+                'Assinatura digital do termo de responsabilidade',
+                'Ficha única ou nova a cada sessão, à sua escolha',
+                'Status revisável: pendente, em andamento, concluída',
+              ]}
+            />
+          </Section>
+
           {/* 5. Antes e depois */}
           <Section>
             <H2>Geração de antes e depois com logo em segundos</H2>
@@ -345,6 +419,39 @@ export default function ComoFuncionaPage() {
                 'Marca d\'água de texto',
                 'Preferências salvas automaticamente',
                 'Compartilhamento direto para qualquer app',
+              ]}
+            />
+          </Section>
+
+          {/* 5.5 Importação em lote */}
+          <Section>
+            <H2>Importação em lote de fotos antigas da galeria</H2>
+            <Prose>
+              <p>
+                Quem já tem fotos de clientes acumuladas na galeria do celular — de antes de usar o
+                Lume — não precisa cadastrar uma por uma. O Lume permite selecionar várias fotos de
+                uma vez direto da galeria e importá-las para o histórico do cliente correto em um
+                único fluxo.
+              </p>
+              <p>
+                Cada foto importada recebe automaticamente a data em que foi tirada, lida
+                diretamente dos metadados da imagem, com opção de editar a data manualmente para
+                uma foto específica ou aplicar a mesma data para todo o lote de uma vez. O envio
+                acontece em segundo plano, com barra de progresso, para não travar o uso do app
+                enquanto as fotos sobem.
+              </p>
+              <p>
+                Essa funcionalidade é especialmente útil para quem está migrando o histórico de
+                clientes represado em fotos soltas no celular para dentro do prontuário organizado
+                do Lume, sem perder a data real de cada sessão antiga.
+              </p>
+            </Prose>
+            <Highlights
+              items={[
+                'Seleção múltipla direto da galeria do celular',
+                'Data preenchida automaticamente pelos metadados da foto',
+                'Edição de data por foto ou em lote',
+                'Upload em segundo plano com barra de progresso',
               ]}
             />
           </Section>

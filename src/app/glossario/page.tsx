@@ -24,6 +24,16 @@ const terms = [
     ],
   },
   {
+    id: 'agenda',
+    letter: 'A',
+    name: 'Agenda (de clientes)',
+    body: [
+      'Na estética, a agenda é a organização dos horários marcados com cada cliente — tradicionalmente feita em planilha, caderno ou aplicativo de calendário genérico. O problema desses métodos é que eles não sabem o que é um "serviço" da clínica: não têm preço, duração padrão nem vínculo com o histórico clínico do cliente, exigindo que o profissional preencha manualmente os mesmos dados a cada agendamento.',
+      'Uma agenda integrada ao prontuário resolve isso vinculando cada horário marcado ao cliente, ao serviço escolhido e, no dia do atendimento, à própria sessão registrada — eliminando a necessidade de manter uma ferramenta separada só para marcar horário.',
+      'No Lume, a agenda tem visão de semana e de mês, é vinculada ao catálogo de serviços (nome, cor, duração e preço) e ao prontuário de cada cliente, com lembrete local automático antes de cada horário marcado.',
+    ],
+  },
+  {
     id: 'anamnese',
     letter: 'A',
     name: 'Anamnese',
@@ -72,6 +82,16 @@ const terms = [
       'O princípio é simples: a imagem de referência age como um "fantasma" guia. O profissional posiciona o cliente até que os pontos de referência anatômicos — nariz, olhos, contorno do rosto — coincidam com a sobreposição, e só então registra a foto. A opacidade da sobreposição é ajustável com um controle deslizante, permitindo equilibrar visibilidade do guia e clareza do cliente ao vivo.',
       'A câmera ghost é compatível com câmera frontal e traseira e aceita uma foto da galeria do celular como imagem de referência, caso o profissional queira comparar com uma foto tirada fora do app. O Lume foi um dos primeiros aplicativos de gestão estética a implementar câmera ghost nativamente, tornando-a acessível a qualquer profissional sem necessidade de equipamentos ou aplicativos adicionais.',
       'O impacto direto da câmera ghost é na qualidade do antes e depois. Fotos com ângulo consistente tornam a diferença entre sessões imediatamente evidente, passam mais credibilidade profissional e geram resultados mais convincentes nas redes sociais.',
+    ],
+  },
+  {
+    id: 'catalogo-de-servicos',
+    letter: 'C',
+    name: 'Catálogo de Serviços',
+    body: [
+      'O catálogo de serviços é o cadastro dos procedimentos que um profissional ou clínica de estética oferece, geralmente com nome, duração padrão e preço de cada um. Ter esse cadastro centralizado evita que o profissional precise redigitar os mesmos dados toda vez que agenda um novo cliente ou registra uma cobrança.',
+      'Quando o catálogo de serviços está integrado à agenda e ao prontuário, agendar um cliente passa a ser só uma questão de escolher o serviço: a duração e o preço já vêm preenchidos automaticamente, e o registro da sessão fica vinculado a qual serviço foi de fato realizado.',
+      'No Lume, o catálogo de serviços registra nome, cor, duração e preço de cada procedimento, usado tanto para padronizar o agendamento na agenda quanto para dar contexto ao prontuário da sessão. Está disponível tanto no plano gratuito quanto no Lume Pro.',
     ],
   },
   {

@@ -7,7 +7,7 @@ import { APP_STORE_URL } from '@/lib/stores'
 export const metadata: Metadata = {
   title: 'Perguntas Frequentes — Lume App para Esteticistas',
   description:
-    'Tudo sobre o Lume: câmera ghost, ficha clínica de botox e filler, anamnese digital, geração de antes e depois e organização de clientes. O app gratuito para esteticistas e médicos estetas.',
+    'Tudo sobre o Lume: câmera ghost, ficha clínica de botox e filler, anamnese digital, agenda com catálogo de serviços, geração de antes e depois e organização de clientes. O app gratuito para esteticistas e médicos estetas.',
   alternates: {
     canonical: 'https://brlume.app/faq',
   },
@@ -20,7 +20,7 @@ const CATEGORIES = [
       {
         question: 'O que é o Lume?',
         answer:
-          'O Lume é um aplicativo para iOS e Android criado para profissionais de estética que precisam registrar e acompanhar a evolução dos seus clientes. Com ele, você cadastra clientes em segundos, fotografa cada sessão com uma câmera especial que mantém o ângulo consistente e gera imagens de antes e depois prontas para compartilhar. Para quem trabalha com botox e preenchimento facial, o Lume também funciona como prontuário clínico completo, registrando produtos, lotes, diluições e pontos de aplicação por região anatômica. Tudo organizado por cliente, acessível de qualquer dispositivo, sem perder nada.',
+          'O Lume é um aplicativo para iOS e Android criado para profissionais de estética que precisam registrar e acompanhar a evolução dos seus clientes. Com ele, você cadastra clientes em segundos, fotografa cada sessão com uma câmera especial que mantém o ângulo consistente e gera imagens de antes e depois prontas para compartilhar. Para quem trabalha com botox e preenchimento facial, o Lume também funciona como prontuário clínico completo, registrando produtos, lotes, diluições e pontos de aplicação por região anatômica. O app também tem agenda com catálogo de serviços, vinculando cada horário marcado ao cliente e à sessão. Tudo organizado por cliente, acessível de qualquer dispositivo, sem perder nada.',
       },
       {
         question: 'Para quem é o Lume?',
@@ -30,7 +30,7 @@ const CATEGORIES = [
       {
         question: 'O Lume é gratuito?',
         answer:
-          'Sim, o Lume é gratuito para baixar e usar. O plano gratuito permite cadastrar até 50 clientes com até 30 sessões cada, com acesso completo a todas as funcionalidades — câmera ghost, ficha clínica, anamnese digital, antes e depois. Para quem precisa de mais capacidade, o Lume Pro oferece clientes e sessões ilimitados. Durante o período de beta, todos os usuários têm acesso ao plano Pro sem custo.',
+          'Sim, o Lume é gratuito para baixar e usar. O plano gratuito permite cadastrar até 50 clientes com até 30 sessões cada, com acesso completo a todas as funcionalidades — câmera ghost, ficha clínica, anamnese digital, agenda com catálogo de serviços, antes e depois. Para quem precisa de mais capacidade, o Lume Pro oferece clientes e sessões ilimitados. Durante o período de beta, todos os usuários têm acesso ao plano Pro sem custo.',
       },
       {
         question: 'Preciso criar conta para usar o Lume?',
@@ -160,6 +160,41 @@ const CATEGORIES = [
     ],
   },
   {
+    title: 'Agenda e Catálogo de Serviços',
+    items: [
+      {
+        question: 'O Lume tem agenda para marcar horário de clientes?',
+        answer:
+          'Sim. A agenda do Lume tem visão de semana e de mês, e cada agendamento fica vinculado ao cliente, ao serviço escolhido e à sessão do prontuário. Ao abrir a agenda no dia do atendimento, basta tocar no horário marcado para ir direto para o registro da sessão — sem precisar procurar o cliente de novo em outra tela.',
+      },
+      {
+        question: 'O que é o catálogo de serviços do Lume?',
+        answer:
+          'É onde você cadastra, uma única vez, cada procedimento que oferece — com nome, cor, duração e preço. Depois de cadastrado, agendar um cliente é só escolher o serviço: a duração e a cor já preenchem automaticamente o horário na agenda, sem precisar redigitar nada a cada agendamento.',
+      },
+      {
+        question: 'A agenda do Lume envia confirmação automática de horário pro cliente?',
+        answer:
+          'Hoje não — a agenda organiza os horários por cliente com visão de semana e mês, vinculada ao serviço e à sessão, mas não envia lembretes automáticos por SMS ou WhatsApp para o cliente. O que o Lume envia é um lembrete local para o próprio profissional antes de cada horário marcado, direto no celular, mesmo sem internet.',
+      },
+      {
+        question: 'Dá para agendar mais de um profissional na mesma agenda?',
+        answer:
+          'A agenda do Lume é pensada para o profissional autônomo ou pequena clínica, organizada por conta de usuário. Para clínicas com múltiplos profissionais compartilhando uma agenda única, um sistema de gestão de clínica dedicado pode ser mais adequado.',
+      },
+      {
+        question: 'O catálogo de serviços calcula o faturamento automaticamente?',
+        answer:
+          'O catálogo de serviços registra nome, cor, duração e preço de cada serviço, o que já ajuda a padronizar o agendamento e a cobrança. O Lume não gera, porém, relatórios financeiros completos de faturamento ou comissão — para isso, uma planilha ou app financeiro dedicado continua sendo necessário.',
+      },
+      {
+        question: 'Agenda e catálogo de serviços são gratuitos no Lume?',
+        answer:
+          'Sim. Agenda e catálogo de serviços estão disponíveis tanto no plano Gratuito quanto no Lume Pro, sem diferença de funcionalidade entre os dois — a diferença dos planos está apenas no limite de clientes e sessões cadastradas.',
+      },
+    ],
+  },
+  {
     title: 'Organização de Clientes',
     items: [
       {
@@ -261,7 +296,7 @@ export default function FaqPage() {
               Tudo sobre o Lume
             </h1>
             <p className="text-gray-400 text-base max-w-md mx-auto">
-              Respostas para as dúvidas mais comuns sobre câmera ghost, ficha clínica, anamnese digital, antes e depois e organização de clientes.
+              Respostas para as dúvidas mais comuns sobre câmera ghost, ficha clínica, anamnese digital, agenda, catálogo de serviços, antes e depois e organização de clientes.
             </p>
           </div>
 

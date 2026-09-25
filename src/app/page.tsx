@@ -10,6 +10,7 @@ import Problem from '@/components/sections/Problem'
 import ForWho from '@/components/sections/ForWho'
 import Features from '@/components/sections/Features'
 import Anamnesis from '@/components/sections/Anamnesis'
+import Scheduling from '@/components/sections/Scheduling'
 import MidCTA from '@/components/sections/MidCTA'
 import HowItWorks from '@/components/sections/HowItWorks'
 import QuickStart from '@/components/sections/QuickStart'
@@ -29,6 +30,7 @@ export default function Home() {
         <ForWho />
         <Features />
         <Anamnesis />
+        <Scheduling />
         <MidCTA />
         <HowItWorks />
         <QuickStart />

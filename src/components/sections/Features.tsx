@@ -46,7 +46,12 @@ const FEATURES = [
     title: 'Toda a história, num único lugar',
     description:
       'Cada sessão aparece em ordem cronológica com foto, data e tudo que foi registrado. Você abre o perfil da cliente e vê a evolução desde a primeira visita. Sem procurar em WhatsApp, sem depender de nada fora do app.',
-    highlights: ['Busca por nome', 'Grade visual por data', 'Importa contatos do celular'],
+    highlights: [
+      'Busca por nome',
+      'Grade visual por data',
+      'Importa contatos do celular',
+      'Importação em lote de fotos antigas',
+    ],
     imageSide: 'right' as const,
     image: '/images/site/screen_home.jpeg',
     imageAlt: 'Histórico completo de sessões de uma cliente no app Lume',
